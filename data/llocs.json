@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "nom": "Can Bonastre Wine Resort",
+    "slug": "can-bonastre",
+    "categoria": "allotjament",
+    "lat": 41.5247,
+    "lng": 1.8312,
+    "comarca": "Anoia",
+    "descripcio": "Masia del segle XVIII envoltada de vinyes al cor del Penedès. Allotjament de luxe discret amb celler propi, piscina entre ceps i cuina de territori.",
+    "descripcio_llarga": "Can Bonastre és una masia del segle XVIII enclavada enmig de les vinyes del Penedès. Setze habitacions úniques, celler propi amb vins de la finca, piscina entre ceps i un restaurant que treballa amb productes de l'entorn immediat. La família Cusí va recuperar la propietat fa vint anys i la va transformar en un dels allotjaments rurals de referència de Catalunya. Cada racó de la masia conserva la pedra original, la biga de fusta i la proporció de l'arquitectura pagesa. El resultat és un espai on el luxe és silenciós, on la decoració no crida i on el paisatge és el protagonista absolut.",
+    "client": true,
+    "galeria": [
+      { "id": 1, "alt": "Vista exterior de la masia entre vinyes", "color": "#2d3b2a" },
+      { "id": 2, "alt": "Habitació amb bigues de fusta i llum natural", "color": "#3b2d1e" },
+      { "id": 3, "alt": "Restaurant amb productes de la finca", "color": "#1e2a1e" },
+      { "id": 4, "alt": "Celler amb bótes de roure", "color": "#2a1e14" }
+    ],
+    "testimoni": {
+      "text": "Amb L'Ordiguer hem trobat la veu que necessitàvem per explicar el que fem. Les imatges parlen soles.",
+      "autor": "Marc Cusí",
+      "carrec": "Propietari, Can Bonastre Wine Resort"
+    },
+    "serveis_fets": ["Fotografia d'Espais", "Vídeo Corporatiu", "Gestió de Xarxes"],
+    "web": "https://canbonastre.com",
+    "instagram": "@canbonastre"
+  },
+  {
+    "id": 2,
+    "nom": "Restaurant Les Cols",
+    "slug": "les-cols",
+    "categoria": "restaurant",
+    "lat": 42.1724,
+    "lng": 2.4884,
+    "comarca": "Garrotxa",
+    "descripcio": "Cuina volcànica d'avantguarda de Fina Puigdevall. Dues estrelles Michelin al cor de la Garrotxa. El producte local com a filosofia de vida.",
+    "client": false,
+    "web": "https://lescols.com",
+    "instagram": "@lescols"
+  },
+  {
+    "id": 3,
+    "nom": "Formatgeria La Bauma",
+    "slug": "formatgeria-la-bauma",
+    "categoria": "productor",
+    "lat": 41.9583,
+    "lng": 2.1421,
+    "comarca": "Osona",
+    "descripcio": "Formatges artesans elaborats amb llet crua de vaques de raça bruna dels Pirineus. Producció familiar a la plana de Vic. Madurats en cava de pedra.",
+    "descripcio_llarga": "La Formatgeria La Bauma és un projecte familiar que la Sílvia Prat i en Jordi Mas van tirar endavant fa catorze anys a la plana de Vic. Produeixen formatges artesans amb llet crua de les seves pròpies vaques de raça bruna pirinenca, una raça autòctona que dóna una llet especialment rica en greix i proteïna. El procés és lent i manual: cada peça es madura a la cava de pedra de la masia durant setmanes o mesos, depenent del tipus de formatge. El resultat són peces úniques que canvien lleugerament de sabor i textura amb les estacions, perquè la llet canvia quan canvia l'herba que mengen les vaques. Avui venen al mercat de Vic, a restaurants de la zona i envien a tota Catalunya.",
+    "client": true,
+    "galeria": [
+      { "id": 1, "alt": "Rodes de formatge madurant a la cava de pedra", "color": "#1e1a14" },
+      { "id": 2, "alt": "Vaques brunes al prat a primera hora del matí", "color": "#1a2018" },
+      { "id": 3, "alt": "Mans artesanes treballant la pasta del formatge", "color": "#2a2218" },
+      { "id": 4, "alt": "Selecció de formatges amb herbes aromàtiques", "color": "#1e1814" }
+    ],
+    "testimoni": {
+      "text": "Sabem fer formatge. L'Ordiguer ens va ajudar a explicar-ho de la manera correcta.",
+      "autor": "Sílvia Prat",
+      "carrec": "Formatgera, La Bauma"
+    },
+    "serveis_fets": ["Fotografia de Producte", "Vídeo Reportatge", "Disseny Web"],
+    "web": "https://formatgerialabauma.cat",
+    "instagram": "@formatgerialabauma"
+  },
+  {
+    "id": 4,
+    "nom": "Casa Amatller",
+    "slug": "casa-amatller",
+    "categoria": "espai_cultural",
+    "lat": 41.3919,
+    "lng": 2.1650,
+    "comarca": "Barcelonès",
+    "descripcio": "Obra mestre del modernisme català de Puig i Cadafalch al passeig de Gràcia. Museu, xocolateria artesana i espai d'exposicions. El gust modernista en estat pur.",
+    "client": false,
+    "web": "https://amatller.org",
+    "instagram": "@casaamatller"
+  },
+  {
+    "id": 5,
+    "nom": "Mercat del Lleó de Girona",
+    "slug": "mercat-lleo-girona",
+    "categoria": "mercat",
+    "lat": 41.9832,
+    "lng": 2.8235,
+    "comarca": "Gironès",
+    "descripcio": "El mercat municipal de Girona és un dels millors de Catalunya. Peix fresc de l'Empordà, verdures de l'Horta, embotits de la Garrotxa i formatges de les comarques gironines.",
+    "client": false,
+    "instagram": "@mercatlleo"
+  },
+  {
+    "id": 6,
+    "nom": "Hotel El Cingle",
+    "slug": "hotel-el-cingle",
+    "categoria": "allotjament",
+    "lat": 41.8341,
+    "lng": 2.0123,
+    "comarca": "Moianès",
+    "descripcio": "Petit hotel rural de 8 habitacions enclavat al Moianès. Vista a la plana de Vic, cuina de proximitat i silenci absolut. Per a qui vol desconnectar de veritat.",
+    "client": true,
+    "web": "https://hotelelcingle.cat",
+    "instagram": "@hotelelcingle"
+  },
+  {
+    "id": 7,
+    "nom": "Oli Núria — Cooperativa Siurana",
+    "slug": "cooperativa-siurana",
+    "categoria": "productor",
+    "lat": 41.2284,
+    "lng": 0.9312,
+    "comarca": "Priorat",
+    "descripcio": "Cooperativa centenària de la DOP Siurana al Priorat. Producció d'oli verge extra de varietats arbequina i royal. Visites a l'oliverar i tast guiat.",
+    "client": false,
+    "web": "https://coopcornudella.com",
+    "instagram": "@cooperativasiurana"
+  },
+  {
+    "id": 8,
+    "nom": "Centre d'Art i Natura de Farrera",
+    "slug": "centre-art-farrera",
+    "categoria": "espai_cultural",
+    "lat": 42.4102,
+    "lng": 1.1924,
+    "comarca": "Pallars Sobirà",
+    "descripcio": "Residència d'artistes en un poble recuperat del Pallars Sobirà. Exposicions d'art contemporani, tallers i residències creatives al mig del Pirineu. On l'art i el territori es troben.",
+    "client": true,
+    "web": "https://farrera.cat",
+    "instagram": "@centreartfarrera"
+  }
+]

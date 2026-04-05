@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Client — L'Ordiguer Estudi</title>
+  <meta name="description" id="page-desc" content="Fitxa de client de L'Ordiguer Estudi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVEGACIÓ ==================== -->
+  <nav class="nav" role="navigation" aria-label="Navegació principal">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">L'Ordiguer Estudi</a>
+      <ul class="nav__links">
+        <li><a href="serveis.html">Serveis</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="comunitat.html">Comunitat</a></li>
+        <li><a href="arxiu.html">Arxiu</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="contacte.html" class="nav__cta">Parlem</a></li>
+      </ul>
+      <button class="nav__hamburguesa" aria-label="Obre el menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== ESTAT: CARREGANT ==================== -->
+  <div id="client-loading" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--color-negre);">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--color-gris-clar);letter-spacing:0.1em;">Carregant…</span>
+  </div>
+
+  <!-- ==================== CONTINGUT DINÀMIC ==================== -->
+  <div id="client-contingut" style="display:none;">
+
+    <!-- Capçalera: nom + categoria + badge -->
+    <header class="client-capcalera">
+      <div class="client-capcalera__inner">
+        <div>
+          <span class="etiqueta" id="client-categoria" style="color:var(--color-gris-clar);"></span>
+          <span class="separador" style="background-color:var(--color-terra);"></span>
+          <h1 id="client-nom"></h1>
+          <p id="client-comarca" style="color:var(--color-gris-clar);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.5rem;"></p>
+        </div>
+        <span id="client-badge" class="client-badge-gran"></span>
+      </div>
+    </header>
+
+    <!-- Descripció llarga -->
+    <section class="seccio">
+      <div class="contenidor" style="max-width:800px;">
+        <p id="client-descripcio" style="font-size:1.08rem;line-height:1.85;"></p>
+      </div>
+    </section>
+
+    <!-- Galeria de fotos -->
+    <section class="seccio" style="padding-top:0;">
+      <div class="contenidor">
+        <div class="client-galeria" id="client-galeria"></div>
+      </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="seccio seccio--negra client-testimoni">
+      <blockquote id="client-testimoni-text"></blockquote>
+      <cite id="client-testimoni-autor"></cite>
+    </section>
+
+    <!-- Serveis fets + links -->
+    <section class="seccio">
+      <div class="contenidor">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--espai-lg);align-items:start;">
+
+          <!-- Serveis fets -->
+          <div>
+            <span class="etiqueta">Serveis fets</span>
+            <span class="separador"></span>
+            <div class="client-serveis-grid" id="client-serveis"></div>
+          </div>
+
+          <!-- Info + links -->
+          <div>
+            <span class="etiqueta">Troba'ls a</span>
+            <span class="separador"></span>
+            <div class="client-links" id="client-links"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Botó tornar al mapa -->
+    <section class="seccio seccio--fosca centrat">
+      <div class="contenidor">
+        <a href="mapa.html" class="boto boto--clar">← Tornar al mapa</a>
+        <div style="margin-top:var(--espai-md);">
+          <a href="contacte.html" class="boto boto--transparent" style="color:var(--color-crema);border-color:rgba(255,255,255,0.3);">Parlem del teu projecte</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== ESTAT: NO TROBAT ==================== -->
+  <div id="client-no-trobat" style="display:none;min-height:100vh;display:none;align-items:center;justify-content:center;background:var(--color-negre);text-align:center;padding:var(--espai-lg);">
+    <div>
+      <span class="etiqueta" style="color:var(--color-gris-clar);">Error 404</span>
+      <h2 style="color:var(--color-crema);margin:var(--espai-sm) 0;">No hem trobat<br>aquest client.</h2>
+      <p style="color:var(--color-crema-fosc);margin-bottom:var(--espai-lg);">Potser el slug és incorrecte o el client no té fitxa completa.</p>
+      <a href="mapa.html" class="boto boto--clar">Tornar al mapa</a>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo" id="client-footer" style="display:none;">
+    <div class="contenidor">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__logo">L'Ordiguer Estudi</div>
+          <p class="footer__desc">Estudi creatiu per a negocis del territori català.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Pàgines</h4>
+          <ul>
+            <li><a href="serveis.html">Serveis</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="comunitat.html">Comunitat</a></li>
+            <li><a href="arxiu.html">Arxiu</a></li>
+            <li><a href="mapa.html">Mapa del territori</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacte</h4>
+          <ul>
+            <li><a href="mailto:hola@lordiguer.cat">hola@lordiguer.cat</a></li>
+            <li><a href="https://instagram.com/lordiguer" target="_blank" rel="noopener">@lordiguer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__credits">© 2026 L'Ordiguer Estudi.</span>
+        <span class="footer__credits">Fet amb cura al territori català.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

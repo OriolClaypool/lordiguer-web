@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "titol": "El mercat de Vic a trenc d'alba",
+    "data": "2026-03-12",
+    "lloc": "Plaça Major, Vic",
+    "comarca": "Osona",
+    "descripcio": "Dues hores abans que arribi el primer client, els paradistes de la Plana ja ho han posat tot a punt. Cols, porros, moniatos i formatges que oloren a celler de pedra. El mercat de Vic és un ritual que no ha canviat en segles.",
+    "categoria": "atmosfera",
+    "thumbnail_color": "#1a1e18",
+    "link_video": "#"
+  },
+  {
+    "id": 2,
+    "titol": "La Sílvia Prat: la pastissera que fa coques com l'àvia",
+    "data": "2026-02-20",
+    "lloc": "Avià",
+    "comarca": "Berguedà",
+    "descripcio": "Fa deu anys va deixar una feina a Barcelona per aprendre l'ofici al costat de la seva àvia. Avui la seva pastisseria és un destí. Parlem de farina, de memòria i d'arrels.",
+    "categoria": "histories",
+    "thumbnail_color": "#1e1814",
+    "link_video": "#"
+  },
+  {
+    "id": 3,
+    "titol": "Tres dies pels masos perduts del Montseny",
+    "data": "2026-02-05",
+    "lloc": "Montseny",
+    "comarca": "Vallès Oriental",
+    "descripcio": "Una ruta de 40 quilòmetres per camins antics que passen per masos abandonats, fonts de pedra i boscos de faigs centenaris. El Montseny que no surt a les guies de trekking.",
+    "categoria": "descobriment",
+    "thumbnail_color": "#141a14",
+    "link_video": "#"
+  },
+  {
+    "id": 4,
+    "titol": "La vendema silenciosa del Priorat",
+    "data": "2025-10-08",
+    "lloc": "Porrera",
+    "comarca": "Priorat",
+    "descripcio": "A les sis del matí, quan la llicorella encara és freda, comença la collita. Un reportatge visual sobre la vendema manual al Priorat: el paisatge de llicorella, les mans i el silenci.",
+    "categoria": "atmosfera",
+    "thumbnail_color": "#1a1410",
+    "link_video": "#"
+  },
+  {
+    "id": 5,
+    "titol": "En Miquel Costa, l'últim boter de la Conca",
+    "data": "2025-11-14",
+    "lloc": "Montblanc",
+    "comarca": "Conca de Barberà",
+    "descripcio": "Té 72 anys i fa bótes de roure des dels setze. El seu taller sent a fusta, encenalls i vernís. Quan ell plegui, l'ofici desapareixerà de la comarca. Hem anat a escoltar-lo.",
+    "categoria": "histories",
+    "thumbnail_color": "#181410",
+    "link_video": "#"
+  }
+]

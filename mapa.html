@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa del Territori — L'Ordiguer Estudi</title>
+  <meta name="description" content="Mapa interactiu dels llocs recomanats per L'Ordiguer a Catalunya. Restaurants, allotjaments, productors, espais culturals i mercats.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Leaflet.js CDN (sense API key) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Ajustos específics per al mapa (sense scroll vertical a la pàgina) */
+    html, body { overflow: hidden; }
+    .mapa-wrap { display: flex; flex-direction: column; height: 100vh; }
+    .mapa-controls { flex-shrink: 0; }
+    #mapa { flex: 1; }
+
+    @media (max-width: 768px) {
+      html, body { overflow: auto; }
+      .mapa-wrap { height: auto; }
+      #mapa { height: 75vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVEGACIÓ ==================== -->
+  <nav class="nav" role="navigation" aria-label="Navegació principal">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">L'Ordiguer Estudi</a>
+      <ul class="nav__links">
+        <li><a href="serveis.html">Serveis</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="comunitat.html">Comunitat</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="contacte.html" class="nav__cta">Parlem</a></li>
+      </ul>
+      <button class="nav__hamburguesa" aria-label="Obre el menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== MAPA ==================== -->
+  <main class="mapa-wrap">
+
+    <!-- Controls de filtre per categoria -->
+    <div class="mapa-controls" role="toolbar" aria-label="Filtra per categoria">
+      <span class="etiqueta">Filtrar:</span>
+      <button class="filtre-mapa actiu" data-categoria="tots">Tots</button>
+      <button class="filtre-mapa" data-categoria="restaurant">
+        <span style="color:#c87a6a;">●</span> Restaurant
+      </button>
+      <button class="filtre-mapa" data-categoria="allotjament">
+        <span style="color:#8aad7a;">●</span> Allotjament
+      </button>
+      <button class="filtre-mapa" data-categoria="productor">
+        <span style="color:#c8a45a;">●</span> Productor
+      </button>
+      <button class="filtre-mapa" data-categoria="espai_cultural">
+        <span style="color:#7a8aad;">●</span> Espai Cultural
+      </button>
+      <button class="filtre-mapa" data-categoria="mercat">
+        <span style="color:#ad8a7a;">●</span> Mercat
+      </button>
+    </div>
+
+    <!-- Mapa Leaflet (carregat via JS) -->
+    <div id="mapa" aria-label="Mapa interactiu de Catalunya"></div>
+
+  </main>
+
+  <!-- Leaflet.js -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>

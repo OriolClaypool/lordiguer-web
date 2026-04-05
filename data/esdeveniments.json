@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nom": "Mercat de Pagès de Vic",
+    "data": "2026-04-04",
+    "lloc": "Plaça Major, Vic",
+    "comarca": "Osona",
+    "descripcio": "El mercat setmanal més antic de Catalunya. Productors locals de l'Osona ofereixen verdures, embotits, formatges artesans i flors de temporada. Un ritual que no ha canviat en segles.",
+    "categoria": "mercat"
+  },
+  {
+    "id": 2,
+    "nom": "Fira de Sant Isidre de Mollerussa",
+    "data": "2026-05-15",
+    "lloc": "Recinte Firal, Mollerussa",
+    "comarca": "Pla d'Urgell",
+    "descripcio": "La gran fira agrícola i ramadera del ple de les terres de ponent. Maquinària, bestiar, productes de l'horta i concursos de races autòctones. El batec del pagès català.",
+    "categoria": "fira"
+  },
+  {
+    "id": 3,
+    "nom": "Patum de Berga",
+    "data": "2026-05-28",
+    "lloc": "Plaça de Sant Pere, Berga",
+    "comarca": "Berguedà",
+    "descripcio": "Festa declarada Patrimoni Immaterial de la Humanitat per la UNESCO. Foc, música i figures ancestrals que surten al carrer des del segle XIV. Una experiència única al món.",
+    "categoria": "festa"
+  },
+  {
+    "id": 4,
+    "nom": "Festival Temps de Flors de Girona",
+    "data": "2026-05-09",
+    "lloc": "Barri Vell, Girona",
+    "comarca": "Gironès",
+    "descripcio": "Durant una setmana, el barri vell de Girona es transforma en una instal·lació floral gegant. Patis, esglésies, escales i racons medievals coberts de flors de temporada. Art efímer i territori.",
+    "categoria": "cultura"
+  },
+  {
+    "id": 5,
+    "nom": "Mercat Medieval de Montblanc",
+    "data": "2026-04-23",
+    "lloc": "Muralla Medieval, Montblanc",
+    "comarca": "Conca de Barberà",
+    "descripcio": "La vila de Montblanc reviu l'edat mitjana durant la Setmana Medieval. Artesans, cavallers, músics i mercat de productes tradicionals dins les millors muralles medievals de Catalunya.",
+    "categoria": "mercat"
+  }
+]

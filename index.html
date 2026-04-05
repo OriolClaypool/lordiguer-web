@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Ordiguer Estudi — Per a negocis que valen la pena explicar</title>
+  <meta name="description" content="L'Ordiguer Estudi és un estudi creatiu especialitzat en negocis del territori català. Fotografia, vídeo, xarxes socials i web per a turisme rural, restauració, productors locals i espais culturals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVEGACIÓ ==================== -->
+  <nav class="nav" role="navigation" aria-label="Navegació principal">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">L'Ordiguer Estudi</a>
+      <ul class="nav__links">
+        <li><a href="serveis.html">Serveis</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="comunitat.html">Comunitat</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="contacte.html" class="nav__cta">Parlem</a></li>
+      </ul>
+      <button class="nav__hamburguesa" aria-label="Obre el menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero hero--fosc">
+    <span class="etiqueta hero__etiqueta">Estudi creatiu · Catalunya</span>
+    <h1 class="hero__titol">L'Ordiguer Estudi</h1>
+    <p class="hero__tagline">Per a negocis que valen la pena explicar.</p>
+    <a href="serveis.html" class="boto boto--clar">Descobreix els serveis</a>
+    <span class="hero__scroll">↓ Continua</span>
+  </section>
+
+  <!-- ==================== SERVEIS (resum) ==================== -->
+  <section class="seccio" aria-labelledby="serveis-titol">
+    <div class="contenidor">
+      <span class="etiqueta">El que fem</span>
+      <span class="separador"></span>
+      <h2 id="serveis-titol">Quatre maneres d'explicar<br>la teva història.</h2>
+
+      <div class="serveis-grid">
+        <!-- Bloc 1: Fotografia -->
+        <article class="servei-bloc">
+          <div class="servei-bloc__num">01</div>
+          <h3>Fotografia</h3>
+          <p>Espais, producte, retrat i lifestyle. Imatges que comuniquen sense forçar.</p>
+        </article>
+        <!-- Bloc 2: Vídeo -->
+        <article class="servei-bloc">
+          <div class="servei-bloc__num">02</div>
+          <h3>Vídeo</h3>
+          <p>Reportatge, promocional i peces per a xarxes. Narrar amb moviment i llum.</p>
+        </article>
+        <!-- Bloc 3: Xarxes socials -->
+        <article class="servei-bloc">
+          <div class="servei-bloc__num">03</div>
+          <h3>Xarxes Socials</h3>
+          <p>Gestió editorial estratègica. Contingut que ressona amb qui et busca.</p>
+        </article>
+        <!-- Bloc 4: Web -->
+        <article class="servei-bloc">
+          <div class="servei-bloc__num">04</div>
+          <h3>Desenvolupament Web</h3>
+          <p>Webs netes, ràpides i honestes. La teva presència digital, feta a mida.</p>
+        </article>
+      </div>
+
+      <div class="centrat" style="margin-top:3rem;">
+        <a href="serveis.html" class="boto boto--transparent">Veure tots els serveis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PER A QUI ==================== -->
+  <section class="seccio seccio--fosca" aria-labelledby="peraqui-titol">
+    <div class="contenidor">
+      <div class="per-a-qui__grid">
+        <div class="per-a-qui__text">
+          <span class="etiqueta" style="color: var(--color-gris-clar);">El nostre client</span>
+          <span class="separador"></span>
+          <h2 id="peraqui-titol">Treballem amb qui té<br>alguna cosa a dir.</h2>
+          <ul class="per-a-qui__llista">
+            <li>Allotjaments rurals i cases de pagès</li>
+            <li>Restaurants de km 0 i cuina de territori</li>
+            <li>Productors locals: vi, oli, formatge, mel</li>
+            <li>Espais culturals i artesans</li>
+            <li>Mercats i fires tradicionals</li>
+            <li>Projectes turístics amb arrels</li>
+          </ul>
+        </div>
+        <div>
+          <!-- Placeholder visual editorial -->
+          <div style="aspect-ratio:4/3; background-color: var(--color-verd); position:relative; overflow:hidden;">
+            <div style="position:absolute;bottom:2rem;left:2rem;right:2rem;">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:rgba(245,240,232,0.7);max-width:none;">
+                "El territori té veu pròpia. Nosaltres l'ajudem a sonar bé."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO PREVIEW ==================== -->
+  <section class="seccio" aria-labelledby="portfolio-titol">
+    <div class="contenidor">
+      <span class="etiqueta">Feina feta</span>
+      <span class="separador"></span>
+      <h2 id="portfolio-titol">Alguns projectes.</h2>
+
+      <div class="portfolio-grid">
+        <!-- Item 1 -->
+        <article class="portfolio-item portfolio-item--foto">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__titol">Can Bonastre</h3>
+            <span class="portfolio-item__cat">Fotografia · Allotjament Rural</span>
+          </div>
+        </article>
+        <!-- Item 2 -->
+        <article class="portfolio-item portfolio-item--video">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__titol">Formatgeria La Bauma</h3>
+            <span class="portfolio-item__cat">Vídeo · Productor Local</span>
+          </div>
+        </article>
+        <!-- Item 3 -->
+        <article class="portfolio-item portfolio-item--web">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__titol">Hotel El Cingle</h3>
+            <span class="portfolio-item__cat">Web + Xarxes · Hotel Rural</span>
+          </div>
+        </article>
+        <!-- Item 4 -->
+        <article class="portfolio-item portfolio-item--foto">
+          <div class="portfolio-item__overlay">
+            <h3 class="portfolio-item__titol">Centre d'Art Farrera</h3>
+            <span class="portfolio-item__cat">Fotografia · Espai Cultural</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="centrat" style="margin-top:3rem;">
+        <a href="portfolio.html" class="boto boto--transparent">Veure el portfolio complet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== L'EQUIP ==================== -->
+  <section class="seccio seccio--negra" aria-labelledby="equip-titol">
+    <div class="contenidor">
+      <span class="etiqueta" style="color: var(--color-gris-clar);">L'equip</span>
+      <span class="separador"></span>
+      <h2 id="equip-titol" class="text-crema">Som dues persones<br>i un projecte.</h2>
+
+      <div class="equip-grid" style="margin-top:3rem;">
+        <!-- Oriol -->
+        <div class="membre">
+          <div class="membre__avatar"></div>
+          <div>
+            <h3 class="text-crema">Oriol</h3>
+            <span class="etiqueta" style="color:var(--color-terra-clar);">Contingut digital · Estratègia · Web</span>
+            <p style="color:var(--color-crema-fosc);font-size:0.9rem;margin-top:0.5rem;">
+              Escriu, programa i pensa en estratègia. Creu que una bona web és aquella que el client no ha d'explicar.
+            </p>
+          </div>
+        </div>
+        <!-- Paula -->
+        <div class="membre">
+          <div class="membre__avatar"></div>
+          <div>
+            <h3 class="text-crema">Paula</h3>
+            <span class="etiqueta" style="color:var(--color-terra-clar);">Fotografia Professional</span>
+            <p style="color:var(--color-crema-fosc);font-size:0.9rem;margin-top:0.5rem;">
+              Fotògrafa de llum natural i espais. Capta el que no es veu fins que ella ho mostra. Especialitzada en territori i gastronomia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMUNITAT PREVIEW ==================== -->
+  <section class="seccio seccio--verd" aria-labelledby="comunitat-titol">
+    <div class="contenidor">
+      <div class="comunitat-preview">
+        <!-- Placeholder visual -->
+        <div class="comunitat-preview__visual">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:2rem;">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(245,240,232,0.25);text-align:center;line-height:1.1;">
+              Catalunya<br>des de dins
+            </span>
+          </div>
+        </div>
+
+        <div class="comunitat-preview__text">
+          <span class="etiqueta" style="color:rgba(245,240,232,0.5);">L'Ordiguer Comunitat</span>
+          <span class="separador"></span>
+          <h2 id="comunitat-titol" class="text-crema">Un canal editorial<br>sobre el territori.</h2>
+          <p style="margin-top:1.5rem;margin-bottom:2rem;">
+            Mercats, festes, oficis, paisatges i cultura catalana. L'estètica és el producte. Tot en català.
+          </p>
+          <a href="comunitat.html" class="boto boto--clar">Descobreix la Comunitat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="contenidor">
+      <div class="footer__inner">
+        <!-- Columna 1: Identitat -->
+        <div>
+          <div class="footer__logo">L'Ordiguer Estudi</div>
+          <p class="footer__desc">Estudi creatiu per a negocis del territori català. Fotografia, vídeo, xarxes i web.</p>
+        </div>
+
+        <!-- Columna 2: Navegació -->
+        <div class="footer__col">
+          <h4>Pàgines</h4>
+          <ul>
+            <li><a href="serveis.html">Serveis</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="comunitat.html">Comunitat</a></li>
+            <li><a href="mapa.html">Mapa del territori</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Contacte -->
+        <div class="footer__col">
+          <h4>Contacte</h4>
+          <ul>
+            <li><a href="mailto:hola@lordiguer.cat">hola@lordiguer.cat</a></li>
+            <li><a href="https://instagram.com/lordiguer" target="_blank" rel="noopener">@lordiguer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__credits">© 2026 L'Ordiguer Estudi. Tots els drets reservats.</span>
+        <span class="footer__credits">Fet amb cura al territori català.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
