@@ -1,129 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arxiu de Reportatges — L'Ordiguer Estudi</title>
-  <meta name="description" content="Tots els reportatges i vídeos de L'Ordiguer Comunitat. Atmosfera, descobriment i històries del territori català.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>L’Ordiguer Estudi</title>
+<link rel="canonical" href="https://lordiguer.cat/diari/">
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="0; url=/diari/">
 </head>
 <body>
-
-  <!-- ==================== NAVEGACIÓ ==================== -->
-  <nav class="nav" role="navigation" aria-label="Navegació principal">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo">L'Ordiguer Estudi</a>
-      <ul class="nav__links">
-        <li><a href="serveis.html">Serveis</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="comunitat.html">Comunitat</a></li>
-        <li><a href="arxiu.html">Arxiu</a></li>
-        <li><a href="mapa.html">Mapa</a></li>
-        <li><a href="contacte.html" class="nav__cta">Parlem</a></li>
-      </ul>
-      <button class="nav__hamburguesa" aria-label="Obre el menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ==================== CAPÇALERA ==================== -->
-  <header class="capcalera-pagina">
-    <span class="etiqueta" style="color:var(--color-gris-clar);">L'Ordiguer Comunitat</span>
-    <h1>Arxiu</h1>
-    <p>Reportatges, vídeos i mirades sobre el territori català.</p>
-  </header>
-
-  <!-- ==================== FILTRES + GRID ==================== -->
-  <main>
-    <section class="seccio seccio--fosca">
-      <div class="contenidor">
-
-        <!-- Filtre per categoria -->
-        <div style="margin-bottom:var(--espai-sm);">
-          <span class="etiqueta" style="color:var(--color-gris-clar);display:block;margin-bottom:0.75rem;">Categoria</span>
-          <div class="arxiu-filtres" role="toolbar" id="filtres-categoria">
-            <button class="filtre-boto actiu" data-categoria="tot"
-                    style="color:var(--color-crema-fosc);border-color:rgba(255,255,255,0.15);">Tots</button>
-            <button class="filtre-boto" data-categoria="atmosfera"
-                    style="color:var(--color-crema-fosc);border-color:rgba(255,255,255,0.15);">Atmosfera</button>
-            <button class="filtre-boto" data-categoria="descobriment"
-                    style="color:var(--color-crema-fosc);border-color:rgba(255,255,255,0.15);">Descobriment</button>
-            <button class="filtre-boto" data-categoria="histories"
-                    style="color:var(--color-crema-fosc);border-color:rgba(255,255,255,0.15);">Històries</button>
-          </div>
-        </div>
-
-        <!-- Filtre per comarca -->
-        <div style="margin-bottom:var(--espai-lg);">
-          <span class="etiqueta" style="color:var(--color-gris-clar);display:block;margin-bottom:0.75rem;">Comarca</span>
-          <div class="arxiu-filtres" role="toolbar" id="filtres-comarca">
-            <button class="filtre-boto actiu" data-comarca="totes"
-                    style="color:var(--color-crema-fosc);border-color:rgba(255,255,255,0.15);">Totes</button>
-            <!-- Les comarques es generen dinàmicament via JS -->
-          </div>
-        </div>
-
-        <!-- Grid de reportatges (carregat via JS) -->
-        <div class="arxiu-grid" id="arxiu-grid" aria-live="polite">
-          <p style="color:var(--color-gris-clar);font-style:italic;">Carregant reportatges…</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="seccio seccio--negra centrat">
-      <div class="contenidor">
-        <span class="etiqueta" style="color:var(--color-gris-clar);">Segueix la Comunitat</span>
-        <span class="separador separador--centrat"></span>
-        <h2 class="text-crema" style="max-width:22ch;margin:0 auto 1.5rem;">
-          Nou contingut cada setmana.
-        </h2>
-        <a href="https://instagram.com/lordiguer" target="_blank" rel="noopener" class="boto boto--clar">
-          Seguir @lordiguer
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer" role="contentinfo">
-    <div class="contenidor">
-      <div class="footer__inner">
-        <div>
-          <div class="footer__logo">L'Ordiguer Estudi</div>
-          <p class="footer__desc">Estudi creatiu per a negocis del territori català.</p>
-        </div>
-        <div class="footer__col">
-          <h4>Pàgines</h4>
-          <ul>
-            <li><a href="serveis.html">Serveis</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="comunitat.html">Comunitat</a></li>
-            <li><a href="arxiu.html">Arxiu</a></li>
-            <li><a href="mapa.html">Mapa del territori</a></li>
-            <li><a href="contacte.html">Contacte</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Contacte</h4>
-          <ul>
-            <li><a href="mailto:hola@lordiguer.cat">hola@lordiguer.cat</a></li>
-            <li><a href="https://instagram.com/lordiguer" target="_blank" rel="noopener">@lordiguer</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span class="footer__credits">© 2026 L'Ordiguer Estudi.</span>
-        <span class="footer__credits">Fet amb cura al territori català.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<p>Aquesta pàgina s’ha traslladat a <a href="/diari/">https://lordiguer.cat/diari/</a>.</p>
 </body>
 </html>

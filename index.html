@@ -1,259 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L'Ordiguer Estudi — Per a negocis que valen la pena explicar</title>
-  <meta name="description" content="L'Ordiguer Estudi és un estudi creatiu especialitzat en negocis del territori català. Fotografia, vídeo, xarxes socials i web per a turisme rural, restauració, productors locals i espais culturals.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L’Ordiguer Estudi · Fotografia, vídeo i xarxes a Catalunya</title>
+<meta name="description" content="Estudi creatiu i agència de contingut en català. Fotografia, vídeo, xarxes i web per a turisme rural, productors, cooperatives i restaurants de Catalunya.">
+<link rel="canonical" href="https://lordiguer.cat/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="L’Ordiguer Estudi">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:title" content="Per a negocis que valen la pena explicar">
+<meta property="og:description" content="Estudi creatiu i agència de contingut en català. Fotografia, vídeo, xarxes i web per a turisme rural, productors, cooperatives i restaurants de Catalunya.">
+<meta property="og:url" content="https://lordiguer.cat/">
+<meta property="og:image" content="https://lordiguer.cat/assets/og/inici.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F3EE">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=4ae9f24c">
+<script>(function(d){if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('js-anim');setTimeout(function(){d.classList.remove('js-anim')},2500)}})(document.documentElement)</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://lordiguer.cat/#organitzacio",
+   "name": "L’Ordiguer Estudi",
+   "alternateName": "L’Ordiguer",
+   "url": "https://lordiguer.cat/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lordiguer.cat/assets/icons/icon-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "email": "agenciaordiguer@gmail.com",
+   "description": "Estudi creatiu i agència de contingut en català. Fotografia, vídeo, xarxes i web per a turisme rural, productors, cooperatives, restaurants i comerç de proximitat de Catalunya.",
+   "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Catalunya"
+   },
+   "knowsLanguage": [
+    "ca",
+    "es"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/lordiguer/"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://lordiguer.cat/#web",
+   "url": "https://lordiguer.cat/",
+   "name": "L’Ordiguer Estudi",
+   "inLanguage": "ca",
+   "publisher": {
+    "@id": "https://lordiguer.cat/#organitzacio"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://lordiguer.cat/#pagina",
+   "url": "https://lordiguer.cat/",
+   "name": "L’Ordiguer Estudi · Fotografia, vídeo i xarxes a Catalunya",
+   "description": "Estudi creatiu i agència de contingut en català. Fotografia, vídeo, xarxes i web per a turisme rural, productors, cooperatives i restaurants de Catalunya.",
+   "inLanguage": "ca",
+   "isPartOf": {
+    "@id": "https://lordiguer.cat/#web"
+   },
+   "about": {
+    "@id": "https://lordiguer.cat/#organitzacio"
+   }
+  }
+ ]
+}
+</script>
 </head>
-<body>
-
-  <!-- ==================== NAVEGACIÓ ==================== -->
-  <nav class="nav" role="navigation" aria-label="Navegació principal">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo">L'Ordiguer Estudi</a>
-      <ul class="nav__links">
-        <li><a href="serveis.html">Serveis</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="comunitat.html">Comunitat</a></li>
-        <li><a href="mapa.html">Mapa</a></li>
-        <li><a href="contacte.html" class="nav__cta">Parlem</a></li>
-      </ul>
-      <button class="nav__hamburguesa" aria-label="Obre el menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+<body class="page-inici">
+<a class="skip" href="#contingut">Salta al contingut</a>
+<div class="progress" aria-hidden="true"><span id="progres"></span></div>
+<header class="site-header" id="capcalera">
+  <a class="logo" href="/" aria-label="L’Ordiguer Estudi, inici">
+    <span class="logo__name">L’Ordiguer</span>
+    <span class="logo__bar" aria-hidden="true"></span>
+    <span class="logo__sub">Estudi</span>
+  </a>
+  <nav class="nav" aria-label="Principal">
+    <a href="/serveis/">Serveis</a><a href="/portfolio/">Portfolio</a><a href="/comunitat/">Comunitat</a><a href="/diari/">Diari</a>
   </nav>
+  <a class="cta-link" href="/contacte/">Parlem</a>
+  <button class="menu-btn" id="obre-menu" type="button" aria-expanded="false" aria-controls="menu-mobil">
+    Menú
+    <span class="menu-btn__lines" aria-hidden="true"><span></span><span></span></span>
+  </button>
+</header>
+<div class="menu" id="menu-mobil" hidden>
+  <div class="menu__top">
+    <span class="logo">
+      <span class="logo__name">L’Ordiguer</span>
+      <span class="logo__bar" aria-hidden="true"></span>
+      <span class="logo__sub">Estudi</span>
+    </span>
+    <button class="menu__close" id="tanca-menu" type="button">Tanca</button>
+  </div>
+  <nav class="menu__links" aria-label="Menú mòbil">
+    <a href="/">Inici</a>
+    <a href="/serveis/">Serveis</a><a href="/portfolio/">Portfolio</a><a href="/comunitat/">Comunitat</a><a href="/diari/">Diari</a>
+    <a href="/qui-som/">Qui som</a>
+    <a class="is-cta" href="/contacte/">Parlem</a>
+  </nav>
+</div>
+<main id="contingut">
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero hero--fosc">
-    <span class="etiqueta hero__etiqueta">Estudi creatiu · Catalunya</span>
-    <h1 class="hero__titol">L'Ordiguer Estudi</h1>
-    <p class="hero__tagline">Per a negocis que valen la pena explicar.</p>
-    <a href="serveis.html" class="boto boto--clar">Descobreix els serveis</a>
-    <span class="hero__scroll">↓ Continua</span>
-  </section>
+<div class="dateline">
+  <span>Estudi creatiu i agència de contingut</span>
+  <span>Catalunya</span>
+  <span>Fotografia · Vídeo · Xarxes · Web</span>
+</div>
 
-  <!-- ==================== SERVEIS (resum) ==================== -->
-  <section class="seccio" aria-labelledby="serveis-titol">
-    <div class="contenidor">
-      <span class="etiqueta">El que fem</span>
-      <span class="separador"></span>
-      <h2 id="serveis-titol">Quatre maneres d'explicar<br>la teva història.</h2>
+<section class="hero" aria-labelledby="hero-titol">
+  <h1 class="hero__title" id="hero-titol">
+    <span class="w"><span>Per</span></span> <span class="w"><span>a</span></span> <span class="w"><span>negocis</span></span> <span class="w"><span>que</span></span> <span class="w"><span>valen</span></span> <span class="w"><span>la</span></span> <span class="w"><span>pena</span></span> <span class="hero__em-wrap"><span class="w"><span class="hero__em">explicar.</span></span><svg class="hero__underline" viewBox="0 0 300 26" aria-hidden="true"><path d="M4 15 C 70 6, 170 3, 296 9"></path><path d="M46 21 C 120 15, 198 13, 258 16"></path></svg></span>
+  </h1>
+  <div class="hero__side">
+    <p data-intro>Estudi creatiu i agència de contingut. Fotografia, vídeo, xarxes i web per a allotjaments rurals, restaurants, productors i espais culturals de Catalunya.</p>
+    <a class="btn" href="/contacte/" data-intro>Parlem del teu projecte <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  </div>
+</section>
 
-      <div class="serveis-grid">
-        <!-- Bloc 1: Fotografia -->
-        <article class="servei-bloc">
-          <div class="servei-bloc__num">01</div>
-          <h3>Fotografia</h3>
-          <p>Espais, producte, retrat i lifestyle. Imatges que comuniquen sense forçar.</p>
-        </article>
-        <!-- Bloc 2: Vídeo -->
-        <article class="servei-bloc">
-          <div class="servei-bloc__num">02</div>
-          <h3>Vídeo</h3>
-          <p>Reportatge, promocional i peces per a xarxes. Narrar amb moviment i llum.</p>
-        </article>
-        <!-- Bloc 3: Xarxes socials -->
-        <article class="servei-bloc">
-          <div class="servei-bloc__num">03</div>
-          <h3>Xarxes Socials</h3>
-          <p>Gestió editorial estratègica. Contingut que ressona amb qui et busca.</p>
-        </article>
-        <!-- Bloc 4: Web -->
-        <article class="servei-bloc">
-          <div class="servei-bloc__num">04</div>
-          <h3>Desenvolupament Web</h3>
-          <p>Webs netes, ràpides i honestes. La teva presència digital, feta a mida.</p>
-        </article>
+<figure class="hero-media">
+  <div class="hero-media__frame">
+    <div class="hero-media__img"><div class="ph fill" role="img" aria-label="Esmorzar a la casa rural El Permanyer, amb llum de matí"><span class="ph__label">Fotografia o vídeo en bucle a pantalla completa</span></div></div>
+  </div>
+  <a class="badge" href="#serveis" aria-label="Baixa fins als serveis">
+    <svg viewBox="0 0 140 140" aria-hidden="true">
+      <circle class="badge__disc" cx="70" cy="70" r="69"></circle>
+      <defs><path id="cercle-insignia" d="M70,70 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"></path></defs>
+      <g class="badge__ring">
+        <text class="badge__text"><textPath href="#cercle-insignia" textLength="306" lengthAdjust="spacing">FOTOGRAFIA · VÍDEO · XARXES · WEB ·</textPath></text>
+      </g>
+      <path class="badge__arrow" d="M70 55v30M61 76l9 9 9-9"></path>
+    </svg>
+  </a>
+  <figcaption>
+    <span class="caption">Fig. 01 — El Permanyer, casa rural</span>
+    <span class="caption-meta">Fotografia i vídeo</span>
+  </figcaption>
+</figure>
+
+<section class="section" id="serveis" aria-labelledby="serveis-titol">
+  <div class="section-head">
+    <h2 class="eyebrow" id="serveis-titol">Serveis</h2>
+    <p class="section-head__note">Quatre disciplines, una sola mirada.</p>
+  </div>
+  <ul class="svc-list">
+    <li class="svc">
+      <span class="svc__rule" aria-hidden="true"></span>
+      <a class="svc__link" href="/fotografia/">
+        <span class="svc__name">Fotografia</span>
+        <span class="svc__desc">Espais, producte, retrat i lifestyle. Imatges que comuniquen sense forçar.</span>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </li>
+    <li class="svc">
+      <span class="svc__rule" aria-hidden="true"></span>
+      <a class="svc__link" href="/video/">
+        <span class="svc__name">Vídeo</span>
+        <span class="svc__desc">Reportatge, promocional i peces per a xarxes. Narrar amb moviment i llum.</span>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </li>
+    <li class="svc">
+      <span class="svc__rule" aria-hidden="true"></span>
+      <a class="svc__link" href="/xarxes-socials/">
+        <span class="svc__name">Xarxes socials</span>
+        <span class="svc__desc">Gestió editorial estratègica. Contingut que ressona amb qui et busca.</span>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </li>
+    <li class="svc">
+      <span class="svc__rule" aria-hidden="true"></span>
+      <a class="svc__link" href="/disseny-web/">
+        <span class="svc__name">Web</span>
+        <span class="svc__desc">Webs netes, ràpides i honestes. La teva presència digital, feta a mida.</span>
+        <span class="svc__arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="section manifest" aria-labelledby="manifest-titol">
+  <h2 class="eyebrow manifest__label" id="manifest-titol">Com treballem</h2>
+  <p class="manifest__text" data-ink>Les històries més potents no necessiten artificis, sinó una mirada atenta. Per això, abans de crear, <em>observem</em>: busquem el que fa únic cada projecte i l’expliquem tal com és.</p>
+  <ol class="steps">
+    <li data-reveal><span class="steps__n">01</span><h3>Parlar</h3><p>Conèixer la història que hi ha al darrere del projecte.</p></li>
+    <li data-reveal><span class="steps__n">02</span><h3>Escoltar</h3><p>Descobrir què el fa únic i com vol ser mirat.</p></li>
+    <li data-reveal><span class="steps__n">03</span><h3>Entendre</h3><p>Entendre la seva manera de veure les coses. Només llavors comencem a crear.</p></li>
+  </ol>
+</section>
+
+<section class="section" id="portfolio" aria-labelledby="cas-titol">
+  <div class="section-head">
+    <h2 class="eyebrow">Portfolio · Cas destacat</h2>
+    <a class="text-link" href="/portfolio/">Tot el portfolio <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  </div>
+  <div class="case__grid">
+    <div class="case__intro" data-reveal>
+      <p class="case__meta">Casa rural · Fotografia, vídeo i xarxes</p>
+      <h3 class="case__title" id="cas-titol">El Permanyer</h3>
+      <p>Tres moments d’un mateix dia: l’esmorzar, la piscina i el dinar. Una sessió pensada per explicar com es viu la casa, hora a hora.</p>
+      <a class="text-link" href="/portfolio/el-permanyer/">Veure el cas complet <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+    <figure class="frame frame--a" data-speed="-1">
+      <a class="frame__media" href="/portfolio/el-permanyer/" tabindex="-1" aria-hidden="true"><div class="ph fill" role="img" aria-label="Esmorzar amb producte de la zona a El Permanyer"><span class="ph__label">Esmorzar a El Permanyer</span></div></a>
+      <figcaption><span class="caption">Fig. 02 — Esmorzar</span><span class="caption-meta">Matí</span></figcaption>
+    </figure>
+    <figure class="frame frame--b" data-speed="0.6">
+      <a class="frame__media" href="/portfolio/el-permanyer/" tabindex="-1" aria-hidden="true"><div class="ph fill" role="img" aria-label="La piscina d’El Permanyer al migdia"><span class="ph__label">La piscina d’El Permanyer</span></div></a>
+      <figcaption><span class="caption">Fig. 03 — Piscina</span><span class="caption-meta">Migdia</span></figcaption>
+    </figure>
+    <figure class="frame frame--c" data-speed="-0.4">
+      <a class="frame__media" href="/portfolio/el-permanyer/" tabindex="-1" aria-hidden="true"><div class="ph fill" role="img" aria-label="Taula parada per dinar a El Permanyer"><span class="ph__label">Taula parada per dinar</span></div></a>
+      <figcaption><span class="caption">Fig. 04 — Dinar</span><span class="caption-meta">Taula parada</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="clients" aria-labelledby="clients-titol">
+  <div class="clients__head">
+    <h2 class="eyebrow" id="clients-titol">Per a qui</h2>
+    <p class="clients__lead">Treballem amb qui té alguna cosa a dir.</p>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marquee">
+      <div class="marquee__group">
+        <span class="marquee__item">Allotjaments rurals</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Productors locals</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Cooperatives</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Restaurants de km 0</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Comerç de proximitat</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Cellers i obradors</span><span class="marquee__sep"></span>
       </div>
-
-      <div class="centrat" style="margin-top:3rem;">
-        <a href="serveis.html" class="boto boto--transparent">Veure tots els serveis</a>
+      <div class="marquee__group" aria-hidden="true">
+        <span class="marquee__item">Allotjaments rurals</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Productors locals</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Cooperatives</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Restaurants de km 0</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Comerç de proximitat</span><span class="marquee__sep"></span>
+        <span class="marquee__item">Cellers i obradors</span><span class="marquee__sep"></span>
       </div>
     </div>
-  </section>
+  </div>
+  <ul class="link-grid link-grid--n5 " style="--cols: 5"><li><a class="link-card" href="/turisme-rural/"><span class="link-card__title">Turisme rural <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="link-card__text">Cases rurals, masies i petits hotels.</span></a></li><li><a class="link-card" href="/productors/"><span class="link-card__title">Productors i cellers <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="link-card__text">Cellers, formatgeries, obradors i finques.</span></a></li><li><a class="link-card" href="/cooperatives/"><span class="link-card__title">Cooperatives <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="link-card__text">Cooperatives agràries i agrupacions de productors.</span></a></li><li><a class="link-card" href="/restaurants/"><span class="link-card__title">Restaurants <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="link-card__text">Cuina de territori i de km 0.</span></a></li><li><a class="link-card" href="/comerc-proximitat/"><span class="link-card__title">Comerç de proximitat <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span class="link-card__text">Botigues de producte local i obradors.</span></a></li></ul>
+</section>
 
-  <!-- ==================== PER A QUI ==================== -->
-  <section class="seccio seccio--fosca" aria-labelledby="peraqui-titol">
-    <div class="contenidor">
-      <div class="per-a-qui__grid">
-        <div class="per-a-qui__text">
-          <span class="etiqueta" style="color: var(--color-gris-clar);">El nostre client</span>
-          <span class="separador"></span>
-          <h2 id="peraqui-titol">Treballem amb qui té<br>alguna cosa a dir.</h2>
-          <ul class="per-a-qui__llista">
-            <li>Allotjaments rurals i cases de pagès</li>
-            <li>Restaurants de km 0 i cuina de territori</li>
-            <li>Productors locals: vi, oli, formatge, mel</li>
-            <li>Espais culturals i artesans</li>
-            <li>Mercats i fires tradicionals</li>
-            <li>Projectes turístics amb arrels</li>
-          </ul>
-        </div>
-        <div>
-          <!-- Placeholder visual editorial -->
-          <div style="aspect-ratio:4/3; background-color: var(--color-verd); position:relative; overflow:hidden;">
-            <div style="position:absolute;bottom:2rem;left:2rem;right:2rem;">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:rgba(245,240,232,0.7);max-width:none;">
-                "El territori té veu pròpia. Nosaltres l'ajudem a sonar bé."
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+<section class="section community" id="comunitat" aria-labelledby="comunitat-titol">
+  <div class="community__head">
+    <div>
+      <p class="eyebrow">L’Ordiguer Comunitat · Diari</p>
+      <h2 class="h2" id="comunitat-titol">Un canal editorial sobre el territori.</h2>
+      <p class="lead">Mercats, festes, oficis, paisatges i cultura catalana. Tot en català.</p>
     </div>
-  </section>
+    <a class="text-link" href="/diari/">Llegir el Diari <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+  </div>
+  <div class="cards" style="--cols: 3"><article class="card"><a href="/diari/preparar-casa-rural-sessio-fotos/"><div class="card__img"><div class="ph fill" role="img" aria-label="Una habitació de casa rural preparada amb llum de matí"><span class="ph__label">Una habitació de casa rural preparada amb llum de matí</span></div></div><p class="card__cat">Ofici</p><h3 class="card__title"><span>Com preparar una casa rural per a una sessió de fotos</span></h3><p class="card__meta">27 de setembre de 2026 · 2 min de lectura</p></a></article><article class="card"><a href="/diari/que-explicar-producte-local-xarxes/"><div class="card__img"><div class="ph fill" role="img" aria-label="Mans d’un productor amb el producte acabat de collir"><span class="ph__label">Mans d’un productor amb el producte acabat de collir</span></div></div><p class="card__cat">Ofici</p><h3 class="card__title"><span>Què explicar d’un producte local a les xarxes</span></h3><p class="card__meta">27 de setembre de 2026 · 2 min de lectura</p></a></article><article class="card"><a href="/comunitat/"><div class="card__img"><div class="ph fill" role="img" aria-label="Un mercat de pagès a primera hora"><span class="ph__label">Un mercat de pagès a primera hora</span></div></div><p class="card__cat">L’Ordiguer Comunitat</p><h3 class="card__title"><span>Mercats, festes, oficis i paisatges, des de dins</span></h3><p class="card__meta">Segueix-nos a Instagram · @lordiguer</p></a></article></div>
+</section>
 
-  <!-- ==================== PORTFOLIO PREVIEW ==================== -->
-  <section class="seccio" aria-labelledby="portfolio-titol">
-    <div class="contenidor">
-      <span class="etiqueta">Feina feta</span>
-      <span class="separador"></span>
-      <h2 id="portfolio-titol">Alguns projectes.</h2>
-
-      <div class="portfolio-grid">
-        <!-- Item 1 -->
-        <article class="portfolio-item portfolio-item--foto">
-          <div class="portfolio-item__overlay">
-            <h3 class="portfolio-item__titol">Can Bonastre</h3>
-            <span class="portfolio-item__cat">Fotografia · Allotjament Rural</span>
-          </div>
-        </article>
-        <!-- Item 2 -->
-        <article class="portfolio-item portfolio-item--video">
-          <div class="portfolio-item__overlay">
-            <h3 class="portfolio-item__titol">Formatgeria La Bauma</h3>
-            <span class="portfolio-item__cat">Vídeo · Productor Local</span>
-          </div>
-        </article>
-        <!-- Item 3 -->
-        <article class="portfolio-item portfolio-item--web">
-          <div class="portfolio-item__overlay">
-            <h3 class="portfolio-item__titol">Hotel El Cingle</h3>
-            <span class="portfolio-item__cat">Web + Xarxes · Hotel Rural</span>
-          </div>
-        </article>
-        <!-- Item 4 -->
-        <article class="portfolio-item portfolio-item--foto">
-          <div class="portfolio-item__overlay">
-            <h3 class="portfolio-item__titol">Centre d'Art Farrera</h3>
-            <span class="portfolio-item__cat">Fotografia · Espai Cultural</span>
-          </div>
-        </article>
+</main>
+<footer class="site-footer">
+  <div class="footer__grid">
+    <a class="big-cta" href="/contacte/" aria-label="Parlem?"><span aria-hidden="true">P</span><span aria-hidden="true">a</span><span aria-hidden="true">r</span><span aria-hidden="true">l</span><span aria-hidden="true">e</span><span aria-hidden="true">m</span><span class="q" aria-hidden="true">?</span></a>
+    <div class="footer__contact">
+      <p class="footer__lead">Si el teu projecte comparteix aquesta mirada, ens agradarà conèixer-ne la història.</p>
+      <div class="email">
+        <span class="email__addr" data-email>agenciaordiguer@gmail.com</span>
+        <button class="copy" type="button" data-copy>Copia</button>
       </div>
-
-      <div class="centrat" style="margin-top:3rem;">
-        <a href="portfolio.html" class="boto boto--transparent">Veure el portfolio complet</a>
-      </div>
+      <p class="footer__small"><a href="https://www.instagram.com/lordiguer/" rel="noopener">Instagram · @lordiguer</a></p>
     </div>
-  </section>
-
-  <!-- ==================== L'EQUIP ==================== -->
-  <section class="seccio seccio--negra" aria-labelledby="equip-titol">
-    <div class="contenidor">
-      <span class="etiqueta" style="color: var(--color-gris-clar);">L'equip</span>
-      <span class="separador"></span>
-      <h2 id="equip-titol" class="text-crema">Som dues persones<br>i un projecte.</h2>
-
-      <div class="equip-grid" style="margin-top:3rem;">
-        <!-- Oriol -->
-        <div class="membre">
-          <div class="membre__avatar"></div>
-          <div>
-            <h3 class="text-crema">Oriol</h3>
-            <span class="etiqueta" style="color:var(--color-terra-clar);">Contingut digital · Estratègia · Web</span>
-            <p style="color:var(--color-crema-fosc);font-size:0.9rem;margin-top:0.5rem;">
-              Escriu, programa i pensa en estratègia. Creu que una bona web és aquella que el client no ha d'explicar.
-            </p>
-          </div>
-        </div>
-        <!-- Paula -->
-        <div class="membre">
-          <div class="membre__avatar"></div>
-          <div>
-            <h3 class="text-crema">Paula</h3>
-            <span class="etiqueta" style="color:var(--color-terra-clar);">Fotografia Professional</span>
-            <p style="color:var(--color-crema-fosc);font-size:0.9rem;margin-top:0.5rem;">
-              Fotògrafa de llum natural i espais. Capta el que no es veu fins que ella ho mostra. Especialitzada en territori i gastronomia.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== COMUNITAT PREVIEW ==================== -->
-  <section class="seccio seccio--verd" aria-labelledby="comunitat-titol">
-    <div class="contenidor">
-      <div class="comunitat-preview">
-        <!-- Placeholder visual -->
-        <div class="comunitat-preview__visual">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:2rem;">
-            <span style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(245,240,232,0.25);text-align:center;line-height:1.1;">
-              Catalunya<br>des de dins
-            </span>
-          </div>
-        </div>
-
-        <div class="comunitat-preview__text">
-          <span class="etiqueta" style="color:rgba(245,240,232,0.5);">L'Ordiguer Comunitat</span>
-          <span class="separador"></span>
-          <h2 id="comunitat-titol" class="text-crema">Un canal editorial<br>sobre el territori.</h2>
-          <p style="margin-top:1.5rem;margin-bottom:2rem;">
-            Mercats, festes, oficis, paisatges i cultura catalana. L'estètica és el producte. Tot en català.
-          </p>
-          <a href="comunitat.html" class="boto boto--clar">Descobreix la Comunitat</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer" role="contentinfo">
-    <div class="contenidor">
-      <div class="footer__inner">
-        <!-- Columna 1: Identitat -->
-        <div>
-          <div class="footer__logo">L'Ordiguer Estudi</div>
-          <p class="footer__desc">Estudi creatiu per a negocis del territori català. Fotografia, vídeo, xarxes i web.</p>
-        </div>
-
-        <!-- Columna 2: Navegació -->
-        <div class="footer__col">
-          <h4>Pàgines</h4>
-          <ul>
-            <li><a href="serveis.html">Serveis</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="comunitat.html">Comunitat</a></li>
-            <li><a href="mapa.html">Mapa del territori</a></li>
-            <li><a href="contacte.html">Contacte</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 3: Contacte -->
-        <div class="footer__col">
-          <h4>Contacte</h4>
-          <ul>
-            <li><a href="mailto:hola@lordiguer.cat">hola@lordiguer.cat</a></li>
-            <li><a href="https://instagram.com/lordiguer" target="_blank" rel="noopener">@lordiguer</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <span class="footer__credits">© 2026 L'Ordiguer Estudi. Tots els drets reservats.</span>
-        <span class="footer__credits">Fet amb cura al territori català.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  </div>
+  <nav class="footer__cols" aria-label="Peu de pàgina">
+    <div><p class="footer__h">Sectors</p><ul><li><a href="/turisme-rural/">Turisme rural</a></li><li><a href="/productors/">Productors i cellers</a></li><li><a href="/cooperatives/">Cooperatives</a></li><li><a href="/restaurants/">Restaurants</a></li><li><a href="/comerc-proximitat/">Comerç de proximitat</a></li></ul></div>
+    <div><p class="footer__h">Serveis</p><ul><li><a href="/fotografia/">Fotografia</a></li><li><a href="/video/">Vídeo</a></li><li><a href="/xarxes-socials/">Xarxes socials</a></li><li><a href="/disseny-web/">Disseny web</a></li></ul></div>
+    <div><p class="footer__h">L’Ordiguer</p><ul><li><a href="/portfolio/">Portfolio</a></li><li><a href="/comunitat/">Comunitat</a></li><li><a href="/diari/">Diari</a></li><li><a href="/qui-som/">Qui som</a></li><li><a href="/contacte/">Contacte</a></li></ul></div>
+  </nav>
+  <div class="footer__bar">
+    <span>© 2026 L’Ordiguer Estudi</span>
+    <a href="/privacitat/">Avís legal i privacitat</a>
+    <span>Fet amb cura al territori català.</span>
+  </div>
+  <div class="wordmark" aria-hidden="true"><span class="marca-gran">L’Ordiguer</span></div>
+</footer>
+<div class="cursor-view" id="cursor-veure" aria-hidden="true">Veure</div>
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/lenis.min.js" defer></script>
+<script src="/assets/js/site.js?v=b25df65d" defer></script>
 </body>
 </html>

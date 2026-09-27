@@ -1,0 +1,104 @@
+<!--
+{
+  "id": "contacte",
+  "path": "/contacte/",
+  "nav": "contacte",
+  "page_type": "ContactPage",
+  "title": "Contacte · Parlem del teu projecte | L’Ordiguer Estudi",
+  "og_title": "Parlem del teu projecte",
+  "description": "Explica’ns el teu projecte. Fotografia, vídeo, xarxes i web per a negocis del territori català. Escriu-nos a agenciaordiguer@gmail.com.",
+  "crumbs": [["Contacte", null]],
+  "priority": 0.8
+}
+-->
+<section class="page-hero">
+  <div class="page-hero__text">
+    <p class="eyebrow" data-intro>Contacte</p>
+    <h1 class="page-title" data-split>Parlem del teu <em>projecte</em>.</h1>
+  </div>
+  <div class="page-hero__side">
+    <p data-intro>Explica’ns qui ets, quin negoci tens i què necessites. Responem en menys de 48 hores.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Formulari de contacte">
+  <div class="contact">
+    <div class="contact__info">
+      <p>Treballem amb pocs clients a la vegada per poder fer-ho bé. Abans de pressupostar res, ens agrada entendre el projecte i veure si encaixem.</p>
+      <div class="email">
+        <span class="email__addr" data-email>{{email}}</span>
+        <button class="copy" type="button" data-copy>Copia</button>
+      </div>
+      <p><a href="https://www.instagram.com/lordiguer/" rel="noopener">Instagram · @lordiguer</a></p>
+      <p class="pull">Treballem amb qui té alguna cosa a explicar.</p>
+    </div>
+
+    <div class="contact__form">
+      <form class="form" id="formulari-contacte" action="https://formsubmit.co/{{email}}" method="POST" data-endpoint="https://formsubmit.co/ajax/{{email}}" data-email="{{email}}">
+        <input type="hidden" name="_next" value="https://lordiguer.cat/contacte/gracies/">
+        <input type="hidden" name="_subject" value="Nou missatge des de lordiguer.cat">
+        <input type="hidden" name="_template" value="table">
+        <div class="hp" aria-hidden="true">
+          <label for="camp-honey">No omplis aquest camp</label>
+          <input type="text" name="_honey" id="camp-honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="camp-nom">Nom</label>
+            <input id="camp-nom" name="nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="camp-correu">Correu electrònic</label>
+            <input id="camp-correu" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="camp-negoci">Negoci o projecte (opcional)</label>
+            <input id="camp-negoci" name="negoci" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="camp-sector">Sector (opcional)</label>
+            <select id="camp-sector" name="sector">
+              <option value="">Tria’n un</option>
+              <option>Turisme rural</option>
+              <option>Productor o celler</option>
+              <option>Cooperativa o agrupació</option>
+              <option>Restaurant</option>
+              <option>Comerç de proximitat</option>
+              <option>Un altre</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Què necessites?</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="serveis" value="Fotografia" id="servei-fotografia"><span>Fotografia</span></label>
+            <label class="chip"><input type="checkbox" name="serveis" value="Vídeo" id="servei-video"><span>Vídeo</span></label>
+            <label class="chip"><input type="checkbox" name="serveis" value="Xarxes socials" id="servei-xarxes"><span>Xarxes socials</span></label>
+            <label class="chip"><input type="checkbox" name="serveis" value="Web" id="servei-web"><span>Web</span></label>
+            <label class="chip"><input type="checkbox" name="serveis" value="Encara no ho sé" id="servei-no-ho-se"><span>Encara no ho sé</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="camp-missatge">Missatge</label>
+          <textarea id="camp-missatge" name="missatge" required placeholder="Explica’ns el projecte, les dates i el que t’agradaria aconseguir."></textarea>
+        </div>
+
+        <label class="check" for="camp-privacitat">
+          <input type="checkbox" id="camp-privacitat" name="privacitat" value="Acceptada" required>
+          <span>He llegit i accepto la <a href="/privacitat/">política de privacitat</a>.</span>
+        </label>
+
+        <div class="form__foot">
+          <button class="btn" type="submit">Envia el missatge {{arrow}}</button>
+          <p class="form__status" id="estat-formulari" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

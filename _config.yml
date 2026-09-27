@@ -1,0 +1,7 @@
+# GitHub Pages: la web ja es genera amb _build/build.py; aquí només s'exclouen
+# els fitxers de treball perquè no es publiquin.
+exclude:
+  - _build
+  - _antic
+  - CLAUDE.md
+  - README.md
