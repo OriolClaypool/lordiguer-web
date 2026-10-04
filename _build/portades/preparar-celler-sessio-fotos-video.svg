@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs>
+  <filter id="gra" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" seed="7"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 0.28"/></feComponentTransfer>
+  </filter>
+</defs>
+<rect width="1600" height="1000" fill="#E7DFD6"/>
+<circle cx="1180" cy="260" r="120" fill="#F6F3EE"/><rect x="0" y="790" width="1600" height="210" fill="#D6CCC0"/><g transform="translate(-90 0)"><path d="M520 330 C 470 420 470 700 520 790 H860 C 910 700 910 420 860 330Z" fill="#9A4A30"/><path d="M690 330 V790" stroke="#C46A4A" stroke-width="6"/><path d="M600 330 C 585 450 585 670 600 790 M780 330 C 795 450 795 670 780 790" stroke="#C46A4A" stroke-width="6" fill="none"/><path d="M500 410 H880 M490 560 H890 M500 710 H880" stroke="#1C1C1A" stroke-width="22"/><ellipse cx="690" cy="330" rx="172" ry="34" fill="#C9B49B"/></g><path d="M939.6 360 h40.800000000000004 v86.0 C 980.4 497.59999999999997 1020.0 506.2 1020.0 549.1999999999999 V776 a14 14 0 0 1 -14 14 H914.0 a14 14 0 0 1 -14 -14 V549.1999999999999 C 900.0 506.2 939.6 497.59999999999997 939.6 446.0Z" fill="#1C1C1A"/><rect x="936.6" y="360" width="46.800000000000004" height="51.6" rx="5" fill="#C46A4A"/><rect x="910.0" y="609.4" width="100" height="94.6" rx="4" fill="#F6F3EE"/><rect x="928.0" y="639.5" width="64" height="8" fill="#C46A4A"/><circle cx="1150" cy="600" r="25" fill="#56644F"/><circle cx="1192" cy="600" r="25" fill="#56644F"/><circle cx="1234" cy="600" r="25" fill="#56644F"/><circle cx="1171" cy="636" r="25" fill="#56644F"/><circle cx="1213" cy="636" r="25" fill="#56644F"/><circle cx="1129" cy="636" r="25" fill="#56644F"/><circle cx="1255" cy="636" r="25" fill="#56644F"/><circle cx="1150" cy="672" r="25" fill="#56644F"/><circle cx="1192" cy="672" r="25" fill="#56644F"/><circle cx="1234" cy="672" r="25" fill="#56644F"/><circle cx="1171" cy="708" r="25" fill="#56644F"/><circle cx="1213" cy="708" r="25" fill="#56644F"/><circle cx="1192" cy="744" r="25" fill="#56644F"/><path d="M1192 572 C 1187 540 1202 520 1222 508" stroke="#1C1C1A" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M1222 508 c40 -40 110 -30 120 10 c-50 25 -100 25 -120 -10z" fill="#7A8A78"/><rect x="0" y="830" width="1600" height="170" fill="#C9B49B"/>
+<rect width="1600" height="1000" filter="url(#gra)" style="mix-blend-mode:multiply"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs>
+  <filter id="gra" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" seed="7"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 0.28"/></feComponentTransfer>
+  </filter>
+</defs>
+<rect width="1600" height="1000" fill="#D5DACF"/>
+<circle cx="1220" cy="260" r="110" fill="#F6F3EE"/><path d="M0 700 C 340 620 520 660 760 710 S 1180 660 1600 620 V1000 H0Z" fill="#B9C2B4"/><path d="M0 820 C 300 740 600 760 900 820 S 1400 800 1600 760 V1000 H0Z" fill="#7A8A78"/><path d="M0 940 C 350 880 700 900 1000 940 S 1450 920 1600 910 V1000 H0Z" fill="#56644F"/><rect x="500" y="430" width="600" height="380" rx="10" fill="#D6CCC0"/><polygon points="500,440 800,250 1100,440" fill="#D6CCC0"/><g transform="rotate(-8 800 420)"><rect x="560" y="250" width="480" height="300" rx="10" fill="#C46A4A"/><rect x="586" y="276" width="428" height="248" rx="6" fill="none" stroke="#F6F3EE" stroke-width="5" stroke-dasharray="14 10"/><rect x="660" y="250" width="34" height="300" fill="#1C1C1A"/><path d="M677 330 c-70 -70 -130 -20 -100 20 c20 26 70 10 100 -20z M677 330 c50 -80 120 -50 100 -10 c-14 26 -60 30 -100 10z" fill="#1C1C1A"/><rect x="760" y="330" width="200" height="16" rx="8.0" fill="#F6F3EE"/><rect x="760" y="364" width="150" height="16" rx="8.0" fill="#F6F3EE"/><rect x="760" y="430" width="120" height="56" rx="8" fill="#F6F3EE"/></g><path d="M500 470 L800 650 L1100 470 V800 a10 10 0 0 1 -10 10 H510 a10 10 0 0 1 -10 -10Z" fill="#F6F3EE"/><path d="M500 800 L760 620 M1100 800 L840 620" stroke="#D6CCC0" stroke-width="6"/>
+<rect width="1600" height="1000" filter="url(#gra)" style="mix-blend-mode:multiply"/>
+</svg>

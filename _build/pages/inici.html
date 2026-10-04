@@ -49,39 +49,35 @@
     <h2 class="eyebrow" id="serveis-titol">Serveis</h2>
     <p class="section-head__note">Quatre disciplines, una sola mirada.</p>
   </div>
-  <ul class="svc-list">
-    <li class="svc">
-      <span class="svc__rule" aria-hidden="true"></span>
-      <a class="svc__link" href="/fotografia/">
-        <span class="svc__name">Fotografia</span>
-        <span class="svc__desc">Espais, producte, retrat i lifestyle. Imatges que comuniquen sense forçar.</span>
-        <span class="svc__arrow" aria-hidden="true">{{arrow}}</span>
-      </a>
-    </li>
-    <li class="svc">
-      <span class="svc__rule" aria-hidden="true"></span>
-      <a class="svc__link" href="/video/">
-        <span class="svc__name">Vídeo</span>
-        <span class="svc__desc">Reportatge, promocional i peces per a xarxes. Narrar amb moviment i llum.</span>
-        <span class="svc__arrow" aria-hidden="true">{{arrow}}</span>
-      </a>
-    </li>
-    <li class="svc">
-      <span class="svc__rule" aria-hidden="true"></span>
-      <a class="svc__link" href="/xarxes-socials/">
-        <span class="svc__name">Xarxes socials</span>
-        <span class="svc__desc">Gestió editorial estratègica. Contingut que ressona amb qui et busca.</span>
-        <span class="svc__arrow" aria-hidden="true">{{arrow}}</span>
-      </a>
-    </li>
-    <li class="svc">
-      <span class="svc__rule" aria-hidden="true"></span>
-      <a class="svc__link" href="/disseny-web/">
-        <span class="svc__name">Web</span>
-        <span class="svc__desc">Webs netes, ràpides i honestes. La teva presència digital, feta a mida.</span>
-        <span class="svc__arrow" aria-hidden="true">{{arrow}}</span>
-      </a>
-    </li>
+  <ul class="svc-cards">
+    <li><a class="svc-card" href="/fotografia/">
+      <span class="svc-card__icon">{{icon:fotografia}}</span>
+      <span class="svc-card__name">Fotografia</span>
+      <span class="svc-card__desc">Espais, producte, retrat i lifestyle. Imatges que comuniquen sense forçar.</span>
+      <span class="svc-card__list"><span>Espais i interiors</span><span>Producte i gastronomia</span><span>Retrat i equip</span></span>
+      <span class="svc-card__more">Veure el servei {{arrow}}</span>
+    </a></li>
+    <li><a class="svc-card" href="/video/">
+      <span class="svc-card__icon">{{icon:video}}</span>
+      <span class="svc-card__name">Vídeo</span>
+      <span class="svc-card__desc">Reportatge, promocional i peces per a xarxes. Narrar amb moviment i llum.</span>
+      <span class="svc-card__list"><span>Vídeo de marca</span><span>Reportatge</span><span>Peces per a xarxes</span></span>
+      <span class="svc-card__more">Veure el servei {{arrow}}</span>
+    </a></li>
+    <li><a class="svc-card" href="/xarxes-socials/">
+      <span class="svc-card__icon">{{icon:xarxes-socials}}</span>
+      <span class="svc-card__name">Xarxes socials</span>
+      <span class="svc-card__desc">Gestió editorial estratègica. Contingut que ressona amb qui et busca.</span>
+      <span class="svc-card__list"><span>Estratègia</span><span>Contingut propi</span><span>Informe mensual</span></span>
+      <span class="svc-card__more">Veure el servei {{arrow}}</span>
+    </a></li>
+    <li><a class="svc-card" href="/disseny-web/">
+      <span class="svc-card__icon">{{icon:disseny-web}}</span>
+      <span class="svc-card__name">Web</span>
+      <span class="svc-card__desc">Webs netes, ràpides i honestes. La teva presència digital, feta a mida.</span>
+      <span class="svc-card__list"><span>Disseny a mida</span><span>SEO local</span><span>Reserves i botiga</span></span>
+      <span class="svc-card__more">Veure el servei {{arrow}}</span>
+    </a></li>
   </ul>
 </section>
 
@@ -89,9 +85,9 @@
   <h2 class="eyebrow manifest__label" id="manifest-titol">Com treballem</h2>
   <p class="manifest__text" data-ink>Les històries més potents no necessiten artificis, sinó una mirada atenta. Per això, abans de crear, <em>observem</em>: busquem el que fa únic cada projecte i l’expliquem tal com és.</p>
   <ol class="steps">
-    <li data-reveal><span class="steps__n">01</span><h3>Parlar</h3><p>Conèixer la història que hi ha al darrere del projecte.</p></li>
-    <li data-reveal><span class="steps__n">02</span><h3>Escoltar</h3><p>Descobrir què el fa únic i com vol ser mirat.</p></li>
-    <li data-reveal><span class="steps__n">03</span><h3>Entendre</h3><p>Entendre la seva manera de veure les coses. Només llavors comencem a crear.</p></li>
+    <li data-reveal><span class="steps__top"><span class="steps__icon">{{icon:parlar}}</span><span class="steps__n">01</span></span><h3>Parlar</h3><p>Conèixer la història que hi ha al darrere del projecte.</p></li>
+    <li data-reveal><span class="steps__top"><span class="steps__icon">{{icon:escoltar}}</span><span class="steps__n">02</span></span><h3>Escoltar</h3><p>Descobrir què el fa únic i com vol ser mirat.</p></li>
+    <li data-reveal><span class="steps__top"><span class="steps__icon">{{icon:entendre}}</span><span class="steps__n">03</span></span><h3>Entendre</h3><p>Entendre la seva manera de veure les coses. Només llavors comencem a crear.</p></li>
   </ol>
 </section>
 

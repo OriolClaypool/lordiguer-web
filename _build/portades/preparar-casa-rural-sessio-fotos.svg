@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs>
+  <filter id="gra" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" seed="7"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 0.28"/></feComponentTransfer>
+  </filter>
+</defs>
+<rect width="1600" height="1000" fill="#E7DFD6"/>
+<circle cx="1210" cy="250" r="112" fill="#C46A4A"/><path d="M0 620 C 260 540 520 580 760 630 S 1260 580 1600 540 V1000 H0Z" fill="#D6CCC0"/><path d="M0 740 C 300 660 600 680 900 740 S 1400 720 1600 680 V1000 H0Z" fill="#B9C2B4"/><path d="M0 860 C 350 800 700 820 1000 860 S 1450 840 1600 830 V1000 H0Z" fill="#7A8A78"/><path d="M455 480 C 500.88 590.2 495.7 735.2 455 770 C 414.3 735.2 409.12 590.2 455 480Z" fill="#56644F"/><path d="M1150 520 C 1190.92 615.0 1186.3 740.0 1150 770 C 1113.7 740.0 1109.08 615.0 1150 520Z" fill="#56644F"/><rect x="948" y="300" width="46" height="110" fill="#EFE9E1"/><rect x="560" y="430" width="480" height="340" fill="#F6F3EE"/><polygon points="520,452 800,318 1080,452 1080,474 800,342 520,474" fill="#C46A4A"/><polygon points="560,452 800,338 1040,452" fill="#F6F3EE"/><circle cx="800" cy="410" r="20" fill="#1C1C1A"/><rect x="612" y="500" width="60" height="78" fill="#1C1C1A"/><rect x="592" y="500" width="16" height="78" fill="#7A8A78"/><rect x="676" y="500" width="16" height="78" fill="#7A8A78"/><rect x="612" y="625" width="60" height="78" fill="#1C1C1A"/><rect x="592" y="625" width="16" height="78" fill="#7A8A78"/><rect x="676" y="625" width="16" height="78" fill="#7A8A78"/><rect x="928" y="500" width="60" height="78" fill="#1C1C1A"/><rect x="908" y="500" width="16" height="78" fill="#7A8A78"/><rect x="992" y="500" width="16" height="78" fill="#7A8A78"/><rect x="928" y="625" width="60" height="78" fill="#1C1C1A"/><rect x="908" y="625" width="16" height="78" fill="#7A8A78"/><rect x="992" y="625" width="16" height="78" fill="#7A8A78"/><path d="M742 770 V668 A58 58 0 0 1 858 668 V770Z" fill="#1C1C1A"/><path d="M760 770 V672 A40 40 0 0 1 840 672 V770Z" fill="#9A4A30"/><rect x="0" y="770" width="1600" height="230" fill="#7A8A78"/><path d="M0 840 C 400 800 1000 820 1600 790 V1000 H0Z" fill="#56644F"/>
+<rect width="1600" height="1000" filter="url(#gra)" style="mix-blend-mode:multiply"/>
+</svg>

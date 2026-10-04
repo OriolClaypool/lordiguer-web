@@ -74,6 +74,62 @@ REDIRECTS = {
 ARROW = ('<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
          'stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>')
 
+# Icones de línia pròpies (48 × 48). La classe "acc" és l'accent terracota.
+ICONS = {
+    "fotografia": '<path d="M7 17.5h7.5l3-5.5h13l3 5.5H41a2 2 0 0 1 2 2V37a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V19.5a2 2 0 0 1 2-2z"/><circle cx="24" cy="28" r="7.5"/><circle class="acc" cx="24" cy="28" r="3.5"/><circle class="dot" cx="37" cy="22.5" r="1.3"/>',
+    "video": '<rect x="5" y="14" width="29" height="21" rx="2.5"/><path d="M34 21.5l9-5.5v17l-9-5.5z"/><circle class="acc" cx="11" cy="20" r="2.2"/><path d="M11 29.5h17"/>',
+    "xarxes-socials": '<rect x="13" y="4.5" width="22" height="39" rx="4"/><path d="M21.5 8.5h5"/><rect class="acc" x="17" y="14" width="6.5" height="6.5"/><rect x="24.5" y="14" width="6.5" height="6.5"/><rect x="17" y="21.5" width="6.5" height="6.5"/><rect x="24.5" y="21.5" width="6.5" height="6.5"/><path d="M17 33h14"/><circle class="dot" cx="24" cy="38.5" r="1.3"/>',
+    "disseny-web": '<rect x="4.5" y="9" width="39" height="30" rx="3"/><path d="M4.5 16h39"/><circle class="dot" cx="9" cy="12.5" r="1"/><circle class="dot" cx="12.5" cy="12.5" r="1"/><circle class="dot" cx="16" cy="12.5" r="1"/><rect class="acc" x="9.5" y="20.5" width="14" height="10"/><path d="M28 21.5h10.5M28 25.5h10.5M28 29.5h7M9.5 34.5h29"/>',
+    "turisme-rural": '<path d="M5 22.5L24 8l19 14.5"/><path d="M9.5 19.5V40h29V19.5"/><path d="M31.5 13.7V8.5h4.5v8.6"/><path class="acc" d="M20 40v-7.5a4 4 0 0 1 8 0V40z"/><rect x="13.5" y="24" width="5" height="5"/><rect x="29.5" y="24" width="5" height="5"/>',
+    "productors": '<path d="M15.5 5.5h4v7.5c2.8 1.6 4 4 4 7v20.5a1.5 1.5 0 0 1-1.5 1.5h-9a1.5 1.5 0 0 1-1.5-1.5V20c0-3 1.2-5.4 4-7z"/><rect class="acc" x="11.5" y="25" width="12" height="8"/><rect x="27" y="22" width="15" height="20" rx="2.5"/><rect x="28" y="17.5" width="13" height="4.5" rx="1"/><path d="M30.5 30h8"/>',
+    "cooperatives": '<circle cx="13" cy="17" r="4"/><circle cx="35" cy="17" r="4"/><circle class="acc" cx="24" cy="14.5" r="4.8"/><path d="M5 36v-2.5A7.5 7.5 0 0 1 12.5 26H14a7.5 7.5 0 0 1 4.6 1.6"/><path d="M43 36v-2.5A7.5 7.5 0 0 0 35.5 26H34a7.5 7.5 0 0 0-4.6 1.6"/><path d="M14.5 40v-3.5a9.5 9.5 0 0 1 19 0V40"/>',
+    "restaurants": '<circle cx="24" cy="25" r="11.5"/><circle class="acc" cx="24" cy="25" r="5.5"/><path d="M6 9v8.5a3 3 0 0 0 3 3V41M9 9v8M12 9v8.5a3 3 0 0 1-3 3"/><path d="M42 9c-3 2.5-4.5 7-4.5 12H42v20"/>',
+    "comerc-proximitat": '<path d="M6.5 18.5L10 10h28l3.5 8.5z"/><path d="M16.5 10l-1.2 8.5M24 10v8.5M31.5 10l1.2 8.5"/><path d="M6.5 18.5a4.375 4.375 0 0 0 8.75 0a4.375 4.375 0 0 0 8.75 0a4.375 4.375 0 0 0 8.75 0a4.375 4.375 0 0 0 8.75 0"/><path d="M9 23v17h30V23"/><rect class="acc" x="13" y="27" width="10" height="7.5"/><path d="M28 40V28h7v12"/>',
+    "parlar": '<path d="M8 9h32a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H21l-8 7v-7H8a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3z"/><circle class="acc" cx="16" cy="20.5" r="2"/><circle class="acc" cx="24" cy="20.5" r="2"/><circle class="acc" cx="32" cy="20.5" r="2"/>',
+    "escoltar": '<circle class="acc" cx="11" cy="24" r="3.2"/><path d="M18.5 16.5a10.5 10.5 0 0 1 0 15"/><path d="M25 11a18 18 0 0 1 0 26"/><path d="M31.5 5.5a25.5 25.5 0 0 1 0 37"/>',
+    "entendre": '<path d="M4 24c5-8.5 12-13 20-13s15 4.5 20 13c-5 8.5-12 13-20 13S9 32.5 4 24z"/><circle cx="24" cy="24" r="7"/><circle class="acc" cx="24" cy="24" r="3"/>',
+    "pin": '<path d="M24 43s-13-12.6-13-23a13 13 0 0 1 26 0c0 10.4-13 23-13 23z"/><circle class="acc" cx="24" cy="20" r="5"/>',
+    "temps": '<path d="M14 6h20M14 42h20"/><path d="M16 6c0 10 8 12 8 18s-8 8-8 18M32 6c0 10-8 12-8 18s8 8 8 18"/><path class="acc" d="M19 39c1.5-4 4-6 5-6s3.5 2 5 6z"/><circle class="dot" cx="24" cy="27" r="1"/>',
+    "calendari": '<rect x="6" y="9" width="36" height="32" rx="3"/><path d="M6 17h36M15 5v8M33 5v8"/><rect class="acc" x="27" y="27" width="8" height="7"/><path d="M13 24h4M22 24h4M31 24h4M13 31h4M22 31h4"/>',
+}
+ICON_FOR_HREF = {
+    "/fotografia/": "fotografia", "/video/": "video", "/xarxes-socials/": "xarxes-socials",
+    "/disseny-web/": "disseny-web", "/turisme-rural/": "turisme-rural", "/productors/": "productors",
+    "/cooperatives/": "cooperatives", "/restaurants/": "restaurants", "/comerc-proximitat/": "comerc-proximitat",
+}
+
+
+def icon(name, extra=""):
+    return (f'<svg class="icon{extra}" viewBox="0 0 48 48" aria-hidden="true" focusable="false">'
+            f'{ICONS[name]}</svg>')
+
+
+def icon_for(href):
+    """Icona d’un enllaç de servei o sector (també els de les pàgines locals)."""
+    for key, name in ICON_FOR_HREF.items():
+        if href == key or (href.startswith("/on-treballem/") and href.endswith(key)):
+            return name
+    return None
+
+
+def add_icons(body):
+    """Posa la icona que toca a les files de serveis i a les targetes de sector."""
+    def svc(m):
+        name = icon_for(m.group(2))
+        if not name:
+            return m.group(0)
+        return f'{m.group(1)}<span class="svc__name"><span class="svc__icon">{icon(name)}</span>'
+    body = re.sub(r'(<a class="svc__link" href="([^"]+)">)\s*<span class="svc__name">', svc, body)
+
+    def card(m):
+        name = icon_for(m.group(2))
+        if not name:
+            return m.group(0)
+        return (f'<a class="link-card link-card--icon" href="{m.group(2)}">'
+                f'<span class="link-card__icon">{icon(name)}</span>')
+    body = re.sub(r'(<a class="link-card" href="([^"]+)">)', card, body)
+    return re.sub(r"\{\{icon:([a-z-]+)\}\}", lambda m: icon(m.group(1)), body)
+
 TODAY = datetime.date.today()
 SLOTS = {}  # slot -> {ratio, label, pages, status}
 
@@ -179,7 +235,8 @@ def render_slot(attrs, page_path):
         return (f'<img class="fill" src="{img}" alt="{esc(alt)}" width="{width}" height="{height}" '
                 f'{loading} decoding="async">')
     info.setdefault("status", "pendent")
-    return (f'<div class="ph fill" role="img" aria-label="{esc(alt)}">'
+    variant = int(hashlib.md5(slot.encode()).hexdigest(), 16) % 4
+    return (f'<div class="ph ph--v{variant} fill" role="img" aria-label="{esc(alt)}">'
             f'<span class="ph__label">{esc(label)}</span></div>')
 
 
@@ -219,40 +276,105 @@ def reading_minutes(body):
     return max(1, round(words / 200))
 
 
+TOPICS = {
+    "turisme-rural": "Turisme rural",
+    "restaurants": "Restaurants",
+    "productors": "Productors",
+    "comerc": "Comerç",
+    "fotografia": "Fotografia",
+    "xarxes": "Xarxes",
+    "web": "Web",
+    "nadal": "Nadal",
+}
+
+
+def cover_url(a):
+    """Portada il·lustrada de l’article, si n’hi ha (assets/covers/<id>.jpg)."""
+    p = ROOT / "assets" / "covers" / f"{a['id']}.jpg"
+    return f"/assets/covers/{a['id']}.jpg" if p.exists() else None
+
+
+def cover_html(a, eager=False, cls="fill"):
+    url = cover_url(a)
+    if url:
+        loading = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+        return (f'<img class="{cls}" src="{url}" alt="" width="1600" height="1000" {loading} decoding="async">')
+    extra = " eager" if eager else ""
+    return (f'<x-img slot="{a["image"]}" ratio="16/10" alt="{esc(a["image_alt"])}" '
+            f'label="{esc(a["image_alt"])}"{extra}></x-img>')
+
+
+def topics_html(a):
+    names = [TOPICS[t] for t in a.get("tags", []) if t in TOPICS]
+    if not names:
+        return ""
+    return '<p class="topics">' + "".join(f"<span>{esc(n)}</span>" for n in names) + "</p>"
+
+
+def post_meta(a):
+    return (f'<p class="post-meta"><span class="post-meta__cat">{esc(a["category"])}</span>'
+            f'<span>{a["minutes"]} min de lectura</span></p>')
+
+
+def post_card(a, heading="h3"):
+    tags = " ".join(a.get("tags", []))
+    return (f'<article class="post-card" data-tags="{tags}"><a class="post-card__link" href="{a["path"]}">'
+            f'<div class="post-card__cover">{cover_html(a)}</div>'
+            f'<div class="post-card__body">{post_meta(a)}'
+            f'<{heading} class="post-card__title">{esc(a["title"])}</{heading}>'
+            f'<p class="post-card__excerpt">{esc(a["description"])}</p>'
+            f'{topics_html(a)}</div></a></article>')
+
+
+def post_grid(articles, cols=3):
+    return (f'<div class="post-grid post-grid--{cols}">' + "".join(post_card(a) for a in articles) + "</div>")
+
+
+def featured_article(articles):
+    return next((a for a in articles if a.get("featured")), articles[0])
+
+
+def diari_index(articles):
+    top = featured_article(articles)
+    rest = [a for a in articles if a is not top]
+    counts = {k: sum(1 for a in rest if k in a.get("tags", [])) for k in TOPICS}
+    chips = ['<button class="filter" type="button" data-filter="*" aria-pressed="true">Tot '
+             f'<span class="filter__n">{len(rest)}</span></button>']
+    for key, label in TOPICS.items():
+        if counts[key]:
+            chips.append(f'<button class="filter" type="button" data-filter="{key}" aria-pressed="false">'
+                         f'{esc(label)} <span class="filter__n">{counts[key]}</span></button>')
+    feature = (f'<article class="post-feature">'
+               f'<a class="post-feature__cover" href="{top["path"]}" tabindex="-1" aria-hidden="true">{cover_html(top, eager=True)}</a>'
+               f'<div class="post-feature__body">{post_meta(top)}'
+               f'<h2 class="post-feature__title"><a href="{top["path"]}">{esc(top["title"])}</a></h2>'
+               f'<p class="post-feature__excerpt">{esc(top["description"])}</p>{topics_html(top)}'
+               f'<a class="text-link" href="{top["path"]}">Llegir la guia {ARROW}</a></div></article>')
+    return f"""{feature}
+<div class="filters-bar">
+  <h2 class="eyebrow" id="tots-els-articles">Tots els articles</h2>
+  <div class="filters" role="group" aria-label="Filtra els articles per tema">{''.join(chips)}</div>
+</div>
+{post_grid(rest)}
+<p class="filters__empty" hidden>No hi ha cap article d’aquest tema.</p>"""
+
+
 def article_cards(articles, limit, with_community):
-    cards = []
-    for a in articles[:limit]:
-        cards.append(
-            f'<article class="card"><a href="{a["path"]}">'
-            f'<div class="card__img"><x-img slot="{a["image"]}" ratio="4/5" alt="{esc(a["image_alt"])}" '
-            f'label="{esc(a["image_alt"])}"></x-img></div>'
-            f'<p class="card__cat">{esc(a["category"])}</p>'
-            f'<h3 class="card__title"><span>{esc(a["title"])}</span></h3>'
-            f'<p class="card__meta">{format_date(a["date"])} · {a["minutes"]} min de lectura</p>'
-            f'</a></article>')
+    cards = [post_card(a) for a in articles[:limit]]
     if with_community:
         cards.append(
-            '<article class="card"><a href="/comunitat/">'
-            '<div class="card__img"><x-img slot="comunitat-portada" ratio="4/5" '
+            '<article class="post-card"><a class="post-card__link" href="/comunitat/">'
+            '<div class="post-card__cover"><x-img slot="comunitat-portada" ratio="16/10" '
             'alt="Un mercat de pagès a primera hora" label="Un mercat de pagès a primera hora"></x-img></div>'
-            '<p class="card__cat">L’Ordiguer Comunitat</p>'
-            '<h3 class="card__title"><span>Mercats, festes, oficis i paisatges, des de dins</span></h3>'
-            f'<p class="card__meta">Segueix-nos a Instagram · {SITE["instagram_handle"]}</p>'
-            '</a></article>')
-    return f'<div class="cards" style="--cols: {len(cards)}">' + "".join(cards) + "</div>"
+            '<div class="post-card__body"><p class="post-meta"><span class="post-meta__cat">L’Ordiguer Comunitat</span></p>'
+            '<h3 class="post-card__title">Mercats, festes, oficis i paisatges, des de dins</h3>'
+            f'<p class="post-card__excerpt">El nostre canal editorial sobre el territori. Segueix-nos a Instagram, {SITE["instagram_handle"]}.</p>'
+            '</div></a></article>')
+    return f'<div class="post-grid post-grid--{len(cards)}">' + "".join(cards) + "</div>"
 
 
 def article_rows(articles):
-    rows = []
-    for a in articles:
-        rows.append(
-            f'<li><a class="post-row" href="{a["path"]}">'
-            f'<span class="post-row__date">{format_date(a["date"])}</span>'
-            f'<span class="post-row__main"><span class="post-row__title">{esc(a["title"])}</span>'
-            f'<span class="post-row__excerpt">{esc(a["description"])}</span></span>'
-            f'<span class="post-row__cat">{esc(a["category"])} · {a["minutes"]} min</span>'
-            f'<span class="post-row__arrow" aria-hidden="true">{ARROW}</span></a></li>')
-    return '<ol class="post-list">' + "".join(rows) + "</ol>"
+    return post_grid(articles)
 
 
 def expand_parts(body, ctx):
@@ -265,6 +387,8 @@ def expand_parts(body, ctx):
             return link_cards(SERVICES, ctx.get("path"))
         if name == "diari-cards":
             return article_cards(ctx["articles"], int(attrs.get("limit", 2)), "community" in attrs)
+        if name == "diari-index":
+            return diari_index(ctx["articles"])
         if name == "diari-list":
             arts = ctx["articles"]
             if attrs.get("tag"):
@@ -457,7 +581,7 @@ def structured_data(meta, url, body):
             "mainEntityOfPage": {"@id": url + "#pagina"},
             "author": {"@id": org_id},
             "publisher": {"@id": org_id},
-            "image": SITE["base"] + og_image(meta),
+            "image": SITE["base"] + (cover_url(meta) or og_image(meta)),
         })
 
     faqs = faq_entities(body)
@@ -541,29 +665,64 @@ def layout(meta, body):
 """
 
 
-def article_body(meta, body, articles):
+def slugify(text):
+    text = unicodedata.normalize("NFD", plain(text).lower())
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
+def add_heading_ids(body):
+    """Dona un id a cada h2 de l’article i en retorna la llista per a l’índex."""
+    toc = []
+
+    def h2(m):
+        attrs, text = m.group(1), m.group(2)
+        if "id=" in attrs:
+            return m.group(0)
+        slug = slugify(text)
+        toc.append((slug, plain(text)))
+        return f'<h2{attrs} id="{slug}">{text}</h2>'
+    body = re.sub(r"<h2([^>]*)>(.*?)</h2>", h2, body)
+    return body, toc
+
+
+def related(meta, articles, n=3):
+    mine = set(meta.get("tags", []))
     others = [a for a in articles if a["path"] != meta["path"]]
+    others.sort(key=lambda a: -len(mine & set(a.get("tags", []))))
+    return others[:n]
+
+
+def article_body(meta, body, articles):
+    body, toc = add_heading_ids(body)
     more = ""
-    if others:
+    rel = related(meta, articles)
+    if rel:
         more = f"""<section class="section" aria-labelledby="mes-diari">
   <div class="section-head">
-    <h2 class="eyebrow" id="mes-diari">Més al Diari</h2>
+    <h2 class="eyebrow" id="mes-diari">Per seguir llegint</h2>
     <a class="text-link" href="/diari/">Tot el Diari {ARROW}</a>
   </div>
-  {article_rows(others[:3])}
+  {post_grid(rel)}
 </section>"""
+    toc_html = ""
+    if len(toc) > 2:
+        items = "".join(f'<li><a href="#{slug}">{esc(text)}</a></li>' for slug, text in toc)
+        toc_html = (f'<nav class="toc" aria-label="En aquest article"><p class="toc__h">En aquest article</p>'
+                    f'<ol>{items}</ol></nav>')
     return f"""<article class="article">
   <header class="article-head">
-    <p class="article-meta" data-intro><span>{esc(meta['category'])}</span><span>{format_date(meta['date'])}</span><span>{meta['minutes']} min de lectura</span></p>
+    {post_meta(meta).replace('<p class="post-meta">', '<p class="post-meta" data-intro>')}
     <h1 class="article-title" data-split>{meta['title']}</h1>
     <p class="article-lead" data-intro>{meta['description']}</p>
+    {topics_html(meta)}
   </header>
-  <figure class="hero-media article-media">
-    <div class="hero-media__frame">
-      <div class="hero-media__img"><x-img slot="{meta['image']}" ratio="16/9" alt="{esc(meta['image_alt'])}" label="{esc(meta['image_alt'])}" eager></x-img></div>
-    </div>
-  </figure>
+  <figure class="article-cover">{cover_html(meta, eager=True)}</figure>
   <div class="article-body">
+    <aside class="article-aside">
+      <p class="article-date">Publicat el {format_date(meta['date'])}</p>
+      {toc_html}
+    </aside>
     <div class="prose">
 {body}
     </div>
@@ -978,7 +1137,7 @@ def build():
 
     for meta, body in pages:
         ctx = {"path": meta["path"], "articles": article_index}
-        html_body = expand_parts(body, ctx)
+        html_body = add_icons(expand_parts(body, ctx))
         html_body = expand_slots(html_body, meta["path"])
         doc = layout(meta, html_body)
         target = out_path(meta["path"])
@@ -992,8 +1151,8 @@ def build():
         meta.setdefault("nav", "diari")
         meta.setdefault("crumbs", [["Diari", "/diari/"], [meta["title"], None]])
         ctx = {"path": meta["path"], "articles": article_index}
-        inner = expand_parts(body, ctx)
-        html_body = article_body(meta, inner, article_index)
+        inner = add_icons(expand_parts(body, ctx))
+        html_body = add_icons(article_body(meta, inner, article_index))
         html_body = expand_slots(html_body, meta["path"])
         doc = layout(meta, html_body)
         target = out_path(meta["path"])

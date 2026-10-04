@@ -12,6 +12,10 @@ La web es genera amb `python3 _build/build.py` (només Python, sense dependènci
 - Blocs compartits (per exemple, «Com treballem»): `_build/parts/`.
 - Pàgines «On treballem» (una per comarca): dades a `_build/comarques.json`. Les pàgines per servei de les comarques base (Berguedà, Osona, Vallès Occidental i Barcelonès): textos a `_build/serveis-locals.json`. L’estructura de totes dues és a `build.py` (funcions `comarca_page`, `local_service_page` i `hub_page`).
 - Capçalera, peu, menú i dades de contacte: `_build/build.py` (constants `SITE`, `NAV`, `SECTORS`, `SERVICES`).
+- Icones: dibuixades a mà a `build.py` (constant `ICONS`). Les dels serveis i sectors es posen soles; en qualsevol pàgina es poden inserir amb `{{icon:nom}}`.
+- Diari: cada article porta `tags` (temes del filtre, vegeu `TOPICS` a `build.py`) i, si cal, `"featured": true` per sortir destacat a dalt.
+- Portades del Diari: il·lustracions generades amb `_build/portades.py` (cal Playwright). La imatge final és `assets/covers/<article>.jpg`; si no n’hi ha, l’article fa servir la foto del bloc `image`.
+- Infografies dins dels articles i de les pàgines de servei: components `.fig` d’`assets/css/site.css` (comparació, formats, mesos, calendari, camí en passos, dia i sol, temes, esquema amb números, una jornada i diverses peces). Copia’n un d’un article i canvia’n els textos.
 - Estils: `assets/css/site.css`. Animacions i formulari: `assets/js/site.js`.
 
 ## Fotos i vídeos

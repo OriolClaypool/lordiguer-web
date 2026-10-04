@@ -355,6 +355,57 @@
     show(0, false);
   }
 
+  /* ---------- Diari: filter articles by topic ---------- */
+  var filterBtns = $$('.filter');
+  if (filterBtns.length) {
+    var postCards = $$('.diari .post-grid .post-card');
+    var emptyMsg = $('.filters__empty');
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var key = btn.getAttribute('data-filter');
+        filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        var shown = [];
+        postCards.forEach(function (card) {
+          var tags = (card.getAttribute('data-tags') || '').split(' ');
+          var on = key === '*' || tags.indexOf(key) > -1;
+          card.classList.toggle('is-hidden', !on);
+          if (on) shown.push(card);
+        });
+        if (emptyMsg) emptyMsg.hidden = shown.length > 0;
+        if (window.gsap && !reduce) {
+          gsap.fromTo(shown, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: 'power2.out', stagger: 0.05, clearProps: 'transform,opacity' });
+        }
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      });
+    });
+  }
+
+  /* ---------- Article index: highlight the section being read ---------- */
+  var toc = $('.toc');
+  if (toc) {
+    var tocLinks = $$('a', toc);
+    tocLinks.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.getElementById(a.getAttribute('href').slice(1));
+        if (!target) return;
+        tocLinks.forEach(function (x) { x.classList.toggle('is-active', x === a); });
+        if (window.__lenis) { e.preventDefault(); window.__lenis.scrollTo(target, { offset: -120 }); history.replaceState(null, '', a.getAttribute('href')); }
+      });
+    });
+    if ('IntersectionObserver' in window) {
+      var byId = {};
+      tocLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          tocLinks.forEach(function (a) { a.classList.remove('is-active'); });
+          if (byId[en.target.id]) byId[en.target.id].classList.add('is-active');
+        });
+      }, { rootMargin: '-10% 0px -75% 0px' });
+      $$('.prose h2[id]').forEach(function (h) { io.observe(h); });
+    }
+  }
+
   /* ================= Motion ================= */
   if (reduce || !window.gsap || !window.ScrollTrigger) { reveal(); return; }
   gsap.registerPlugin(ScrollTrigger);
@@ -508,7 +559,7 @@
   $$('[data-reveal]').forEach(function (el) {
     gsap.from(el, { y: 44, opacity: 0.3, duration: 1.2, ease: 'expo.out', clearProps: 'transform,opacity', scrollTrigger: { trigger: el, start: 'top 90%' } });
   });
-  ScrollTrigger.batch('.link-card, .faq__item, .post-row, .value, .facts > div', {
+  ScrollTrigger.batch('.link-card, .faq__item, .value, .facts > div', {
     start: 'top 92%',
     once: true,
     onEnter: function (batch) { gsap.from(batch, { y: 30, opacity: 0.3, duration: 1, ease: 'expo.out', stagger: 0.08, clearProps: 'transform,opacity' }); }
@@ -525,6 +576,20 @@
 
   $$('.timeline').forEach(function (line) {
     gsap.from($$('li', line), { clipPath: 'inset(0 100% 0 0)', duration: 1.1, ease: 'power3.inOut', stagger: 0.18, clearProps: 'clipPath', scrollTrigger: { trigger: line, start: 'top 85%' } });
+  });
+
+  /* Line icons draw themselves once, then the terracotta accent appears */
+  $$('.svc-card__icon .icon, .steps__icon .icon').forEach(function (svg) {
+    var lines = $$('path, circle, rect', svg).filter(function (el) { return !el.classList.contains('acc') && !el.classList.contains('dot'); });
+    var marks = $$('.acc, .dot', svg);
+    lines.forEach(function (el) {
+      var len = el.getTotalLength ? Math.ceil(el.getTotalLength()) + 1 : 0;
+      el.style.strokeDasharray = len;
+      el.style.strokeDashoffset = len;
+    });
+    gsap.timeline({ scrollTrigger: { trigger: svg, start: 'top 92%' } })
+      .to(lines, { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut', stagger: 0.07 })
+      .from(marks, { scale: 0, transformOrigin: '50% 50%', duration: 0.55, ease: 'back.out(2.2)', stagger: 0.05 }, '-=0.45');
   });
 
   /* 5 — Photographs uncover and drift at their own pace */
@@ -583,7 +648,7 @@
   }
 
   /* 7 — Cards stagger in */
-  ScrollTrigger.batch('.card', {
+  ScrollTrigger.batch('.post-card, .post-feature', {
     start: 'top 90%',
     once: true,
     onEnter: function (batch) { gsap.from(batch, { y: 60, opacity: 0.3, duration: 1.3, ease: 'expo.out', stagger: 0.12, clearProps: 'transform,opacity' }); }
