@@ -55,6 +55,11 @@ SERVICES = [
     ("Disseny web", "/disseny-web/", "Webs a mida, ràpides i ben posicionades."),
 ]
 
+# Pàgines de temporada que surten al peu, a la columna de serveis. Treu-les quan acabi la campanya.
+SEASONAL = [
+    ("Campanya de Nadal", "/campanya-de-nadal/", ""),
+]
+
 # Adreces de la web anterior que ara redirigeixen a la pàgina nova.
 REDIRECTS = {
     "serveis.html": "/serveis/",
@@ -261,7 +266,10 @@ def expand_parts(body, ctx):
         if name == "diari-cards":
             return article_cards(ctx["articles"], int(attrs.get("limit", 2)), "community" in attrs)
         if name == "diari-list":
-            return article_rows(ctx["articles"])
+            arts = ctx["articles"]
+            if attrs.get("tag"):
+                arts = [a for a in arts if attrs["tag"] in a.get("tags", [])]
+            return article_rows(arts)
         if name == "email":
             return SITE["email"]
         if name == "comarca-options":
@@ -340,7 +348,7 @@ def footer_html():
   </div>
   <nav class="footer__cols" aria-label="Peu de pàgina">
     {col('Sectors', SECTORS)}
-    {col('Serveis', SERVICES)}
+    {col('Serveis', SERVICES + SEASONAL)}
     {col('L’Ordiguer', studio)}
   </nav>
   <div class="footer__bar">

@@ -251,6 +251,11 @@
       };
       if (params.get('sector')) pick('Sector', params.get('sector'));
       (params.get('servei') || '').split(',').forEach(function (k) { if (k) pick('Serveis', k.trim()); });
+      if (params.get('campanya') === 'nadal') {
+        $('#cfg-campanya').value = 'Nadal';
+        var eb = $('.page-hero .eyebrow');
+        if (eb) eb.textContent = 'Configurador · Campanya de Nadal';
+      }
       if (params.get('comarca')) {
         var opt = $('#cfg-comarca option[data-slug="' + params.get('comarca') + '"]');
         if (opt) opt.selected = true;
@@ -321,7 +326,7 @@
         if (key.charAt(0) === '_' || !String(value).trim()) return;
         data[key] = data[key] ? data[key] + ', ' + value : value;
       });
-      data._subject = 'Nou projecte des del configurador · ' + (data.Sector || 'lordiguer.cat');
+      data._subject = (data.Campanya ? 'Campanya de ' + data.Campanya + ' · ' : 'Nou projecte des del configurador · ') + (data.Sector || 'lordiguer.cat');
       data._template = 'table';
       data._replyto = data.email;
       btnSend.disabled = true;
@@ -516,6 +521,10 @@
   });
   $$('.moments--places').forEach(function (list) {
     gsap.from(list.children, { yPercent: 60, opacity: 0, duration: 0.8, ease: 'power2.out', stagger: 0.07, clearProps: 'transform,opacity', scrollTrigger: { trigger: list, start: 'top 88%' } });
+  });
+
+  $$('.timeline').forEach(function (line) {
+    gsap.from($$('li', line), { clipPath: 'inset(0 100% 0 0)', duration: 1.1, ease: 'power3.inOut', stagger: 0.18, clearProps: 'clipPath', scrollTrigger: { trigger: line, start: 'top 85%' } });
   });
 
   /* 5 — Photographs uncover and drift at their own pace */
