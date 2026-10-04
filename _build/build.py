@@ -489,6 +489,7 @@ def layout(meta, body):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(meta['title'])}</title>
 <meta name="description" content="{esc(meta['description'])}">
+<meta name="google-site-verification" content="oEAVnYSO-CpscZ7BsTSx1ffOWHXM_ok3HwmSdKp7LBQ">
 <link rel="canonical" href="{url}">
 {robots}<meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="L’Ordiguer Estudi">
