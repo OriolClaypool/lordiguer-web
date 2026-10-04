@@ -15,6 +15,7 @@ import html
 import json
 import pathlib
 import re
+import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "_build"
@@ -184,7 +185,7 @@ def expand_slots(body, page_path):
 
 # ---------------------------------------------------------------- shared blocks
 
-def link_cards(items, current=None, extra_class=""):
+def link_cards(items, current=None, extra_class="", places=False):
     cards = []
     for title, href, text in items:
         if href == current:
@@ -193,6 +194,8 @@ def link_cards(items, current=None, extra_class=""):
             f'<li><a class="link-card" href="{href}">'
             f'<span class="link-card__title">{esc(title)} {ARROW}</span>'
             f'<span class="link-card__text">{esc(text)}</span></a></li>')
+    if places:
+        return '<ul class="link-grid link-grid--places">' + "".join(cards) + "</ul>"
     cols = len(cards)
     return f'<ul class="link-grid link-grid--n{cols} {extra_class}" style="--cols: {cols}">' + "".join(cards) + "</ul>"
 
@@ -317,7 +320,8 @@ def footer_html():
         lis = "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for label, href, _ in items)
         return f'<div><p class="footer__h">{title}</p><ul>{lis}</ul></div>'
     studio = [("Portfolio", "/portfolio/", ""), ("Comunitat", "/comunitat/", ""),
-              ("Diari", "/diari/", ""), ("Qui som", "/qui-som/", ""), ("Contacte", "/contacte/", "")]
+              ("Diari", "/diari/", ""), ("On treballem", "/on-treballem/", ""),
+              ("Qui som", "/qui-som/", ""), ("Contacte", "/contacte/", "")]
     letters = "".join(f'<span aria-hidden="true">{c}</span>' for c in "Parlem")
     return f"""<footer class="site-footer">
   <div class="footer__grid">
@@ -421,7 +425,7 @@ def structured_data(meta, url, body):
             "description": meta["description"],
             "url": url,
             "provider": {"@id": org_id},
-            "areaServed": {"@type": "AdministrativeArea", "name": "Catalunya"},
+            "areaServed": service.get("area", {"@type": "AdministrativeArea", "name": "Catalunya"}),
             "availableLanguage": ["ca", "es"],
         }
         if service.get("audience"):
@@ -574,6 +578,360 @@ def redirect_stub(target):
 """
 
 
+# ---------------------------------------------------------------- local pages
+# Pàgines «On treballem»: una per comarca (dades a _build/comarques.json) i,
+# per a les comarques base, una per servei (textos a _build/serveis-locals.json).
+
+SERVICE_KEYS = ["fotografia", "video", "xarxes-socials", "disseny-web"]
+SERVICE_NAMES = {"fotografia": "Fotografia", "video": "Vídeo",
+                 "xarxes-socials": "Xarxes socials", "disseny-web": "Disseny web"}
+SECTOR_BY_KEY = {href.strip("/"): (title, href) for title, href, _ in SECTORS}
+HUB = "/on-treballem/"
+
+
+def a_place(name):
+    """«a» davant d’un nom de lloc: a Berga, al Vendrell, a la Seu d’Urgell."""
+    if name.startswith("el "):
+        return "al " + name[3:]
+    if name.startswith("els "):
+        return "als " + name[4:]
+    return "a " + name
+
+
+def de_place(name):
+    """«de» davant d’un nom de lloc: de Berga, del Vendrell, d’Igualada."""
+    if name.startswith("el "):
+        return "del " + name[3:]
+    if name.startswith("els "):
+        return "dels " + name[4:]
+    if unicodedata.normalize("NFD", name[0]).lower()[0] in "aeiou" or name[0] in "Hh":
+        return "d’" + name
+    return "de " + name
+
+
+def join_ca(items):
+    items = list(items)
+    if len(items) <= 1:
+        return "".join(items)
+    return ", ".join(items[:-1]) + " i " + items[-1]
+
+
+def sort_key(name):
+    return unicodedata.normalize("NFD", name).encode("ascii", "ignore").decode().lower()
+
+
+def fit_title(*candidates):
+    for title in candidates:
+        if len(title) <= 65:
+            return title
+    return candidates[-1]
+
+
+def capitals(c):
+    return c.get("capitals", [c["capital"]])
+
+
+def comarca_area(c):
+    return {"@type": "AdministrativeArea", "name": c["name"],
+            "containedInPlace": {"@type": "AdministrativeArea", "name": "Catalunya"}}
+
+
+def svc_row(name, desc, href=None):
+    head = f'<li class="svc"><span class="svc__rule" aria-hidden="true"></span>'
+    inner = f'<span class="svc__name">{esc(name)}</span><span class="svc__desc">{desc}</span>'
+    if href:
+        return (f'{head}<a class="svc__link" href="{href}">{inner}'
+                f'<span class="svc__arrow" aria-hidden="true">{ARROW}</span></a></li>')
+    return f'{head}<div class="svc__link">{inner}</div></li>'
+
+
+def faq_block(items):
+    rows = "".join(
+        f'\n        <details class="faq__item">\n          <summary>{q}</summary>\n'
+        f'          <div class="faq__answer">{a}</div>\n        </details>' for q, a in items)
+    return f"""<section class="section" aria-labelledby="preguntes">
+  <div class="split">
+    <h2 class="eyebrow split__label" id="preguntes">Preguntes freqüents</h2>
+    <div class="split__body">
+      <div class="faq">{rows}
+      </div>
+    </div>
+  </div>
+</section>"""
+
+
+def towns_block(c, label="Pobles on treballem"):
+    towns = "".join(f"<li>{esc(t)}</li>" for t in c["towns"])
+    return f"""<section class="section section--tight" aria-labelledby="pobles">
+  <div class="split">
+    <h2 class="eyebrow split__label" id="pobles">{label}</h2>
+    <div class="split__body">
+      <ul class="moments moments--places">{towns}</ul>
+      <p class="split__intro">I a la resta {c['de']}{esc(c['name'])}.</p>
+    </div>
+  </div>
+</section>"""
+
+
+def closing_block(c):
+    return f"""<section class="closing" aria-labelledby="tancament">
+  <p class="eyebrow">{esc(c['name'])}</p>
+  <h2 class="closing__title" id="tancament">Tens un projecte {c['a']}<em>{esc(c['name'])}</em>?</h2>
+  <a class="btn" href="/contacte/">Parlem {ARROW}</a>
+</section>"""
+
+
+def comarca_page(c, by_slug, local):
+    name, slug = c["name"], c["slug"]
+    url = f"{HUB}{slug}/"
+    caps = capitals(c)
+    has_local = slug in local
+
+    if has_local:
+        title = fit_title(f"Fotografia, vídeo i xarxes {c['a']}{name} | L’Ordiguer Estudi",
+                          f"Fotografia, vídeo i xarxes {c['a']}{name} | L’Ordiguer")
+    else:
+        cap = " i ".join(caps)
+        title = fit_title(f"Fotografia i vídeo {a_place(cap)} i {c['a']}{name} | L’Ordiguer Estudi",
+                          f"Fotografia i vídeo {a_place(cap)} i {c['a']}{name} | L’Ordiguer",
+                          f"Fotografia, vídeo i xarxes {c['a']}{name} | L’Ordiguer Estudi",
+                          f"Fotografia, vídeo i xarxes {c['a']}{name} | L’Ordiguer")
+    towns = c["towns"]
+    description = ""
+    for n in (4, 3, 2):
+        description = (f"Fotografia, vídeo, xarxes socials i web per a negocis {c['de']}{name}. "
+                       f"Treballem {a_place(towns[0])}, {', '.join(towns[1:n])} i a tota la comarca.")
+        if len(description) <= 160:
+            break
+
+    meta = {
+        "id": f"on-treballem-{slug}", "path": url, "title": title,
+        "og_title": f"Fotografia, vídeo i xarxes {c['a']}{name}",
+        "description": description,
+        "crumbs": [["On treballem", HUB], [name, None]],
+        "service": {"name": f"Fotografia, vídeo, xarxes socials i web {c['a']}{name}",
+                    "type": "Fotografia, vídeo, xarxes socials i disseny web",
+                    "area": comarca_area(c)},
+        "priority": 0.6,
+        "_src": SRC / "comarques.json",
+    }
+
+    cap_label = "Capitals" if len(caps) > 1 else "Capital"
+    def dd_list(items):
+        return "".join(f"<span>{esc(i)}</span>" for i in items)
+
+    rows = []
+    for key in SERVICE_KEYS:
+        href = f"{url}{key}/" if has_local else f"/{key}/"
+        rows.append(svc_row(SERVICE_NAMES[key], esc(c["focus"][key]), href))
+
+    sectors = [(SECTOR_BY_KEY[k][0], SECTOR_BY_KEY[k][1], note) for k, note in c["sectors"].items()]
+    neighbours = sorted((by_slug[n] for n in c["neighbours"]), key=lambda x: sort_key(x["name"]))
+    neighbour_cards = [(n["name"], f"{HUB}{n['slug']}/", n["capital"]) for n in neighbours]
+
+    where = join_ca([a_place(x) for x in caps] + [f"a la resta {c['de']}{name}"])
+    faq = [[f"Treballeu {esc(where)}?",
+            f"Sí. Treballem {a_place(towns[0])}, {esc(join_ca(towns[1:]))}, i ens desplacem a qualsevol punt de la comarca."]]
+    faq += c["faq"]
+
+    body = f"""<section class="page-hero">
+  <div class="page-hero__text">
+    <p class="eyebrow" data-intro>{esc(name)} · {esc(c['capital'])}</p>
+    <h1 class="page-title" data-split>Fotografia, vídeo i xarxes {c['a']}<em>{esc(name)}</em>.</h1>
+  </div>
+  <div class="page-hero__side">
+    <p data-intro>{esc(c['lead'])}</p>
+    <a class="btn" href="/contacte/" data-intro>Parlem del teu projecte {ARROW}</a>
+  </div>
+</section>
+
+<section class="section manifest" aria-labelledby="territori">
+  <h2 class="eyebrow manifest__label" id="territori">El territori</h2>
+  <p class="manifest__text manifest__text--sm" data-ink>{c['territory']}</p>
+</section>
+
+<section class="section section--tight" aria-label="La comarca">
+  <dl class="facts facts--list">
+    <div><dt>{cap_label}</dt><dd>{dd_list(caps)}</dd></div>
+    <div><dt>Paisatge i patrimoni</dt><dd>{dd_list(c['landscape'])}</dd></div>
+    <div><dt>Producte</dt><dd>{dd_list(c['products'])}</dd></div>
+  </dl>
+</section>
+
+<section class="section section--tight" aria-labelledby="que-fem">
+  <div class="section-head">
+    <h2 class="eyebrow" id="que-fem">Què fem {c['a']}{esc(name)}</h2>
+    <p class="section-head__note">{esc(c['character'])}.</p>
+  </div>
+  <ul class="svc-list svc-list--sm">{''.join(rows)}</ul>
+</section>
+
+{towns_block(c)}
+
+<section class="section section--tight" aria-labelledby="per-a-qui">
+  <div class="section-head">
+    <h2 class="eyebrow" id="per-a-qui">Per a qui</h2>
+    <a class="text-link" href="/serveis/">Tots els serveis {ARROW}</a>
+  </div>
+  {link_cards(sectors)}
+</section>
+
+{faq_block(faq)}
+
+<section class="section section--tight" aria-labelledby="veines">
+  <div class="section-head">
+    <h2 class="eyebrow" id="veines">Comarques veïnes</h2>
+    <a class="text-link" href="{HUB}">Totes les comarques {ARROW}</a>
+  </div>
+  {link_cards(neighbour_cards, places=True)}
+</section>
+
+{closing_block(c)}"""
+    return meta, body
+
+
+def local_service_page(c, key, texts, services, by_slug):
+    name, slug = c["name"], c["slug"]
+    svc = services[key]
+    url = f"{HUB}{slug}/{key}/"
+    caps = capitals(c)
+
+    meta = {
+        "id": f"on-treballem-{slug}-{key}", "path": url, "title": texts["title"],
+        "og_title": plain(texts["h1"]).rstrip("."),
+        "description": texts["description"],
+        "crumbs": [["On treballem", HUB], [name, f"{HUB}{slug}/"], [svc["name"], None]],
+        "service": {"name": plain(texts["h1"]).rstrip("."), "type": svc["type"],
+                    "area": [{"@type": "City", "name": x} for x in caps] + [comarca_area(c)]},
+        "priority": 0.6,
+        "_src": SRC / "serveis-locals.json",
+    }
+
+    items = "".join(svc_row(n, esc(d)) for n, d in svc["items"])
+    others = [(SERVICE_NAMES[k], f"{HUB}{slug}/{k}/", c["focus"][k]) for k in SERVICE_KEYS if k != key]
+
+    out_caps = " i ".join(de_place(x) for x in caps)
+    rest = [t for t in c["towns"] if t not in caps]
+    near = join_ca(by_slug[n]["el"] + by_slug[n]["name"] for n in c["neighbours"])
+    faq = list(texts["faq"]) + [[
+        f"Treballeu fora {out_caps}?",
+        f"Sí. Treballem {a_place(rest[0])}, {esc(join_ca(rest[1:]))}, i també a les comarques veïnes: {esc(near)}."]]
+
+    body = f"""<section class="page-hero">
+  <div class="page-hero__text">
+    <p class="eyebrow" data-intro>{esc(svc['name'])} · {esc(name)}</p>
+    <h1 class="page-title" data-split>{texts['h1']}</h1>
+  </div>
+  <div class="page-hero__side">
+    <p data-intro>{esc(texts['lead'])}</p>
+    <a class="btn" href="/contacte/" data-intro>Demana pressupost {ARROW}</a>
+  </div>
+</section>
+
+<section class="section manifest" aria-labelledby="context">
+  <h2 class="eyebrow manifest__label" id="context">{esc(name)}</h2>
+  <p class="manifest__text manifest__text--sm" data-ink>{texts['statement']}</p>
+</section>
+
+<section class="section section--tight" aria-labelledby="que-inclou">
+  <div class="section-head">
+    <h2 class="eyebrow" id="que-inclou">Què inclou</h2>
+    <a class="text-link" href="{svc['general']}">Més sobre {esc(svc['name'].lower())} {ARROW}</a>
+  </div>
+  <ul class="svc-list svc-list--sm svc-list--static">{items}</ul>
+</section>
+
+{towns_block(c, "On treballem")}
+
+{faq_block(faq)}
+
+<section class="section section--tight" aria-labelledby="altres-serveis">
+  <div class="section-head">
+    <h2 class="eyebrow" id="altres-serveis">Altres serveis {c['a']}{esc(name)}</h2>
+    <a class="text-link" href="{HUB}{slug}/">{esc(name)}, tots els serveis {ARROW}</a>
+  </div>
+  {link_cards(others)}
+</section>
+
+{closing_block(c)}"""
+    return meta, body
+
+
+def hub_page(comarques):
+    def rows(group):
+        items = sorted((c for c in comarques if c["group"] == group), key=lambda c: sort_key(c["name"]))
+        return "".join(
+            f'<li><a class="place-row" href="{HUB}{c["slug"]}/">'
+            f'<span class="place-row__name">{esc(c["name"])}</span>'
+            f'<span class="place-row__capital">{esc(c["capital"])}</span>'
+            f'<span class="place-row__text">{esc(c["character"])}</span>'
+            f'<span class="place-row__arrow" aria-hidden="true">{ARROW}</span></a></li>'
+            for c in items), len(items)
+
+    bcn, n_bcn = rows("barcelona")
+    near, n_near = rows("veines")
+    meta = {
+        "id": "on-treballem", "path": HUB, "page_type": "CollectionPage",
+        "title": "On treballem: comarques de Catalunya | L’Ordiguer Estudi",
+        "og_title": "On treballem, comarca a comarca",
+        "description": ("Fotografia, vídeo, xarxes socials i web per a negocis de la província de "
+                        "Barcelona i de les comarques veïnes. Tria la teva comarca."),
+        "crumbs": [["On treballem", None]],
+        "priority": 0.6,
+        "_src": SRC / "comarques.json",
+    }
+    body = f"""<section class="page-hero">
+  <div class="page-hero__text">
+    <p class="eyebrow" data-intro>Comarca a comarca</p>
+    <h1 class="page-title" data-split>On <em>treballem</em>.</h1>
+  </div>
+  <div class="page-hero__side">
+    <p data-intro>Treballem a tota Catalunya, i sobretot a la província de Barcelona i a les comarques veïnes. Cada comarca té el seu paisatge, el seu producte i el seu ritme.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="provincia">
+  <div class="section-head">
+    <h2 class="eyebrow" id="provincia">Província de Barcelona</h2>
+    <p class="section-head__note">{n_bcn} comarques</p>
+  </div>
+  <ul class="place-list">{bcn}</ul>
+</section>
+
+<section class="section section--tight" aria-labelledby="comarques-veines">
+  <div class="section-head">
+    <h2 class="eyebrow" id="comarques-veines">Comarques veïnes</h2>
+    <p class="section-head__note">{n_near} comarques</p>
+  </div>
+  <ul class="place-list">{near}</ul>
+</section>
+
+<section class="closing" aria-labelledby="tancament">
+  <p class="eyebrow">A tota Catalunya</p>
+  <h2 class="closing__title" id="tancament">La teva comarca no <em>hi és</em>?</h2>
+  <p class="lead">Ens desplacem a qualsevol punt de Catalunya. Explica’ns el projecte.</p>
+  <a class="btn" href="/contacte/">Parlem {ARROW}</a>
+</section>"""
+    return meta, body
+
+
+def local_pages():
+    path = SRC / "comarques.json"
+    if not path.exists():
+        return []
+    comarques = json.loads(path.read_text(encoding="utf-8"))
+    local = json.loads((SRC / "serveis-locals.json").read_text(encoding="utf-8"))
+    services = local.pop("_serveis")
+    by_slug = {c["slug"]: c for c in comarques}
+    pages = [hub_page(comarques)]
+    for c in comarques:
+        pages.append(comarca_page(c, by_slug, local))
+        for key in SERVICE_KEYS:
+            if c["slug"] in local and key in local[c["slug"]]:
+                pages.append(local_service_page(c, key, local[c["slug"]][key], services, by_slug))
+    return pages
+
+
 # ---------------------------------------------------------------- build
 
 def build():
@@ -589,6 +947,7 @@ def build():
     article_index = [m for m, _ in articles]
 
     pages = [read_source(p) for p in sorted((SRC / "pages").glob("*.html"))]
+    pages += local_pages()
     sitemap = []
 
     for meta, body in pages:

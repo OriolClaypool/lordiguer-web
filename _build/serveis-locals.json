@@ -1,0 +1,228 @@
+{
+  "_serveis": {
+    "fotografia": {
+      "name": "Fotografia", "general": "/fotografia/", "type": "Fotografia d’espais, producte i retrat",
+      "items": [
+        ["Espais i interiors", "Allotjaments, restaurants, botigues i obradors, amb la llum de cada hora."],
+        ["Producte", "En context o sobre fons net, per a la web, el catàleg i la botiga en línia."],
+        ["Retrat i equip", "Les persones que hi ha darrere del negoci, treballant o en calma."],
+        ["Reportatge", "Una jornada de feina, una visita o un esdeveniment, tal com passa."]
+      ]
+    },
+    "video": {
+      "name": "Vídeo", "general": "/video/", "type": "Vídeo de marca, reportatge i vídeo per a xarxes",
+      "items": [
+        ["Vídeo de marca", "El teu negoci explicat en un o dos minuts, per a la web."],
+        ["Peces per a xarxes", "Vídeos curts i verticals per a Reels, pensats per veure’s també sense so."],
+        ["Reportatge", "Una jornada, una fira o una verema, amb el ritme de cada moment."],
+        ["Procés", "L’elaboració d’un producte o d’un plat, de principi a final."]
+      ]
+    },
+    "xarxes-socials": {
+      "name": "Xarxes socials", "general": "/xarxes-socials/", "type": "Gestió de xarxes socials i Instagram",
+      "items": [
+        ["Estratègia", "Què explicarem cada mes, a qui i amb quin ritme."],
+        ["Contingut propi", "Fotografia i vídeo fets per nosaltres, amb una mateixa línia visual."],
+        ["Textos en català", "Escrits amb la veu del teu negoci, i en castellà si cal."],
+        ["Informe mensual", "Què ha funcionat, què no, i què canviem el mes següent."]
+      ]
+    },
+    "disseny-web": {
+      "name": "Disseny web", "general": "/disseny-web/", "type": "Disseny web a mida i SEO local",
+      "items": [
+        ["Disseny a mida", "Pensada per al teu negoci, no adaptada d’una plantilla."],
+        ["SEO local", "Textos, estructura i dades perquè Google entengui què fas i on."],
+        ["Reserves i botiga", "Connexió amb el teu sistema de reserves o amb una botiga en línia."],
+        ["Manteniment", "Actualitzacions i canvis perquè no te n’hagis de preocupar."]
+      ]
+    }
+  },
+
+  "bergueda": {
+    "fotografia": {
+      "title": "Fotògrafs a Berga i al Berguedà | L’Ordiguer Estudi",
+      "description": "Fotografia d’espais, producte i persones per a allotjaments, productors i negocis de Berga i el Berguedà. Llum natural i imatges que expliquen el territori.",
+      "h1": "Fotografia a Berga i al <em>Berguedà</em>.",
+      "lead": "Fotografia per a cases de pagès, hotels de muntanya, formatgeries, obradors i restaurants de Berga i de tota la comarca.",
+      "statement": "Al Berguedà, la llum canvia molt d’una vall a l’altra i d’una estació a la següent. Per això preparem cada sessió <em>seguint el sol</em> i el calendari del negoci, no només la data que va bé.",
+      "faq": [
+        ["Quant dura una sessió de fotos per a una casa rural?", "Normalment, un matí o un dia sencer, segons la mida de la casa i els moments que vulguis explicar. Ho concretem abans, al pressupost."],
+        ["Feu retrats per a la web i les xarxes?", "Sí. Retrats de les persones que fan el negoci, treballant o en calma, amb llum natural."]
+      ]
+    },
+    "video": {
+      "title": "Vídeo per a negocis a Berga i al Berguedà | L’Ordiguer",
+      "description": "Vídeo per a allotjaments, productors i restaurants del Berguedà: peces de marca, reportatges i vídeos curts per a Reels, amb el paisatge i les persones.",
+      "h1": "Vídeo per a negocis de Berga i del <em>Berguedà</em>.",
+      "lead": "Vídeos per a allotjaments, productors, restaurants i projectes culturals de la comarca: de peces curtes per a Reels a vídeos de marca per a la web.",
+      "statement": "Un vídeo del Berguedà no necessita efectes: la boira al Pedraforca, el vapor d’una cuina, <em>unes mans fent formatge</em>. La nostra feina és ser-hi a l’hora bona i saber on posar la càmera.",
+      "faq": [
+        ["Podeu gravar a l’hivern, amb neu?", "Sí. Si el teu negoci té una cara d’hivern, val la pena gravar-la. Seguim la previsió i movem la data si cal."],
+        ["Feu vídeos de fires i jornades de portes obertes?", "Sí, si formen part de la història del teu negoci. En fem una peça curta per a les xarxes i guardem material per a la resta de l’any."]
+      ]
+    },
+    "xarxes-socials": {
+      "title": "Gestió de xarxes socials a Berga i al Berguedà | L’Ordiguer",
+      "description": "Gestió d’Instagram i xarxes socials en català per a allotjaments, restaurants, productors i comerços del Berguedà. Estratègia, contingut i publicació.",
+      "h1": "Xarxes socials per a negocis del <em>Berguedà</em>.",
+      "lead": "Gestionem l’Instagram d’allotjaments, restaurants, productors i botigues de Berga i la comarca, amb contingut propi i en català.",
+      "statement": "Al Berguedà, les estacions marquen el negoci: la neu, els bolets, la Patum, l’estiu. Un bon calendari de xarxes <em>segueix aquest ritme</em> i ajuda a omplir els mesos més fluixos.",
+      "faq": [
+        ["Treballeu amb negocis que obren per temporada?", "Sí. Planifiquem el contingut perquè el perfil no s’aturi quan el negoci tanca i arribi amb força a l’obertura."],
+        ["Publiqueu en català?", "Sí, en català, i també en castellà si el teu públic ho necessita."]
+      ]
+    },
+    "disseny-web": {
+      "title": "Disseny web a Berga i al Berguedà | L’Ordiguer Estudi",
+      "description": "Disseny web a mida per a allotjaments, productors i negocis del Berguedà: webs ràpides, en català, amb reserves o botiga i preparades per sortir a Google.",
+      "h1": "Disseny web per a negocis del <em>Berguedà</em>.",
+      "lead": "Webs a mida per a cases rurals, hotels de muntanya, productors i comerços de Berga i la comarca.",
+      "statement": "Molts allotjaments de muntanya depenen de les plataformes de reserva. Una web pròpia, ràpida i ben posicionada és <em>la manera de recuperar la reserva directa</em>.",
+      "faq": [
+        ["La web es podrà trobar quan algú busqui allotjament al Berguedà?", "La preparem perquè Google l’entengui: textos pensats per a les cerques de la zona, velocitat i dades estructurades. El posicionament també depèn del temps i del contingut."],
+        ["Em podeu fer també les fotos de la web?", "Sí. Si ho necessites, fem la sessió de fotos i els textos alhora que la web, perquè tot tingui el mateix to."]
+      ]
+    }
+  },
+
+  "osona": {
+    "fotografia": {
+      "title": "Fotògrafs a Vic i a Osona | L’Ordiguer Estudi",
+      "description": "Fotografia de producte, espais i persones per a productors, restaurants i allotjaments de Vic i Osona. Llum natural i imatges per a web, botiga i xarxes.",
+      "h1": "Fotografia a Vic i a <em>Osona</em>.",
+      "lead": "Fotografia per a xarcuteries, obradors, productors, restaurants i cases rurals de Vic, Manlleu, Torelló i la resta de la comarca.",
+      "statement": "A Osona, el producte ho és tot, i una fotografia de producte n’ha d’ensenyar també l’origen: <em>l’obrador, les mans, la plana</em>. És la diferència entre un catàleg i una marca.",
+      "faq": [
+        ["Feu fotografia de producte sobre fons blanc?", "Sí, per a botigues en línia i catàlegs. I també en context, a l’obrador o a taula, que és el que més ajuda a vendre a les xarxes."],
+        ["Podeu fotografiar el procés d’elaboració?", "Sí. Planifiquem la sessió amb el teu calendari de producció perquè no t’aturi la feina."]
+      ]
+    },
+    "video": {
+      "title": "Vídeo per a negocis a Vic i a Osona | L’Ordiguer Estudi",
+      "description": "Vídeo per a productors, restaurants i allotjaments d’Osona: peces de marca, reportatges d’obrador i vídeos curts per a xarxes, gravats amb llum natural.",
+      "h1": "Vídeo per a negocis de Vic i d’<em>Osona</em>.",
+      "lead": "Vídeos de marca, de procés i per a xarxes per a productors, restaurants i allotjaments de la comarca.",
+      "statement": "Un vídeo d’obrador explica en trenta segons el que una fitxa de producte no pot: <em>el temps i l’ofici</em>. A Osona, on hi ha tant producte artesà, és una eina amb molt de recorregut.",
+      "faq": [
+        ["Feu vídeos de procés per a productors?", "Sí. Gravem l’elaboració de principi a final i en fem peces curtes per a les xarxes i una de més llarga per a la web."],
+        ["Quant temps necessiteu per gravar?", "Sovint n’hi ha prou amb una jornada. Ho concretem segons el que vulguis explicar."]
+      ]
+    },
+    "xarxes-socials": {
+      "title": "Gestió de xarxes socials a Vic i a Osona | L’Ordiguer",
+      "description": "Gestió d’Instagram i xarxes socials en català per a productors, restaurants i comerços de Vic i Osona: estratègia, fotografia pròpia, textos i publicació.",
+      "h1": "Xarxes socials per a negocis d’<em>Osona</em>.",
+      "lead": "Gestionem l’Instagram de productors, restaurants i botigues de Vic, Manlleu, Torelló i la resta de la comarca.",
+      "statement": "Els dimarts i els dissabtes, el mercat de Vic s’omple de gent que vol saber d’on ve el que compra. Les xarxes són <em>la continuació d’aquesta conversa</em> la resta de la setmana.",
+      "faq": [
+        ["Podeu gestionar les xarxes d’una botiga i d’un obrador alhora?", "Sí. Si són el mateix negoci, ho plantegem com un sol perfil amb dues cares: la del taulell i la de l’elaboració."],
+        ["Les xarxes ajuden a vendre fora de la comarca?", "Hi ajuden, sobretot si van lligades a una botiga en línia. Plantegem el contingut pensant també en qui encara no et coneix."]
+      ]
+    },
+    "disseny-web": {
+      "title": "Disseny web a Vic i a Osona | L’Ordiguer Estudi",
+      "description": "Disseny web a mida per a productors, restaurants i comerços de Vic i Osona: webs ràpides, en català, amb botiga en línia i preparades per a Google.",
+      "h1": "Disseny web per a negocis d’<em>Osona</em>.",
+      "lead": "Webs a mida i botigues en línia per a productors, restaurants i comerços de Vic i de la comarca.",
+      "statement": "Un productor d’Osona pot vendre a tot Catalunya des del seu obrador. Només li cal <em>una botiga en línia clara</em>, bones fotos i una web que Google entengui.",
+      "faq": [
+        ["Feu botigues en línia?", "Sí. Integrem la botiga que millor s’adapti al teu producte i a la manera com vens."],
+        ["Podré afegir productes jo mateix?", "Si ho necessites, ho tenim en compte des del principi perquè puguis fer-ho sense ajuda."]
+      ]
+    }
+  },
+
+  "valles-occidental": {
+    "fotografia": {
+      "title": "Fotògrafs a Sabadell i Terrassa | L’Ordiguer Estudi",
+      "description": "Fotografia per a restaurants, comerços, obradors i empreses familiars de Sabadell, Terrassa, Sant Cugat i el Vallès Occidental. Llum natural i imatges pròpies.",
+      "h1": "Fotografia a Sabadell, Terrassa i al <em>Vallès Occidental</em>.",
+      "lead": "Fotografia per a restaurants, botigues, obradors i empreses familiars de Sabadell, Terrassa, Sant Cugat, Rubí i la resta de la comarca.",
+      "statement": "En una ciutat plena de cadenes, un negoci de proximitat es guanya el client per la confiança, i la confiança comença per <em>veure el teu local i el teu equip</em>.",
+      "faq": [
+        ["Feu fotos per a la fitxa de Google del negoci?", "Sí. Una fitxa amb fotos actuals del local, el producte i l’equip ajuda molt que et triïn a les cerques de la zona."],
+        ["Podeu fotografiar el local en horari d’obertura?", "Preferim fer-ho abans d’obrir o en una hora tranquil·la, perquè la llum i l’espai estiguin com vols."]
+      ]
+    },
+    "video": {
+      "title": "Vídeo per a empreses a Sabadell i Terrassa | L’Ordiguer",
+      "description": "Vídeo de marca, d’equip i per a xarxes per a restaurants, comerços i empreses de Sabadell, Terrassa i el Vallès Occidental.",
+      "h1": "Vídeo per a negocis de Sabadell, Terrassa i el <em>Vallès</em>.",
+      "lead": "Vídeos per presentar un negoci, un producte o un equip, per a la web i per a les xarxes.",
+      "statement": "Una peça curta que ensenyi qui hi ha darrere del taulell fa més que qualsevol anunci. Al Vallès, on el comerç de proximitat competeix cada dia, <em>la cara del negoci</em> és el millor argument.",
+      "faq": [
+        ["Feu vídeos per a empreses familiars?", "Sí. Vídeos que expliquen la història, l’equip i la manera de fer, sense llenguatge corporatiu."],
+        ["Feu vídeos per a Reels i TikTok?", "Sí, en format vertical i pensats per veure’s també sense so."]
+      ]
+    },
+    "xarxes-socials": {
+      "title": "Gestió de xarxes socials a Sabadell i Terrassa | L’Ordiguer",
+      "description": "Gestió d’Instagram en català per a restaurants i comerços de Sabadell, Terrassa, Sant Cugat i el Vallès Occidental: estratègia, contingut i publicació.",
+      "h1": "Xarxes socials per a negocis de Sabadell i <em>Terrassa</em>.",
+      "lead": "Gestionem l’Instagram de restaurants, botigues i obradors del Vallès Occidental, amb fotografia pròpia i textos en català.",
+      "statement": "El client de proximitat et segueix perquè et coneix. Les xarxes serveixen per <em>no deixar de ser a prop</em>, també els dies que no passa per davant de la botiga.",
+      "faq": [
+        ["Us encarregueu de respondre missatges i comentaris?", "Sí, si ho vols. Ho acordem al principi perquè el to sigui el del teu negoci."],
+        ["Tinc botigues a Sabadell i a Terrassa. Com ho plantegeu?", "Com un sol perfil o com dos, segons el que tingui més sentit per als teus clients. Ho decidim junts abans de començar."]
+      ]
+    },
+    "disseny-web": {
+      "title": "Disseny web a Sabadell i Terrassa | L’Ordiguer Estudi",
+      "description": "Webs a mida per a comerços, restaurants i empreses de Sabadell, Terrassa i el Vallès Occidental: ràpides, en català i preparades per a les cerques locals.",
+      "h1": "Disseny web a Sabadell, Terrassa i el <em>Vallès Occidental</em>.",
+      "lead": "Webs a mida per a restaurants, comerços i empreses familiars de la comarca, pensades per sortir a les cerques de la zona.",
+      "statement": "Quan algú busca un restaurant o una botiga a prop, Google ensenya primer els negocis que entén millor. <em>Una web clara i ràpida</em>, amb les dades ben posades, és la base perquè et trobin.",
+      "faq": [
+        ["La web m’ajudarà a sortir a les cerques locals?", "És una de les coses que més hi ajuden, juntament amb una bona fitxa de Google. La preparem perquè Google entengui què fas i on."],
+        ["Podeu refer una web que ja tinc?", "Sí. Aprofitem el que funciona i refem la resta."]
+      ]
+    }
+  },
+
+  "barcelones": {
+    "fotografia": {
+      "title": "Fotògrafs per a negocis a Barcelona | L’Ordiguer Estudi",
+      "description": "Fotografia per a restaurants, obradors, botigues i negocis de producte de Barcelona, l’Hospitalet i Badalona. Llum natural i imatges honestes.",
+      "h1": "Fotografia per a negocis a <em>Barcelona</em>.",
+      "lead": "Fotografia per a restaurants, obradors, botigues de producte i espais amb personalitat de Barcelona i el Barcelonès.",
+      "statement": "A Barcelona, tothom té bones fotos. El que falta són <em>fotos que s’assemblin al negoci</em>: la llum real del local, les persones de sempre, el producte com és.",
+      "faq": [
+        ["Feu fotografia gastronòmica a Barcelona?", "Sí. Plats, cuina, sala i equip, en sessions que no interfereixin amb el servei."],
+        ["Feu fotografia d’interiors per a botigues i locals?", "Sí, amb llum natural sempre que es pugui, per ensenyar l’espai tal com és."]
+      ]
+    },
+    "video": {
+      "title": "Vídeo per a negocis a Barcelona | L’Ordiguer Estudi",
+      "description": "Vídeo per a restaurants, comerços i marques de producte de Barcelona: peces curtes per a Reels, vídeos de marca i reportatges amb llum natural.",
+      "h1": "Vídeo per a negocis a <em>Barcelona</em>.",
+      "lead": "Vídeos curts per a xarxes, vídeos de marca i reportatges per a restaurants, obradors i comerços de la ciutat.",
+      "statement": "En una ciutat que es mira a través del mòbil, <em>quinze segons ben fets</em> poden omplir una taula. El secret és que el vídeo s’assembli al negoci, no a un anunci.",
+      "faq": [
+        ["Feu vídeos per a restaurants?", "Sí. Cuina, sala i plats, en peces curtes per a Reels i una de més llarga per a la web."],
+        ["Podeu gravar amb el restaurant obert?", "Preferim fer-ho abans del servei o en una hora tranquil·la. Si volem la sala plena, ho preparem amb tu perquè no molesti els clients."]
+      ]
+    },
+    "xarxes-socials": {
+      "title": "Gestió de xarxes socials a Barcelona | L’Ordiguer Estudi",
+      "description": "Gestió d’Instagram en català per a restaurants, botigues i obradors de Barcelona: estratègia, fotografia pròpia, textos i publicació.",
+      "h1": "Gestió de xarxes socials a <em>Barcelona</em>.",
+      "lead": "Gestionem l’Instagram de restaurants, botigues i obradors de Barcelona, amb contingut propi i en català.",
+      "statement": "A la ciutat, un perfil d’Instagram és sovint la primera visita a un restaurant o a una botiga. <em>Ha d’assemblar-se al negoci</em>: la mateixa llum, les mateixes persones, el mateix to.",
+      "faq": [
+        ["Feu vosaltres les fotos i els vídeos del perfil?", "Sí. El contingut és propi: el fem en sessions planificades al teu local i el combinem amb el material que ens enviïs."],
+        ["Treballeu amb negocis petits?", "Sí. Els negocis petits de barri són els que més es noten quan tenen un perfil cuidat."]
+      ]
+    },
+    "disseny-web": {
+      "title": "Disseny web per a negocis a Barcelona | L’Ordiguer Estudi",
+      "description": "Disseny web a mida per a restaurants, botigues i marques de producte de Barcelona: webs ràpides, amb carta, reserves o botiga, i preparades per a Google.",
+      "h1": "Disseny web per a negocis a <em>Barcelona</em>.",
+      "lead": "Webs a mida per a restaurants, botigues, obradors i marques de producte de la ciutat.",
+      "statement": "A Barcelona hi ha milers de negocis buscant el mateix client. Una web ràpida i pròpia, <em>que expliqui per què tu</em>, és el que fa que et triïn després de trobar-te.",
+      "faq": [
+        ["Podeu fer una web amb reserves per a un restaurant?", "Sí. Integrem el sistema de reserves que ja facis servir, amb la carta sempre al dia."],
+        ["La carta i els horaris es poden canviar fàcilment?", "Sí. Ho deixem preparat perquè els canvis habituals siguin ràpids. Si ho prefereixes, te’ls fem nosaltres."]
+      ]
+    }
+  }
+}

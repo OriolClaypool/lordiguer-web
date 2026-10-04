@@ -1,0 +1,508 @@
+[
+  {
+    "slug": "bergueda", "name": "Berguedà", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Berga", "group": "barcelona", "base": true,
+    "towns": ["Berga", "Gironella", "Puig-reig", "Bagà", "Guardiola de Berguedà", "la Pobla de Lillet", "Casserres"],
+    "neighbours": ["cerdanya", "ripolles", "llucanes", "bages", "solsones", "alt-urgell"],
+    "character": "Muntanya, turisme rural i cultura popular",
+    "landscape": ["El Pedraforca", "El Parc Natural del Cadí-Moixeró", "Les fonts del Llobregat", "La Patum de Berga"],
+    "products": ["Formatges i embotits de muntanya", "Bolets de temporada"],
+    "lead": "Treballem amb cases de pagès, productors, restaurants i botigues de Berga, Gironella, Bagà i la resta de la comarca. És on treballem més sovint.",
+    "territory": "Del Pedraforca a les fonts del Llobregat, el Berguedà és una comarca de muntanya on el turisme rural viu de la natura i de <em>la cultura popular</em>. Aquí, una bona imatge ha d’ensenyar el paisatge, però també la gent que el fa viure.",
+    "focus": {
+      "fotografia": "Cases de pagès i allotjaments de muntanya, obradors, formatgeries i restaurants de Berga i els pobles.",
+      "video": "Peces curtes de paisatge, oficis i estades per atraure visitants tot l’any, no només a l’estiu.",
+      "xarxes-socials": "Contingut amb el ritme de les estacions: la neu, els bolets, la Patum, l’estiu a la muntanya.",
+      "disseny-web": "Webs per a allotjaments i productors que volen reserves i vendes directes, sense dependre només de les plataformes."
+    },
+    "sectors": {
+      "turisme-rural": "Cases de pagès, masies i hotels de muntanya a prop del Pedraforca i del Cadí.",
+      "productors": "Formatgeries, obradors i productors que venen al mercat i a la botiga."
+    },
+    "faq": [["Feu fotografia d’allotjaments a l’hivern?", "Sí. La neu i la llum d’hivern ensenyen una altra cara de la muntanya. Té sentit fer una sessió a l’hivern i una altra a l’estiu."]]
+  },
+  {
+    "slug": "bages", "name": "Bages", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Manresa", "group": "barcelona",
+    "towns": ["Manresa", "Sant Joan de Vilatorrada", "Sant Fruitós de Bages", "Navarcles", "Súria", "Cardona", "Artés"],
+    "neighbours": ["bergueda", "solsones", "llucanes", "moianes", "valles-occidental", "baix-llobregat", "anoia"],
+    "character": "Vinya, Montserrat i pobles de pedra",
+    "landscape": ["Montserrat", "La Muntanya de Sal de Cardona", "Sant Llorenç del Munt i l’Obac", "El poble de Mura"],
+    "products": ["DO Pla de Bages", "Vins de picapoll", "Les tines de pedra"],
+    "lead": "Treballem amb cellers, allotjaments, restaurants i comerços de Manresa, Cardona, Navarcles i la resta del Bages.",
+    "territory": "Vinya de picapoll, tines de pedra enmig del bosc, pobles com Mura i la silueta de Montserrat a l’horitzó. El Bages té <em>paisatges que ja expliquen molt</em>; la feina és ensenyar-los amb la gent que hi viu.",
+    "focus": {
+      "fotografia": "Cellers de la DO Pla de Bages, cases rurals, restaurants i botigues de Manresa.",
+      "video": "Peces d’enoturisme i de paisatge: la verema, les tines, les rutes a peu.",
+      "xarxes-socials": "Contingut per a cellers i restaurants que volen explicar la temporada i omplir visites.",
+      "disseny-web": "Webs per a cellers i allotjaments amb visites i reserves en línia."
+    },
+    "sectors": {
+      "productors": "Cellers de la DO Pla de Bages i productors de la plana.",
+      "turisme-rural": "Cases rurals a prop de Montserrat, Sant Llorenç del Munt i Cardona."
+    },
+    "faq": [["Feu contingut per a enoturisme?", "Sí. Fotografiem i gravem la vinya, el celler i les visites perquè qui ho vegi tingui ganes de venir-hi."]]
+  },
+  {
+    "slug": "osona", "name": "Osona", "el": "", "a": "a ", "de": "d’",
+    "capital": "Vic", "group": "barcelona", "base": true,
+    "towns": ["Vic", "Manlleu", "Torelló", "Centelles", "Roda de Ter", "Tona", "Rupit i Pruit"],
+    "neighbours": ["ripolles", "garrotxa", "selva", "valles-oriental", "moianes", "llucanes"],
+    "character": "Embotit, mercat i turisme rural",
+    "landscape": ["La Plaça Major de Vic", "El Collsacabra i Rupit", "Les Guilleries i el pantà de Sau", "El Montseny"],
+    "products": ["Llonganissa de Vic IGP", "Embotits artesans", "El mercat setmanal de Vic"],
+    "lead": "Treballem amb productors, restaurants, allotjaments i botigues de Vic, Manlleu, Torelló, Centelles i la resta d’Osona.",
+    "territory": "El mercat de la Plaça Major, la llonganissa de Vic, les masies del Collsacabra. Osona és una comarca on <em>el producte ho és tot</em>, i on els negocis petits necessiten explicar-se tan bé com els grans.",
+    "focus": {
+      "fotografia": "Producte i obrador per a xarcuteries i productors, restaurants de Vic i cases rurals del Collsacabra i les Guilleries.",
+      "video": "El procés d’elaboració, el mercat, la cuina: peces per a la web i les xarxes.",
+      "xarxes-socials": "Contingut constant per a productors i restaurants que volen vendre més a prop i fora de la comarca.",
+      "disseny-web": "Webs i botigues en línia per a productors que venen directament al client."
+    },
+    "sectors": {
+      "productors": "Xarcuteries, obradors i productors de la Plana de Vic.",
+      "restaurants": "Restaurants de cuina de mercat i de producte d’Osona."
+    },
+    "faq": [["Feu fotografia de producte per a botiga en línia?", "Sí. Fotografiem embotits, formatges i altres productes sobre fons net per a la botiga, i també en context, a l’obrador o a taula."]]
+  },
+  {
+    "slug": "llucanes", "name": "Lluçanès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Prats de Lluçanès", "group": "barcelona",
+    "towns": ["Prats de Lluçanès", "Olost", "Sant Bartomeu del Grau", "Sant Feliu Sasserra", "Oristà", "Alpens", "Lluçà"],
+    "neighbours": ["osona", "bergueda", "bages"],
+    "character": "Altiplà de masies i pagesia",
+    "landscape": ["Santa Maria de Lluçà", "L’altiplà del Lluçanès", "Els camins de masia en masia"],
+    "products": ["Ramaderia i producte de pagès", "Venda directa de masia"],
+    "lead": "Treballem amb masies, cases de turisme rural, productors i botigues de Prats de Lluçanès, Olost, Sant Bartomeu del Grau i la resta de la comarca.",
+    "territory": "El Lluçanès és la comarca més jove de Catalunya, però el seu paisatge de masies i camps és antic. Aquí el turisme és tranquil i el producte és de pagès: <em>tot demana calma</em>, també a l’hora de fotografiar-ho.",
+    "focus": {
+      "fotografia": "Masies de turisme rural, productors de pagès i botigues de poble.",
+      "video": "Peces pausades de paisatge i de feina al camp, pensades per a qui busca desconnectar.",
+      "xarxes-socials": "Contingut per donar a conèixer una comarca nova i els negocis que la mantenen viva.",
+      "disseny-web": "Webs senzilles per a masies i productors, amb reserva o venda directa."
+    },
+    "sectors": {
+      "turisme-rural": "Masies i cases rurals de l’altiplà, lluny de les presses.",
+      "productors": "Ramaders i pagesos amb venda directa."
+    },
+    "faq": [["Us desplaceu a masies aïllades?", "Sí. Sovint és on hi ha les millors imatges. Només cal saber com arribar-hi."]]
+  },
+  {
+    "slug": "moianes", "name": "Moianès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Moià", "group": "barcelona",
+    "towns": ["Moià", "Castellterçol", "l’Estany", "Santa Maria d’Oló", "Calders", "Sant Quirze Safaja", "Collsuspina"],
+    "neighbours": ["bages", "osona", "valles-oriental", "valles-occidental"],
+    "character": "Altiplà, bosc i patrimoni",
+    "landscape": ["Les Coves del Toll", "El monestir de l’Estany", "El nucli antic de Moià"],
+    "products": ["Producte de pagès de l’altiplà", "Bolets de temporada"],
+    "lead": "Treballem amb allotjaments, restaurants i productors de Moià, Castellterçol, l’Estany i la resta del Moianès.",
+    "territory": "Entre el Vallès i la Plana de Vic, el Moianès és un altiplà de boscos, masies i pobles petits. Un territori <em>a una hora de Barcelona</em> que molta gent encara ha de descobrir.",
+    "focus": {
+      "fotografia": "Cases rurals, restaurants de cuina de proximitat i productors de l’altiplà.",
+      "video": "Peces que expliquin l’altiplà a qui el té a una hora de casa i no el coneix.",
+      "xarxes-socials": "Contingut per atraure escapades de cap de setmana des de l’àrea metropolitana.",
+      "disseny-web": "Webs per a allotjaments i restaurants amb reserva directa."
+    },
+    "sectors": {
+      "turisme-rural": "Cases rurals i masies per a escapades a prop de Barcelona.",
+      "restaurants": "Restaurants de cuina de proximitat i de temporada."
+    },
+    "faq": [["Feu contingut pensat per al públic de Barcelona?", "Sí. Si el teu client ve de l’àrea metropolitana, ho tenim en compte en les imatges, els textos i els horaris de publicació."]]
+  },
+  {
+    "slug": "solsones", "name": "Solsonès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Solsona", "group": "veines",
+    "towns": ["Solsona", "Sant Llorenç de Morunys", "Olius", "Navès", "Riner", "Pinós", "Guixers"],
+    "neighbours": ["bergueda", "alt-urgell", "bages", "segarra"],
+    "character": "Bosc, bolets i muntanya",
+    "landscape": ["La catedral de Solsona", "La Vall de Lord", "Port del Comte", "El santuari del Miracle"],
+    "products": ["Bolets del Solsonès", "Producte de muntanya de la Vall de Lord"],
+    "lead": "Treballem amb allotjaments, restaurants i productors de Solsona, Sant Llorenç de Morunys, la Vall de Lord i la resta del Solsonès.",
+    "territory": "Boscos de bolets, la Vall de Lord, el Port del Comte i una capital de carrers de pedra. El Solsonès té <em>temporades molt marcades</em>, i cada una és una oportunitat per explicar-se.",
+    "focus": {
+      "fotografia": "Cases rurals i hotels de muntanya, restaurants de cuina de temporada i productors de la comarca.",
+      "video": "Peces de temporada: la tardor dels bolets, la neu al Port del Comte, l’estiu a la vall.",
+      "xarxes-socials": "Un calendari de contingut que segueixi les estacions i ompli els mesos més fluixos.",
+      "disseny-web": "Webs per a allotjaments i restaurants que viuen del turisme de temporada."
+    },
+    "sectors": {
+      "turisme-rural": "Cases rurals i hotels de muntanya de la Vall de Lord i el Port del Comte.",
+      "restaurants": "Restaurants de cuina de muntanya i de temporada."
+    },
+    "faq": [["Podeu fer una sessió a cada temporada?", "Sí. Al Solsonès té molt sentit: la tardor, l’hivern i l’estiu atrauen públics diferents i cadascun demana les seves imatges."]]
+  },
+  {
+    "slug": "ripolles", "name": "Ripollès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Ripoll", "group": "veines",
+    "towns": ["Ripoll", "Campdevànol", "Sant Joan de les Abadesses", "Camprodon", "Ribes de Freser", "Setcases"],
+    "neighbours": ["cerdanya", "bergueda", "osona", "garrotxa"],
+    "character": "Pirineu, romànic i neu",
+    "landscape": ["El monestir de Santa Maria de Ripoll", "La Vall de Núria", "La vall de Camprodon", "Sant Joan de les Abadesses"],
+    "products": ["Embotits i galetes de Camprodon", "Ramaderia de muntanya"],
+    "lead": "Treballem amb allotjaments, restaurants i productors de Ripoll, Camprodon, Ribes de Freser i la resta del Ripollès.",
+    "territory": "La portada de Ripoll, la vall de Núria, els pobles de pedra de la vall de Camprodon. El Ripollès és <em>Pirineu i romànic</em>, i qui hi ve busca muntanya, però també història.",
+    "focus": {
+      "fotografia": "Hotels i cases de muntanya, restaurants, obradors i productors de les valls.",
+      "video": "Peces de muntanya i de patrimoni per a les dues temporades: la neu i l’estiu.",
+      "xarxes-socials": "Contingut que doni ganes de venir també fora de la temporada d’esquí.",
+      "disseny-web": "Webs per a allotjaments de muntanya amb reserva directa."
+    },
+    "sectors": {
+      "turisme-rural": "Hotels i cases de muntanya a la vall de Camprodon i a la de Ribes.",
+      "productors": "Obradors i productors d’embotits, galetes i producte de muntanya."
+    },
+    "faq": [["Feu fotografia a l’hivern amb neu?", "Sí. Planifiquem la sessió segons la previsió perquè la neu i la llum hi acompanyin."]]
+  },
+  {
+    "slug": "cerdanya", "name": "Cerdanya", "el": "la ", "a": "a la ", "de": "de la ",
+    "capital": "Puigcerdà", "group": "veines",
+    "towns": ["Puigcerdà", "Bellver de Cerdanya", "Llívia", "Alp", "Bolvir", "Das"],
+    "neighbours": ["alt-urgell", "bergueda", "ripolles"],
+    "character": "Vall de muntanya, neu i estiu",
+    "landscape": ["La vall de la Cerdanya", "L’estany de Puigcerdà", "Llívia", "La serra del Cadí"],
+    "products": ["Formatge de l’Alt Urgell i la Cerdanya DOP", "Mantega de l’Alt Urgell i la Cerdanya DOP"],
+    "lead": "Treballem amb hotels, allotjaments, restaurants i productors de Puigcerdà, Bellver, Llívia, Alp i la resta de la Cerdanya.",
+    "territory": "Una vall ampla i assolellada entre muntanyes, amb neu a l’hivern i prats a l’estiu. La Cerdanya té un visitant fidel i exigent, i <em>l’estètica hi compta molt</em>.",
+    "focus": {
+      "fotografia": "Hotels i allotjaments de muntanya, restaurants i botigues de Puigcerdà i els pobles de la vall.",
+      "video": "Peces per a les dues temporades, la neu i l’estiu, i per al visitant que torna cada any.",
+      "xarxes-socials": "Contingut cuidat per a un públic que coneix bé la vall i en valora els detalls.",
+      "disseny-web": "Webs amb reserva directa per a hotels, apartaments i restaurants."
+    },
+    "sectors": {
+      "turisme-rural": "Hotels, apartaments i cases de muntanya de la vall.",
+      "restaurants": "Restaurants de cuina de muntanya i de producte de la vall."
+    },
+    "faq": [["Podeu fer contingut per a la temporada d’esquí i per a l’estiu?", "Sí. Són dos públics diferents i cadascun necessita les seves imatges. Ho planifiquem perquè cada temporada tingui el material a punt."]]
+  },
+  {
+    "slug": "alt-penedes", "name": "Alt Penedès", "el": "l’", "a": "a l’", "de": "de l’",
+    "capital": "Vilafranca del Penedès", "group": "barcelona",
+    "towns": ["Vilafranca del Penedès", "Sant Sadurní d’Anoia", "Gelida", "Santa Margarida i els Monjos", "Subirats", "Sant Pere de Riudebitlles"],
+    "neighbours": ["anoia", "baix-llobregat", "garraf", "baix-penedes", "alt-camp"],
+    "character": "Vinya, cava i enoturisme",
+    "landscape": ["Les vinyes del Penedès", "El Vinseum de Vilafranca", "Les caves de Sant Sadurní d’Anoia"],
+    "products": ["DO Penedès", "DO Cava", "Cellers i caves familiars"],
+    "lead": "Treballem amb cellers, caves, cooperatives, allotjaments i restaurants de Vilafranca, Sant Sadurní d’Anoia i la resta de l’Alt Penedès.",
+    "territory": "Vinya fins on arriba la vista, caves centenàries i una manera de fer que passa de pares a fills. A l’Alt Penedès, <em>el vi és paisatge</em>, i per explicar un celler cal ensenyar-ne la terra, les mans i el temps.",
+    "focus": {
+      "fotografia": "Vinya, celler, ampolla i persones: fotografia per a cellers, caves i cooperatives del Penedès.",
+      "video": "La verema, la criança i la visita al celler, en peces per a la web i les xarxes.",
+      "xarxes-socials": "Contingut que segueixi el cicle de la vinya i acompanyi el vi fins a la taula.",
+      "disseny-web": "Webs de celler amb botiga en línia i reserva de visites d’enoturisme."
+    },
+    "sectors": {
+      "productors": "Cellers i caves de la DO Penedès i la DO Cava.",
+      "cooperatives": "Cellers cooperatius i agrupacions de viticultors."
+    },
+    "faq": [["Veniu durant la verema?", "És el millor moment. Planifiquem la sessió amb el calendari del celler perquè no faci nosa a la feina."]]
+  },
+  {
+    "slug": "anoia", "name": "Anoia", "el": "l’", "a": "a l’", "de": "de l’",
+    "capital": "Igualada", "group": "barcelona",
+    "towns": ["Igualada", "Piera", "Vilanova del Camí", "Santa Margarida de Montbui", "Capellades", "Masquefa", "Calaf"],
+    "neighbours": ["bages", "baix-llobregat", "alt-penedes", "alt-camp", "conca-de-barbera", "segarra"],
+    "character": "Ofici, cereal i patrimoni",
+    "landscape": ["Montserrat", "El castell de Claramunt", "El Molí Paperer de Capellades", "L’Alta Anoia"],
+    "products": ["Cereal de l’Alta Anoia", "La tradició de la pell i del paper"],
+    "lead": "Treballem amb productors, comerços, allotjaments i restaurants d’Igualada, Piera, Capellades, Calaf i la resta de l’Anoia.",
+    "territory": "Una comarca de tradició industrial, de la pell al paper, amb pobles de pagès i camps de cereal a l’Alta Anoia. A l’Anoia hi ha <em>molt ofici per explicar</em>, i sovint encara no s’ha explicat bé.",
+    "focus": {
+      "fotografia": "Obradors, tallers, botigues i productors: l’ofici de prop, amb llum natural.",
+      "video": "Peces sobre oficis i empreses familiars, per a la web i les xarxes.",
+      "xarxes-socials": "Contingut per a comerços i productors que volen fer-se veure més enllà de la comarca.",
+      "disseny-web": "Webs i botigues en línia per a marques de la comarca."
+    },
+    "sectors": {
+      "productors": "Productors, obradors i empreses familiars amb ofici.",
+      "comerc-proximitat": "Botigues i comerços del centre d’Igualada i dels pobles."
+    },
+    "faq": [["Feu fotografia de tallers i obradors?", "Sí. Ens agrada fotografiar la feina de prop: les eines, les mans i el procés, sense aturar la producció."]]
+  },
+  {
+    "slug": "garraf", "name": "Garraf", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Vilanova i la Geltrú", "group": "barcelona",
+    "towns": ["Vilanova i la Geltrú", "Sitges", "Sant Pere de Ribes", "Cubelles", "Canyelles", "Olivella"],
+    "neighbours": ["alt-penedes", "baix-penedes", "baix-llobregat"],
+    "character": "Mar, restauració i cultura",
+    "landscape": ["El Parc Natural del Garraf", "El Cau Ferrat de Sitges", "El port de Vilanova i la Geltrú"],
+    "products": ["El xató", "La malvasia de Sitges", "Peix de la llotja de Vilanova"],
+    "lead": "Treballem amb restaurants, botigues, allotjaments i productors de Vilanova i la Geltrú, Sitges, Sant Pere de Ribes i Cubelles.",
+    "territory": "Mar, massís i una cuina amb nom propi, com el xató. Al Garraf, la competència per l’atenció és alta, i <em>una imatge pròpia</em> és el que separa un restaurant del del costat.",
+    "focus": {
+      "fotografia": "Restaurants, cuina de peix i de mercat, botigues i allotjaments de la costa.",
+      "video": "Peces curtes de cuina, sala i entorn per a Reels i la web.",
+      "xarxes-socials": "Contingut constant per a negocis que competeixen cada dia per ser la primera opció.",
+      "disseny-web": "Webs amb carta, reserves i botiga per a restaurants i comerços."
+    },
+    "sectors": {
+      "restaurants": "Restaurants de peix, de xató i de cuina de mercat.",
+      "comerc-proximitat": "Botigues i comerços de Vilanova, Sitges i Ribes."
+    },
+    "faq": [["Feu contingut per a restaurants abans de la temporada alta?", "Sí. Preparem el material abans de l’estiu perquè a la temporada alta el tinguis a punt i no hagis de pensar-hi."]]
+  },
+  {
+    "slug": "baix-penedes", "name": "Baix Penedès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "el Vendrell", "group": "veines",
+    "towns": ["el Vendrell", "Calafell", "Cunit", "l’Arboç", "Santa Oliva", "Banyeres del Penedès"],
+    "neighbours": ["garraf", "alt-penedes", "alt-camp"],
+    "character": "Costa, vinya i cultura",
+    "landscape": ["Les platges de Calafell i Coma-ruga", "La Vila Museu Pau Casals", "La Ciutadella Ibèrica de Calafell"],
+    "products": ["DO Penedès", "Cellers de l’interior"],
+    "lead": "Treballem amb restaurants, allotjaments, cellers i comerços del Vendrell, Calafell, Cunit i l’Arboç.",
+    "territory": "Platges a la costa i vinya a l’interior: el Baix Penedès té <em>dues cares</em>, i la majoria de visitants només en coneixen una. Explicar l’altra és una oportunitat per als negocis de l’interior.",
+    "focus": {
+      "fotografia": "Restaurants de la costa, cellers i allotjaments de l’interior.",
+      "video": "Peces que connectin el mar amb la vinya i atreguin visitants fora de l’estiu.",
+      "xarxes-socials": "Contingut per allargar la temporada més enllà dels mesos de platja.",
+      "disseny-web": "Webs amb reserves per a restaurants, allotjaments i visites a celler."
+    },
+    "sectors": {
+      "restaurants": "Restaurants de la costa i de cuina de producte.",
+      "turisme-rural": "Allotjaments rurals entre vinyes, a l’interior de la comarca."
+    },
+    "faq": [["Ens podeu ajudar a atraure visitants fora de l’estiu?", "És una de les coses que més ens interessen. Amb contingut de l’interior i de la tardor, la comarca s’entén d’una altra manera."]]
+  },
+  {
+    "slug": "alt-camp", "name": "Alt Camp", "el": "l’", "a": "a l’", "de": "de l’",
+    "capital": "Valls", "group": "veines",
+    "towns": ["Valls", "Alcover", "el Pla de Santa Maria", "Vila-rodona", "Aiguamúrcia", "Cabra del Camp"],
+    "neighbours": ["conca-de-barbera", "anoia", "alt-penedes", "baix-penedes"],
+    "character": "Calçots, castells i vinya",
+    "landscape": ["El monestir de Santes Creus", "El nucli antic de Valls", "La Gran Festa de la Calçotada"],
+    "products": ["Calçot de Valls IGP", "DO Tarragona", "Oli i vi de cooperativa"],
+    "lead": "Treballem amb productors, restaurants, cooperatives i allotjaments de Valls, Alcover, el Pla de Santa Maria i la resta de l’Alt Camp.",
+    "territory": "La terra del calçot i dels castells, amb Santes Creus i una xarxa de cellers cooperatius que expliquen la història agrària de la comarca. A l’Alt Camp, <em>la tradició ven</em>, si s’explica bé.",
+    "focus": {
+      "fotografia": "Calçotades, restaurants, productors i cellers, amb la llum de l’hivern i de la vinya.",
+      "video": "Peces de temporada: la calçotada, la verema, l’oli nou.",
+      "xarxes-socials": "Un calendari de contingut que aprofiti els grans moments de l’any, de la calçotada als castells.",
+      "disseny-web": "Webs amb reserves per a restaurants de calçotades i botiga per a productors."
+    },
+    "sectors": {
+      "productors": "Productors de calçots, oli i vi de l’Alt Camp.",
+      "restaurants": "Restaurants de calçotades i de cuina del Camp."
+    },
+    "faq": [["Feu contingut per a la temporada de calçots?", "Sí, i convé preparar-lo amb temps. La temporada és curta i el contingut ha d’estar a punt quan la gent comença a buscar on anar."]]
+  },
+  {
+    "slug": "conca-de-barbera", "name": "Conca de Barberà", "el": "la ", "a": "a la ", "de": "de la ",
+    "capital": "Montblanc", "group": "veines",
+    "towns": ["Montblanc", "l’Espluga de Francolí", "Santa Coloma de Queralt", "Vimbodí i Poblet", "Barberà de la Conca", "Sarral"],
+    "neighbours": ["alt-camp", "anoia", "segarra"],
+    "character": "Vinya, Cister i cellers cooperatius",
+    "landscape": ["El monestir de Poblet", "Les muralles de Montblanc", "Els cellers cooperatius modernistes"],
+    "products": ["DO Conca de Barberà", "Vins de trepat"],
+    "lead": "Treballem amb cellers, cooperatives, allotjaments i restaurants de Montblanc, l’Espluga de Francolí, Santa Coloma de Queralt i la resta de la Conca.",
+    "territory": "Poblet, les muralles de Montblanc i els cellers cooperatius modernistes que en diuen catedrals del vi. La Conca de Barberà és <em>una comarca de cooperatives</em>, i la veu col·lectiva és una part essencial de la seva història.",
+    "focus": {
+      "fotografia": "Cellers cooperatius, vinya, socis i producte de la DO Conca de Barberà.",
+      "video": "Peces sobre la vinya, el trepat i la feina compartida de les cooperatives.",
+      "xarxes-socials": "Un pla de contingut per a cooperatives i cellers que volen arribar a clients nous.",
+      "disseny-web": "Webs per a cellers i cooperatives amb botiga i visites."
+    },
+    "sectors": {
+      "cooperatives": "Cellers cooperatius i agrupacions de viticultors de la Conca.",
+      "productors": "Cellers de la DO Conca de Barberà i productors d’oli."
+    },
+    "faq": [["Treballeu amb cellers cooperatius?", "Sí. Són dels projectes que més ens agrada explicar: moltes famílies, un sol celler i sovint un edifici singular."]]
+  },
+  {
+    "slug": "segarra", "name": "Segarra", "el": "la ", "a": "a la ", "de": "de la ",
+    "capital": "Cervera", "group": "veines",
+    "towns": ["Cervera", "Guissona", "Torrefeta i Florejacs", "Sant Guim de Freixenet", "Sant Ramon", "els Plans de Sió"],
+    "neighbours": ["anoia", "solsones", "conca-de-barbera"],
+    "character": "Cereal, pobles closos i cooperativisme",
+    "landscape": ["La Universitat de Cervera", "Els pobles closos", "Els castells de la Segarra"],
+    "products": ["Cereal de secà", "Cooperatives agràries", "La indústria agroalimentària de Guissona"],
+    "lead": "Treballem amb cooperatives, productors, comerços i allotjaments de Cervera, Guissona i els pobles de la Segarra.",
+    "territory": "Camps de cereal fins a l’horitzó, pobles closos i una tradició cooperativa molt arrelada. La Segarra és <em>un paisatge de secà</em> que té molt més per ensenyar del que sembla des de la carretera.",
+    "focus": {
+      "fotografia": "Cooperatives, pagesos, pobles i producte de la plana de secà.",
+      "video": "Peces de paisatge i de feina al camp, de la sembra a la sega.",
+      "xarxes-socials": "Contingut per a cooperatives i productors que volen explicar-se al consumidor final.",
+      "disseny-web": "Webs per a cooperatives i productors amb venda directa."
+    },
+    "sectors": {
+      "cooperatives": "Cooperatives agràries i agrupacions de productors de cereal i ramaderia.",
+      "productors": "Pagesos i productors amb venda directa."
+    },
+    "faq": [["Feu reportatges per a cooperatives agràries?", "Sí. Retratem els socis, les finques i la feina compartida, i en fem un arxiu que la cooperativa pugui fer servir tot l’any."]]
+  },
+  {
+    "slug": "alt-urgell", "name": "Alt Urgell", "el": "l’", "a": "a l’", "de": "de l’",
+    "capital": "la Seu d’Urgell", "group": "veines",
+    "towns": ["la Seu d’Urgell", "Montferrer i Castellbò", "Oliana", "Organyà", "Coll de Nargó", "Peramola"],
+    "neighbours": ["cerdanya", "bergueda", "solsones"],
+    "character": "Formatge, Pirineu i aigües braves",
+    "landscape": ["La catedral de Santa Maria de la Seu d’Urgell", "El Parc del Segre", "El Parc Natural del Cadí-Moixeró"],
+    "products": ["Formatge de l’Alt Urgell i la Cerdanya DOP", "Mantega de l’Alt Urgell i la Cerdanya DOP", "Llet de muntanya"],
+    "lead": "Treballem amb formatgeries, cooperatives, allotjaments i restaurants de la Seu d’Urgell, Organyà, Oliana i la resta de l’Alt Urgell.",
+    "territory": "Prats, vaques de llet i un formatge amb denominació d’origen conegut arreu. A l’Alt Urgell, <em>el producte i el paisatge</em> van de la mà, i s’han d’explicar junts.",
+    "focus": {
+      "fotografia": "Formatgeries, ramaders, cooperatives i allotjaments de muntanya.",
+      "video": "Peces sobre la llet, l’elaboració del formatge i la vida a la muntanya.",
+      "xarxes-socials": "Contingut per a productors que volen explicar el seu producte més enllà de la comarca.",
+      "disseny-web": "Webs amb botiga en línia per a formatgeries i productors."
+    },
+    "sectors": {
+      "productors": "Formatgeries i productors de la DOP de l’Alt Urgell i la Cerdanya.",
+      "cooperatives": "Cooperatives lleteres i agrupacions de ramaders."
+    },
+    "faq": [["Feu fotografia de formatge i producte làctic?", "Sí. Fotografiem el producte, l’obrador i el procés, i també la muntanya d’on surt la llet."]]
+  },
+  {
+    "slug": "barcelones", "name": "Barcelonès", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Barcelona", "group": "barcelona", "base": true,
+    "towns": ["Barcelona", "l’Hospitalet de Llobregat", "Badalona", "Santa Coloma de Gramenet", "Sant Adrià de Besòs"],
+    "neighbours": ["baix-llobregat", "valles-occidental", "maresme"],
+    "character": "Restaurants, mercats i comerç de barri",
+    "landscape": ["Els mercats municipals", "Els eixos comercials de barri", "La façana marítima"],
+    "products": ["Cuina de mercat i de temporada", "Obradors i botigues de producte"],
+    "lead": "Treballem amb restaurants, botigues, obradors i negocis de producte de Barcelona, l’Hospitalet, Badalona i la resta del Barcelonès.",
+    "territory": "A la ciutat, cada carrer té el seu forn, el seu restaurant i la seva botiga de tota la vida. En un entorn tan saturat, <em>una imatge honesta</em> és el que fa que et triïn a tu i no la cadena del costat.",
+    "focus": {
+      "fotografia": "Restaurants, obradors, botigues de producte i espais amb personalitat.",
+      "video": "Peces curtes de cuina, taulell i barri per a Reels i la web.",
+      "xarxes-socials": "Gestió d’Instagram per a restaurants i comerços que volen fidelitzar el barri i atraure gent de fora.",
+      "disseny-web": "Webs ràpides amb carta, reserves o botiga, preparades per sortir a les cerques de la zona."
+    },
+    "sectors": {
+      "restaurants": "Restaurants de cuina de mercat, de temporada i de producte.",
+      "comerc-proximitat": "Botigues de barri, obradors i comerços de producte local."
+    },
+    "faq": [["Treballeu amb negocis petits de barri?", "Sí. Són els que més es noten quan tenen bones imatges. Adaptem la feina a la mida de cada negoci."]]
+  },
+  {
+    "slug": "baix-llobregat", "name": "Baix Llobregat", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Sant Feliu de Llobregat", "group": "barcelona",
+    "towns": ["Cornellà de Llobregat", "Sant Boi de Llobregat", "Viladecans", "el Prat de Llobregat", "Castelldefels", "Sant Feliu de Llobregat", "Martorell"],
+    "neighbours": ["barcelones", "valles-occidental", "bages", "anoia", "alt-penedes", "garraf"],
+    "character": "Parc Agrari, delta i restauració",
+    "landscape": ["El delta del Llobregat", "La Colònia Güell", "Montserrat", "Les platges de Castelldefels"],
+    "products": ["Carxofa del Prat IGP", "Pollastre del Prat IGP", "El Parc Agrari del Baix Llobregat"],
+    "lead": "Treballem amb productors, restaurants i comerços de Sant Boi, el Prat, Viladecans, Castelldefels, Sant Feliu i la resta del Baix Llobregat.",
+    "territory": "A tocar de Barcelona hi ha un dels espais agraris més valuosos del país: el Parc Agrari, amb la carxofa i el pollastre del Prat. Al Baix Llobregat, <em>el producte de proximitat</em> és literalment a la porta de casa.",
+    "focus": {
+      "fotografia": "Pagesos del Parc Agrari, producte fresc, restaurants i botigues de la comarca.",
+      "video": "Peces sobre la collita, la venda directa i la cuina de producte del delta.",
+      "xarxes-socials": "Contingut per a productors i restaurants que volen fer valer el quilòmetre zero.",
+      "disseny-web": "Webs amb venda directa per a pagesos i botiga per a productors."
+    },
+    "sectors": {
+      "productors": "Pagesos i productors del Parc Agrari, amb venda directa.",
+      "restaurants": "Restaurants de cuina de producte i de temporada."
+    },
+    "faq": [["Feu contingut per a pagesos amb venda directa?", "Sí. Fotografiem el camp, la collita i les persones, i t’ajudem a explicar on i com es pot comprar el producte."]]
+  },
+  {
+    "slug": "valles-occidental", "name": "Vallès Occidental", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Sabadell i Terrassa", "capitals": ["Sabadell", "Terrassa"], "group": "barcelona", "base": true,
+    "towns": ["Terrassa", "Sabadell", "Sant Cugat del Vallès", "Rubí", "Cerdanyola del Vallès", "Castellar del Vallès", "Matadepera"],
+    "neighbours": ["bages", "moianes", "valles-oriental", "barcelones", "baix-llobregat"],
+    "character": "Ciutats, comerç i natura a tocar",
+    "landscape": ["La Mola i Sant Llorenç del Munt", "La Seu d’Ègara de Terrassa", "El Parc de Collserola"],
+    "products": ["Mongeta del ganxet DOP", "Comerç i restauració de ciutat"],
+    "lead": "Treballem amb restaurants, comerços, productors i empreses de Sabadell, Terrassa, Sant Cugat, Rubí i la resta del Vallès Occidental.",
+    "territory": "Dues ciutats amb passat tèxtil, una xarxa de comerç de proximitat molt viva i la Mola a l’horitzó. Al Vallès Occidental hi ha <em>molts negocis bons</em> que es perden entre les cadenes per no explicar-se prou.",
+    "focus": {
+      "fotografia": "Restaurants, botigues, obradors i empreses familiars de Sabadell, Terrassa i Sant Cugat.",
+      "video": "Peces curtes per presentar un negoci, un producte o un equip.",
+      "xarxes-socials": "Gestió d’Instagram per a comerços i restaurants que volen ser la primera opció del barri.",
+      "disseny-web": "Webs ràpides i ben posicionades a les cerques locals de la comarca."
+    },
+    "sectors": {
+      "restaurants": "Restaurants de cuina de mercat i de producte de la comarca.",
+      "comerc-proximitat": "Comerços de barri, obradors i botigues de producte local."
+    },
+    "faq": [["Podeu fer fotos del nostre equip i del local?", "Sí. El retrat de l’equip i les fotos del local són de les imatges que més confiança donen a qui encara no et coneix."]]
+  },
+  {
+    "slug": "valles-oriental", "name": "Vallès Oriental", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Granollers", "group": "barcelona",
+    "towns": ["Granollers", "Mollet del Vallès", "Cardedeu", "Sant Celoni", "la Garriga", "Caldes de Montbui", "les Franqueses del Vallès"],
+    "neighbours": ["osona", "moianes", "valles-occidental", "maresme", "selva"],
+    "character": "Montseny, pagesia i comerç",
+    "landscape": ["El Parc Natural del Montseny", "Les termes romanes de Caldes de Montbui", "El modernisme de la Garriga"],
+    "products": ["Mongeta del ganxet DOP", "Producte de pagès del Montseny", "El mercat setmanal de Granollers"],
+    "lead": "Treballem amb productors, restaurants, comerços i allotjaments de Granollers, Cardedeu, Sant Celoni, la Garriga, Caldes de Montbui i la resta del Vallès Oriental.",
+    "territory": "Del Montseny a la plana, el Vallès Oriental combina pagesia, ciutats amb un comerç molt viu i pobles d’estiueig amb història. Una comarca <em>amb molt de producte</em> i poc temps per explicar-lo.",
+    "focus": {
+      "fotografia": "Productors del Montseny, restaurants, comerços de Granollers i allotjaments rurals.",
+      "video": "Peces de producte i de paisatge, del Montseny a la plana.",
+      "xarxes-socials": "Contingut per a productors i comerços que volen vendre més a prop de casa.",
+      "disseny-web": "Webs i botigues en línia per a productors i comerços de la comarca."
+    },
+    "sectors": {
+      "productors": "Pagesos i productors del Montseny i de la plana del Vallès.",
+      "restaurants": "Restaurants de cuina de proximitat i de temporada."
+    },
+    "faq": [["Feu fotografia al Montseny?", "Sí. És un dels paisatges més agraïts de fotografiar, i un gran argument per a allotjaments i productors de la zona."]]
+  },
+  {
+    "slug": "maresme", "name": "Maresme", "el": "el ", "a": "al ", "de": "del ",
+    "capital": "Mataró", "group": "barcelona",
+    "towns": ["Mataró", "Arenys de Mar", "Calella", "el Masnou", "Premià de Mar", "Pineda de Mar", "Sant Andreu de Llavaneres"],
+    "neighbours": ["barcelones", "valles-oriental", "selva"],
+    "character": "Horta, flor i costa",
+    "landscape": ["El Parc de la Serralada Litoral", "El Montnegre i el Corredor", "Les platges del Maresme"],
+    "products": ["DO Alella", "Maduixa del Maresme", "Pèsol de Llavaneres", "Mongeta del ganxet DOP"],
+    "lead": "Treballem amb productors, cellers, restaurants i comerços de Mataró, Arenys de Mar, Calella, el Masnou i la resta del Maresme.",
+    "territory": "Maduixes, pèsols, vi d’Alella i flor, entre el mar i la serralada. El Maresme és <em>una horta a tocar de la platja</em>, i els seus productors mereixen ser coneguts més enllà de la temporada.",
+    "focus": {
+      "fotografia": "Pagesos de l’horta, cellers de la DO Alella, restaurants i botigues de la costa.",
+      "video": "Peces de collita i de cuina de temporada: la maduixa, el pèsol, la verema.",
+      "xarxes-socials": "Contingut que segueixi la temporada de cada producte i porti gent al mercat i al celler.",
+      "disseny-web": "Webs amb venda directa per a pagesos, i botiga i visites per a cellers."
+    },
+    "sectors": {
+      "productors": "Pagesos de l’horta i cellers de la DO Alella.",
+      "restaurants": "Restaurants de peix, de cuina de mercat i de producte del Maresme."
+    },
+    "faq": [["Feu contingut de temporada per a productors d’horta?", "Sí. Cada producte té la seva finestra, i el contingut ha d’arribar just quan la gent el busca."]]
+  },
+  {
+    "slug": "garrotxa", "name": "Garrotxa", "el": "la ", "a": "a la ", "de": "de la ",
+    "capital": "Olot", "group": "veines",
+    "towns": ["Olot", "Sant Joan les Fonts", "la Vall d’en Bas", "Besalú", "Santa Pau", "Castellfollit de la Roca"],
+    "neighbours": ["ripolles", "osona", "selva"],
+    "character": "Volcans, cuina i paisatge",
+    "landscape": ["La Zona Volcànica de la Garrotxa", "La Fageda d’en Jordà", "Besalú", "Castellfollit de la Roca"],
+    "products": ["Fesols de Santa Pau DOP", "La Cuina Volcànica", "Embotits i ratafia d’Olot"],
+    "lead": "Treballem amb restaurants, allotjaments rurals i productors d’Olot, Besalú, Santa Pau, la Vall d’en Bas i la resta de la Garrotxa.",
+    "territory": "Volcans, fagedes i una cuina que ha fet del paisatge la seva identitat. La Garrotxa és <em>un territori molt fotogènic</em>, i precisament per això la imatge d’un negoci ha de ser més pròpia que mai.",
+    "focus": {
+      "fotografia": "Restaurants de cuina de territori, cases rurals i productors de la zona volcànica.",
+      "video": "Peces de paisatge i de cuina: el fesol, la fageda, la tardor als volcans.",
+      "xarxes-socials": "Contingut que es distingeixi en una comarca on tothom fa fotos boniques.",
+      "disseny-web": "Webs amb reserves per a restaurants i allotjaments rurals."
+    },
+    "sectors": {
+      "restaurants": "Restaurants de cuina volcànica i de producte de la Garrotxa.",
+      "turisme-rural": "Cases rurals i masies entre volcans i fagedes."
+    },
+    "faq": [["Com us diferencieu en una comarca tan fotografiada?", "Buscant el que només té el teu negoci: les persones, el producte i la manera de fer. El paisatge és de tothom; la teva història, no."]]
+  },
+  {
+    "slug": "selva", "name": "Selva", "el": "la ", "a": "a la ", "de": "de la ",
+    "capital": "Santa Coloma de Farners", "group": "veines",
+    "towns": ["Santa Coloma de Farners", "Blanes", "Lloret de Mar", "Arbúcies", "Hostalric", "Tossa de Mar", "Breda"],
+    "neighbours": ["osona", "garrotxa", "valles-oriental", "maresme"],
+    "character": "Costa, Montseny i Guilleries",
+    "landscape": ["Les Guilleries", "El Montseny", "La Vila Vella de Tossa de Mar", "El jardí de Marimurtra a Blanes"],
+    "products": ["Les aigües de Caldes de Malavella", "Castanyes i bolets de muntanya"],
+    "lead": "Treballem amb allotjaments, restaurants i productors de Santa Coloma de Farners, Arbúcies, Hostalric, Blanes, Tossa i la resta de la Selva.",
+    "territory": "La Selva té costa i té muntanya: Tossa i Blanes d’una banda, el Montseny i les Guilleries de l’altra. Els negocis de l’interior <em>tenen molt per explicar</em>, i sovint queden a l’ombra de la costa.",
+    "focus": {
+      "fotografia": "Cases rurals del Montseny i les Guilleries, restaurants i productors de l’interior i de la costa.",
+      "video": "Peces que ensenyin l’interior de la comarca a qui només en coneix les platges.",
+      "xarxes-socials": "Contingut per a allotjaments i restaurants que volen atraure visitants tot l’any.",
+      "disseny-web": "Webs amb reserves per a allotjaments i restaurants."
+    },
+    "sectors": {
+      "turisme-rural": "Cases rurals i masies del Montseny i les Guilleries.",
+      "restaurants": "Restaurants de cuina de muntanya i de peix de la costa."
+    },
+    "faq": [["Treballeu tant a la costa com a l’interior?", "Sí. Són dos públics diferents, i el contingut s’adapta a cadascun."]]
+  }
+]

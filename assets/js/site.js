@@ -291,6 +291,15 @@
     onEnter: function (batch) { gsap.from(batch, { y: 30, opacity: 0.3, duration: 1, ease: 'expo.out', stagger: 0.08, clearProps: 'transform,opacity' }); }
   });
 
+  ScrollTrigger.batch('.place-row', {
+    start: 'top 94%',
+    once: true,
+    onEnter: function (batch) { gsap.from(batch, { x: -32, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.06, clearProps: 'transform,opacity' }); }
+  });
+  $$('.moments--places').forEach(function (list) {
+    gsap.from(list.children, { yPercent: 60, opacity: 0, duration: 0.8, ease: 'power2.out', stagger: 0.07, clearProps: 'transform,opacity', scrollTrigger: { trigger: list, start: 'top 88%' } });
+  });
+
   /* 5 — Photographs uncover and drift at their own pace */
   $$('.frame, .feature, .person').forEach(function (fig) {
     var media = $('.frame__media, .feature__media, .person__media', fig);
