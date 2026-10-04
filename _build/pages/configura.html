@@ -1,0 +1,226 @@
+<!--
+{
+  "id": "configura",
+  "path": "/configura/",
+  "nav": "contacte",
+  "title": "Configura el teu projecte · Pressupost | L’Ordiguer Estudi",
+  "og_title": "Configura el teu projecte",
+  "description": "Tria el sector, els serveis i la comarca, i et preparem una proposta de fotografia, vídeo, xarxes o web per al teu negoci. Sis preguntes, sense compromís.",
+  "crumbs": [["Contacte", "/contacte/"], ["Configura el teu projecte", null]],
+  "priority": 0.7
+}
+-->
+<section class="page-hero">
+  <div class="page-hero__text">
+    <p class="eyebrow" data-intro>Configurador</p>
+    <h1 class="page-title" data-split>Configura el teu <em>projecte</em>.</h1>
+  </div>
+  <div class="page-hero__side">
+    <p data-intro>Sis preguntes ràpides. Amb les respostes et preparem una proposta tancada, sense compromís. Responem en menys de 48 hores.</p>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Configurador del projecte">
+  <form class="config" id="configurador" action="https://formsubmit.co/{{email}}" method="POST" data-endpoint="https://formsubmit.co/ajax/{{email}}" data-email="{{email}}">
+    <input type="hidden" name="_next" value="https://lordiguer.cat/contacte/gracies/">
+    <input type="hidden" name="_subject" value="Nou projecte des del configurador">
+    <input type="hidden" name="_template" value="table">
+    <div class="hp" aria-hidden="true">
+      <label for="cfg-honey">No omplis aquest camp</label>
+      <input type="text" name="_honey" id="cfg-honey" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="config__main">
+      <div class="config__top">
+        <p class="config__count" id="cfg-pas" aria-live="polite">Pas <span data-step-n>1</span> de 6</p>
+        <div class="config__progress" aria-hidden="true"><span class="config__bar"></span></div>
+      </div>
+
+      <fieldset class="config__step" data-step="1">
+        <legend class="config__q"><span class="config__n">01</span>Quin negoci tens?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="Sector" value="Turisme rural" data-key="turisme-rural"><span class="option__box"><span class="option__title">Turisme rural</span><span class="option__text">Cases rurals, masies i petits hotels.</span></span></label>
+          <label class="option"><input type="radio" name="Sector" value="Productor o celler" data-key="productors"><span class="option__box"><span class="option__title">Productor o celler</span><span class="option__text">Cellers, formatgeries, obradors i finques.</span></span></label>
+          <label class="option"><input type="radio" name="Sector" value="Cooperativa" data-key="cooperatives"><span class="option__box"><span class="option__title">Cooperativa</span><span class="option__text">Cooperatives agràries i agrupacions de productors.</span></span></label>
+          <label class="option"><input type="radio" name="Sector" value="Restaurant" data-key="restaurants"><span class="option__box"><span class="option__title">Restaurant</span><span class="option__text">Cuina de territori i de mercat.</span></span></label>
+          <label class="option"><input type="radio" name="Sector" value="Comerç de proximitat" data-key="comerc-proximitat"><span class="option__box"><span class="option__title">Comerç</span><span class="option__text">Botigues de producte local i obradors.</span></span></label>
+          <label class="option"><input type="radio" name="Sector" value="Un altre" data-key="altre"><span class="option__box"><span class="option__title">Un altre</span><span class="option__text">Ens ho expliques al final.</span></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="config__step" data-step="2">
+        <legend class="config__q"><span class="config__n">02</span>Què necessites?</legend>
+        <p class="config__hint">Pots triar-ne més d’un.</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="Serveis" value="Fotografia" data-key="fotografia"><span class="option__box"><span class="option__title">Fotografia</span><span class="option__text">Espais, producte, retrat i reportatge.</span></span></label>
+          <label class="option"><input type="checkbox" name="Serveis" value="Vídeo" data-key="video"><span class="option__box"><span class="option__title">Vídeo</span><span class="option__text">De marca, reportatge i peces per a xarxes.</span></span></label>
+          <label class="option"><input type="checkbox" name="Serveis" value="Xarxes socials" data-key="xarxes-socials"><span class="option__box"><span class="option__title">Xarxes socials</span><span class="option__text">Estratègia, contingut i publicació.</span></span></label>
+          <label class="option"><input type="checkbox" name="Serveis" value="Disseny web" data-key="disseny-web"><span class="option__box"><span class="option__title">Disseny web</span><span class="option__text">Webs a mida, ràpides i ben posicionades.</span></span></label>
+          <label class="option option--wide"><input type="checkbox" name="Serveis" value="Encara no ho sé" data-key="no-ho-se"><span class="option__box"><span class="option__title">Encara no ho sé</span><span class="option__text">Ho decidim junts.</span></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="config__step" data-step="3">
+        <legend class="config__q"><span class="config__n">03</span>Explica’ns una mica més.</legend>
+        <p class="config__hint">Tot és opcional.</p>
+
+        <div class="config__group" role="group" aria-labelledby="cfg-objectiu">
+          <p class="config__label" id="cfg-objectiu">Què vols aconseguir?</p>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="Objectiu" value="Més reserves directes"><span>Més reserves directes</span></label>
+            <label class="chip"><input type="checkbox" name="Objectiu" value="Vendre més"><span>Vendre més</span></label>
+            <label class="chip"><input type="checkbox" name="Objectiu" value="Que et coneguin fora de la comarca"><span>Que et coneguin fora de la comarca</span></label>
+            <label class="chip"><input type="checkbox" name="Objectiu" value="Renovar la imatge"><span>Renovar la imatge</span></label>
+            <label class="chip"><input type="checkbox" name="Objectiu" value="Tenir contingut per a tot l’any"><span>Tenir contingut per a tot l’any</span></label>
+          </div>
+        </div>
+
+        <div class="config__group" role="group" aria-labelledby="cfg-foto" data-for="fotografia">
+          <p class="config__label" id="cfg-foto">Fotografia · Què vols fotografiar?</p>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="Fotografia" value="Espais i interiors"><span>Espais i interiors</span></label>
+            <label class="chip"><input type="checkbox" name="Fotografia" value="Producte"><span>Producte</span></label>
+            <label class="chip"><input type="checkbox" name="Fotografia" value="Plats"><span>Plats</span></label>
+            <label class="chip"><input type="checkbox" name="Fotografia" value="Persones i equip"><span>Persones i equip</span></label>
+            <label class="chip"><input type="checkbox" name="Fotografia" value="Una jornada o un esdeveniment"><span>Una jornada o un esdeveniment</span></label>
+          </div>
+        </div>
+
+        <div class="config__group" role="group" aria-labelledby="cfg-video" data-for="video">
+          <p class="config__label" id="cfg-video">Vídeo · Per a on és?</p>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="Vídeo" value="La web"><span>La web</span></label>
+            <label class="chip"><input type="checkbox" name="Vídeo" value="Les xarxes"><span>Les xarxes</span></label>
+            <label class="chip"><input type="checkbox" name="Vídeo" value="Una fira o una presentació"><span>Una fira o una presentació</span></label>
+          </div>
+        </div>
+
+        <div class="config__group" role="group" aria-labelledby="cfg-xarxes" data-for="xarxes-socials">
+          <p class="config__label" id="cfg-xarxes">Xarxes · Com està el teu perfil ara?</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="Xarxes" value="No en tinc"><span>No en tinc</span></label>
+            <label class="chip"><input type="radio" name="Xarxes" value="En tinc, però publico poc"><span>En tinc, però publico poc</span></label>
+            <label class="chip"><input type="radio" name="Xarxes" value="Publico, però vull millorar-lo"><span>Publico, però vull millorar-lo</span></label>
+          </div>
+        </div>
+
+        <div class="config__group" role="group" aria-labelledby="cfg-web" data-for="disseny-web">
+          <p class="config__label" id="cfg-web">Web · Tens web ara?</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="Web" value="No en tinc"><span>No en tinc</span></label>
+            <label class="chip"><input type="radio" name="Web" value="Sí, però s’ha de refer"><span>Sí, però s’ha de refer</span></label>
+          </div>
+          <p class="config__label" id="cfg-web-fn">Web · Què ha de poder fer?</p>
+          <div class="chips" role="group" aria-labelledby="cfg-web-fn">
+            <label class="chip"><input type="checkbox" name="Web: funcions" value="Reserves"><span>Reserves</span></label>
+            <label class="chip"><input type="checkbox" name="Web: funcions" value="Botiga en línia"><span>Botiga en línia</span></label>
+            <label class="chip"><input type="checkbox" name="Web: funcions" value="Carta o catàleg"><span>Carta o catàleg</span></label>
+            <label class="chip"><input type="checkbox" name="Web: funcions" value="Només informació"><span>Només informació</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="config__step" data-step="4">
+        <legend class="config__q"><span class="config__n">04</span>On és el negoci?</legend>
+        <div class="form__row">
+          <div class="field">
+            <label for="cfg-comarca">Comarca</label>
+            <select id="cfg-comarca" name="Comarca">
+              <option value="">Tria-la</option>
+              <x-part name="comarca-options"></x-part>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cfg-poble">Població (opcional)</label>
+            <input id="cfg-poble" name="Població" type="text" autocomplete="address-level2">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="config__step" data-step="5">
+        <legend class="config__q"><span class="config__n">05</span>Quan, i amb quin pressupost?</legend>
+        <div class="config__group" role="group" aria-labelledby="cfg-quan">
+          <p class="config__label" id="cfg-quan">Quan t’agradaria començar?</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="Quan" value="Com més aviat millor"><span>Com més aviat millor</span></label>
+            <label class="chip"><input type="radio" name="Quan" value="D’aquí a un o dos mesos"><span>D’aquí a un o dos mesos</span></label>
+            <label class="chip"><input type="radio" name="Quan" value="Per a una temporada concreta"><span>Per a una temporada concreta</span></label>
+            <label class="chip"><input type="radio" name="Quan" value="Encara ho estic mirant"><span>Encara ho estic mirant</span></label>
+          </div>
+        </div>
+        <div class="config__group" role="group" aria-labelledby="cfg-pressupost">
+          <p class="config__label" id="cfg-pressupost">Pressupost aproximat (opcional)</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="Pressupost" value="Fins a 500 €"><span>Fins a 500 €</span></label>
+            <label class="chip"><input type="radio" name="Pressupost" value="De 500 a 1.500 €"><span>De 500 a 1.500 €</span></label>
+            <label class="chip"><input type="radio" name="Pressupost" value="De 1.500 a 3.000 €"><span>De 1.500 a 3.000 €</span></label>
+            <label class="chip"><input type="radio" name="Pressupost" value="Més de 3.000 €"><span>Més de 3.000 €</span></label>
+            <label class="chip"><input type="radio" name="Pressupost" value="Prefereixo parlar-ne"><span>Prefereixo parlar-ne</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="config__step" data-step="6">
+        <legend class="config__q"><span class="config__n">06</span>Com et podem respondre?</legend>
+        <div class="form__row">
+          <div class="field">
+            <label for="cfg-nom">Nom</label>
+            <input id="cfg-nom" name="Nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cfg-correu">Correu electrònic</label>
+            <input id="cfg-correu" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="cfg-negoci">Negoci (opcional)</label>
+            <input id="cfg-negoci" name="Negoci" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="cfg-tel">Telèfon (opcional)</label>
+            <input id="cfg-tel" name="Telèfon" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="cfg-missatge">Alguna cosa més? (opcional)</label>
+          <textarea id="cfg-missatge" name="Missatge" placeholder="Dates, la web o l’Instagram del negoci, el que vulguis que sapiguem."></textarea>
+        </div>
+        <label class="check" for="cfg-privacitat">
+          <input type="checkbox" id="cfg-privacitat" name="Privacitat" value="Acceptada" required>
+          <span>He llegit i accepto la <a href="/privacitat/">política de privacitat</a>.</span>
+        </label>
+      </fieldset>
+
+      <div class="config__nav">
+        <button class="config__back" type="button" data-back>Enrere</button>
+        <p class="form__status" id="cfg-estat" role="status" aria-live="polite"></p>
+        <button class="btn" type="button" data-next>Següent {{arrow}}</button>
+        <button class="btn" type="submit" data-submit>Envia la petició {{arrow}}</button>
+      </div>
+
+      <div class="config__done" id="cfg-fet" tabindex="-1" hidden>
+        <p class="eyebrow">Rebut</p>
+        <h2 class="config__q">Gràcies. Ja tenim el teu <em>projecte</em>.</h2>
+        <p>Et respondrem en menys de 48 hores amb una proposta. Si vols afegir-hi alguna cosa, escriu-nos a <a href="mailto:{{email}}">{{email}}</a>.</p>
+        <a class="text-link" href="/diari/">Mentrestant, llegeix el Diari {{arrow}}</a>
+      </div>
+    </div>
+
+    <aside class="config__summary" aria-label="Resum del projecte">
+      <p class="eyebrow">El teu projecte</p>
+      <dl class="summary">
+        <div data-sum="Sector"><dt>Negoci</dt><dd>—</dd></div>
+        <div data-sum="Serveis"><dt>Serveis</dt><dd>—</dd></div>
+        <div data-sum="Objectiu"><dt>Objectiu</dt><dd>—</dd></div>
+        <div data-sum="Comarca"><dt>On</dt><dd>—</dd></div>
+        <div data-sum="Quan"><dt>Quan</dt><dd>—</dd></div>
+        <div data-sum="Pressupost"><dt>Pressupost</dt><dd>—</dd></div>
+      </dl>
+      <div class="summary__plan" hidden>
+        <p class="summary__h">Per on començaríem</p>
+        <ul class="summary__list" id="cfg-pla"></ul>
+      </div>
+    </aside>
+  </form>
+</section>

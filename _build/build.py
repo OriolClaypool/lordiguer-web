@@ -264,6 +264,8 @@ def expand_parts(body, ctx):
             return article_rows(ctx["articles"])
         if name == "email":
             return SITE["email"]
+        if name == "comarca-options":
+            return comarca_options()
         path = SRC / "parts" / f"{name}.html"
         if not path.exists():
             raise SystemExit(f"No trobo el bloc {name} ({path})")
@@ -321,7 +323,8 @@ def footer_html():
         return f'<div><p class="footer__h">{title}</p><ul>{lis}</ul></div>'
     studio = [("Portfolio", "/portfolio/", ""), ("Comunitat", "/comunitat/", ""),
               ("Diari", "/diari/", ""), ("On treballem", "/on-treballem/", ""),
-              ("Qui som", "/qui-som/", ""), ("Contacte", "/contacte/", "")]
+              ("Qui som", "/qui-som/", ""), ("Contacte", "/contacte/", ""),
+              ("Configura el projecte", "/configura/", "")]
     letters = "".join(f'<span aria-hidden="true">{c}</span>' for c in "Parlem")
     return f"""<footer class="site-footer">
   <div class="footer__grid">
@@ -913,6 +916,20 @@ def hub_page(comarques):
   <a class="btn" href="/contacte/">Parlem {ARROW}</a>
 </section>"""
     return meta, body
+
+
+def comarca_options():
+    """Opcions del desplegable de comarques del configurador."""
+    comarques = json.loads((SRC / "comarques.json").read_text(encoding="utf-8"))
+    groups = []
+    for group, label in (("barcelona", "Província de Barcelona"), ("veines", "Comarques veïnes")):
+        items = sorted((c for c in comarques if c["group"] == group), key=lambda c: sort_key(c["name"]))
+        opts = "".join(f'<option value="{esc(c["name"])}" data-slug="{c["slug"]}">{esc(c["name"])}</option>'
+                       for c in items)
+        groups.append(f'<optgroup label="{label}">{opts}</optgroup>')
+    groups.append('<optgroup label="Altres"><option>Una altra comarca de Catalunya</option>'
+                  '<option>Fora de Catalunya</option></optgroup>')
+    return "".join(groups)
 
 
 def local_pages():
