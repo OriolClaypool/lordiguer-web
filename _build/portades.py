@@ -335,6 +335,72 @@ def lots_nadal():
     return frame(PAPER2, body)
 
 
+def videos_restaurant():
+    """Una paella al foc i un mòbil en vertical que grava."""
+    flames = []
+    for i, x in enumerate((470, 540, 610, 680, 750)):
+        h = 64 if i % 2 else 92
+        c = TERRA if i % 2 else TERRA_L
+        flames.append(f'<path d="M{x} 716 c-30 -22 -26 -{h*0.62:.0f} 0 -{h} c26 {h*0.38:.0f} 30 {h-22} 0 {h}z" fill="{c}"/>')
+    pan = (f'<path d="M352 580 C 368 640 420 660 470 660 H730 C 780 660 832 640 848 580Z" fill="{INK}"/>'
+           f'<ellipse cx="600" cy="580" rx="248" ry="46" fill="{INK}"/>'
+           f'<ellipse cx="600" cy="574" rx="222" ry="34" fill="{TERRA_INK}"/>'
+           f'<g transform="rotate(8 352 580)"><rect x="90" y="562" width="270" height="34" rx="17" fill="{INK}"/></g>')
+    food = (f'<circle cx="520" cy="470" r="30" fill="{SAGE}"/>'
+            f'<circle cx="640" cy="410" r="22" fill="{TERRA}"/>'
+            f'<ellipse cx="720" cy="488" rx="18" ry="36" transform="rotate(40 720 488)" fill="{SAGE_INK}"/>'
+            f'<ellipse cx="580" cy="530" rx="16" ry="30" transform="rotate(-50 580 530)" fill="{TERRA}"/>'
+            f'<circle cx="690" cy="545" r="16" fill="{PAPER}"/>'
+            f'<circle cx="470" cy="540" r="12" fill="{SAGE_INK}"/>')
+    steam = "".join(f'<path d="M{x} 360 c-34 -40 34 -66 0 -116 c-34 -40 34 -66 0 -110" stroke="{PAPER}" '
+                    f'stroke-width="14" fill="none" stroke-linecap="round" opacity="0.85"/>' for x in (520, 610, 700))
+    phone = (f'<g transform="rotate(7 1250 440)">'
+             f'<rect x="1110" y="160" width="280" height="540" rx="44" fill="{INK}"/>'
+             f'<rect x="1128" y="178" width="244" height="504" rx="30" fill="{TERRA_L}"/>'
+             f'<circle cx="1176" cy="226" r="16" fill="{TERRA}"/>'
+             f'<polygon points="1218,370 1218,490 1316,430" fill="{PAPER}"/>'
+             f'<rect x="1160" y="616" width="180" height="10" rx="5" fill="{PAPER}" opacity="0.6"/>'
+             f'<rect x="1160" y="616" width="74" height="10" rx="5" fill="{TERRA_INK}"/>'
+             f'</g>')
+    body = (sun(250, 220, 96, PAPER) + steam + food + pan + "".join(flames) +
+            f'<rect x="400" y="716" width="420" height="14" rx="7" fill="{INK}"/>' +
+            ground(730, KRAFT) + f'<rect x="0" y="730" width="{W}" height="16" fill="{TERRA_INK}"/>' + phone)
+    return frame(SAGE_BG, body)
+
+
+def web_restaurant():
+    """La web d'un restaurant al mòbil: la carta amb preus, l'horari i el mapa."""
+    phone = [f'<rect x="560" y="120" width="400" height="780" rx="56" fill="{INK}"/>',
+             f'<rect x="582" y="142" width="356" height="736" rx="38" fill="{PAPER}"/>',
+             f'<rect x="604" y="190" width="312" height="200" fill="{TERRA_L}"/>',
+             f'<circle cx="760" cy="300" r="78" fill="{PAPER}"/>',
+             f'<circle cx="760" cy="300" r="44" fill="{TERRA}"/>',
+             f'<ellipse cx="740" cy="284" rx="12" ry="24" transform="rotate(35 740 284)" fill="{SAGE_INK}"/>',
+             f'<circle cx="780" cy="314" r="10" fill="{TERRA_INK}"/>',
+             lines(604, 420, [170], INK, 0, 20)]
+    for k, w in enumerate((200, 160, 220, 180)):
+        y = 474 + k * 58
+        phone.append(lines(604, y, [w], SAND2, 0, 14))
+        phone.append(f'<rect x="850" y="{y-5}" width="66" height="24" rx="6" fill="{TERRA}"/>')
+    phone.append(f'<rect x="604" y="728" width="312" height="62" rx="31" fill="{TERRA}"/>')
+    phone.append(lines(700, 752, [120], PAPER, 0, 14))
+    clock = (f'<circle cx="1190" cy="330" r="118" fill="{PAPER}"/>'
+             f'<circle cx="1190" cy="330" r="118" fill="none" stroke="{INK}" stroke-width="14"/>'
+             f'<path d="M1190 330 V250 M1190 330 L1248 360" stroke="{INK}" stroke-width="14" stroke-linecap="round"/>'
+             f'<circle cx="1190" cy="330" r="14" fill="{TERRA}"/>')
+    map_card = (f'<g transform="rotate(-6 1200 680)">'
+                f'<rect x="1040" y="560" width="320" height="240" rx="14" fill="{SAGE_L}"/>'
+                f'<path d="M1040 700 C 1120 660 1200 740 1360 640 M1130 560 C 1150 640 1110 720 1160 800" '
+                f'stroke="{PAPER}" stroke-width="16" fill="none"/>'
+                f'<path d="M1220 690 c-36 -42 -66 -72 -66 -108 a66 66 0 0 1 132 0 c0 36 -30 66 -66 108z" fill="{TERRA}"/>'
+                f'<circle cx="1220" cy="582" r="26" fill="{PAPER}"/></g>')
+    fork = (f'<g fill="{INK}" transform="translate(-30 40)"><rect x="386" y="330" width="14" height="110" rx="7"/>'
+            f'<rect x="418" y="330" width="14" height="110" rx="7"/><rect x="450" y="330" width="14" height="110" rx="7"/>'
+            f'<path d="M386 430 h78 v20 c0 30 -18 44 -30 50 v230 a9 9 0 0 1 -18 0 v-230 c-12 -6 -30 -20 -30 -50z"/></g>')
+    body = "".join(phone) + clock + map_card + fork
+    return frame(SAND, body)
+
+
 COVERS = {
     "preparar-casa-rural-sessio-fotos": casa_rural,
     "que-explicar-producte-local-xarxes": producte_xarxes,
@@ -346,6 +412,8 @@ COVERS = {
     "campanya-de-nadal-petit-negoci": campanya_nadal,
     "vals-regal-web": vals_regal,
     "fotografiar-lots-de-nadal": lots_nadal,
+    "videos-restaurant-sense-aturar-servei": videos_restaurant,
+    "que-ha-de-tenir-web-restaurant": web_restaurant,
 }
 
 
