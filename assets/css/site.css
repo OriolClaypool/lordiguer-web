@@ -1186,6 +1186,8 @@ h2.eyebrow {
   .config.is-js .config__nav .form__status { grid-column: 1 / -1; grid-row: 2; text-align: left; }
   .config.is-js .config__nav .btn { grid-column: 2; }
   .footer__cols { grid-template-columns: 1fr; row-gap: 28px; }
+  .footer__cols ul { gap: 0; }
+  .footer__cols a { display: block; padding-block: 10px; }
   .pair__video, .pair--rev .pair__video, .pair__photo, .pair--rev .pair__photo { grid-column: 1 / -1; }
   .pair__video .frame__media { aspect-ratio: 4 / 5; }
   .hero-media figcaption { flex-direction: column; gap: 4px; }

@@ -38,6 +38,7 @@ NAV = [
     ("portfolio", "Portfolio", "/portfolio/"),
     ("comunitat", "Comunitat", "/comunitat/"),
     ("diari", "Diari", "/diari/"),
+    ("qui-som", "Qui som", "/qui-som/"),
 ]
 
 SECTORS = [
@@ -443,7 +444,6 @@ def header_html(current):
   <nav class="menu__links" aria-label="Menú mòbil">
     <a href="/">Inici</a>
     {mobile}
-    <a href="/qui-som/">Qui som</a>
     <a class="is-cta" href="/contacte/">Parlem</a>
   </nav>
 </div>"""
@@ -1045,8 +1045,8 @@ def hub_page(comarques):
         "id": "on-treballem", "path": HUB, "page_type": "CollectionPage",
         "title": "On treballem: comarques de Catalunya | L’Ordiguer Estudi",
         "og_title": "On treballem, comarca a comarca",
-        "description": ("Fotografia, vídeo, xarxes socials i web per a negocis de la província de "
-                        "Barcelona i de les comarques veïnes. Tria la teva comarca."),
+        "description": ("Fotografia, vídeo, xarxes socials i web per a negocis de tot Catalunya. "
+                        "Tria la teva comarca."),
         "crumbs": [["On treballem", None]],
         "priority": 0.6,
         "_src": SRC / "comarques.json",
@@ -1057,7 +1057,7 @@ def hub_page(comarques):
     <h1 class="page-title" data-split>On <em>treballem</em>.</h1>
   </div>
   <div class="page-hero__side">
-    <p data-intro>Treballem a tota Catalunya, i sobretot a la província de Barcelona i a les comarques veïnes. Cada comarca té el seu paisatge, el seu producte i el seu ritme.</p>
+    <p data-intro>Treballem a tota Catalunya. Aquestes són les comarques que tenim més a prop. Cada comarca té el seu paisatge, el seu producte i el seu ritme.</p>
   </div>
 </section>
 
