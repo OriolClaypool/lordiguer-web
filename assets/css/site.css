@@ -483,6 +483,29 @@ h2.eyebrow {
 .svc-card__more svg { transition: transform 0.5s var(--ease); }
 .svc-card:hover .svc-card__more svg { transform: translateX(6px); }
 
+/* Offers with prices (serveis) */
+.offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.offer { display: flex; flex-direction: column; gap: 12px; height: 100%; padding: 26px 24px 24px; background: var(--sand); }
+.offer--plain { background: none; border: 1px solid var(--rule); }
+.offer__tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra-ink); }
+.offer__name { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 2vw, 1.85rem); line-height: 1.1; }
+.offer__price { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; font-family: var(--display); font-size: clamp(2.5rem, 3.6vw, 3.25rem); line-height: 1; }
+.offer__price small { font: 600 0.75rem var(--sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--graphite); }
+.offer__note { font-size: 0.9375rem; color: var(--graphite); }
+.offer__desc { font-size: 1rem; line-height: 1.5; color: var(--graphite); }
+.offer__more { align-self: flex-start; margin-top: auto; }
+.offer .svc-card__list { margin-bottom: 14px; }
+.offers__terms { margin-top: clamp(28px, 3.5vw, 48px); }
+@media (max-width: 1100px) {
+  .offers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .offer--plain { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .offers { grid-template-columns: 1fr; gap: 10px; }
+  .offer { padding: 22px 18px 20px; }
+  .offer .svc-card__list { display: flex; }
+}
+
 /* Manifest / statement */
 .manifest { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: clamp(28px, 3.5vw, 48px); border-top: 1px solid var(--ink); }
 .manifest__label { grid-column: 1 / span 3; padding-top: 10px; }
