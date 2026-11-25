@@ -628,6 +628,7 @@ h2.eyebrow {
 .community__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; padding-bottom: clamp(40px, 5vw, 72px); }
 .community__head > div { display: flex; flex-direction: column; gap: 18px; max-width: 44rem; }
 .community .eyebrow { color: var(--sage-ink); }
+.community--diari .eyebrow { color: var(--terra-ink); }
 
 
 /* Post cards (Diari, home, related articles) */

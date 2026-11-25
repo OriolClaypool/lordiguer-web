@@ -10,7 +10,6 @@ Desa cada foto a `assets/img/<nom>.jpg` (2000 px d’ample, qualitat 80) i cada 
 | `campanya-nadal-hero` | 16/9 | Un lot de producte local preparat per regalar | /campanya-de-nadal/ | pendent |
 | `comerc-proximitat-hero` | 16/9 | El taulell d’una botiga de producte local | /comerc-proximitat/ | pendent |
 | `comunitat-hero` | 16/9 | Un mercat de pagès a primera hora del matí | /comunitat/ | pendent |
-| `comunitat-portada` | 16/10 | Un mercat de pagès a primera hora | / | pendent |
 | `cooperatives-hero` | 16/9 | Socis d’una cooperativa durant la collita | /cooperatives/ | pendent |
 | `disseny-web-hero` | 16/9 | Una web oberta en un portàtil | /disseny-web/ | pendent |
 | `el-permanyer-dinar` | 4/5 | Fotografia · el dinar | /, /portfolio/el-permanyer/ | pendent |

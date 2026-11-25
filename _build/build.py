@@ -50,7 +50,6 @@ PREUS = {
 NAV = [
     ("serveis", "Serveis", "/serveis/"),
     ("portfolio", "Portfolio", "/portfolio/"),
-    ("comunitat", "Comunitat", "/comunitat/"),
     ("diari", "Diari", "/diari/"),
     ("qui-som", "Qui som", "/qui-som/"),
 ]
