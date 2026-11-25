@@ -65,37 +65,48 @@
 <section class="section section--tight" id="preus" aria-labelledby="preus-titol">
   <div class="section-head">
     <h2 class="eyebrow" id="preus-titol">Preus</h2>
-    <p class="section-head__note">Un punt de partida clar. La resta, parlant-ne.</p>
+    <p class="section-head__note">Tres punts de partida, i cada un inclou l’anterior. La resta, parlant-ne.</p>
   </div>
   <ul class="offers">
     <li class="offer" data-reveal>
-      <p class="offer__tag">El mínim</p>
-      <h3 class="offer__name">Foto, vídeo i perfil</h3>
-      <p class="offer__price"><small>Des de</small> 710&nbsp;€</p>
-      <p class="offer__note">Preu de llançament. Després, 890&nbsp;€.</p>
-      <p class="offer__desc">Una sessió al teu negoci i l’Instagram posat al dia amb el material nou.</p>
-      <span class="svc-card__list"><span>Mitja jornada amb tots dos</span><span>20 fotografies editades</span><span>4 reels, que també serveixen per a TikTok</span><span>Instagram: foto de perfil, bio i destacats</span></span>
+      <p class="offer__tag">Per començar</p>
+      <h3 class="offer__name">Fotos i fitxa de Google</h3>
+      <p class="offer__price"><small>Des de</small> {{preu:per-comencar}}</p>
+      <x-obertura><p class="offer__note">Preu d’obertura. Després, {{preu-normal:per-comencar}}.</p></x-obertura>
+      <p class="offer__desc">Fotos noves i la fitxa de Google posada a punt, perquè qui et busca et trobi i et triï. Serveix a qualsevol negoci, també si no fas servir Instagram.</p>
+      <span class="svc-card__list"><span>Mitja jornada de fotografia</span><span>25–30 fotografies editades, per a la web, la carta o les reserves i les xarxes</span><span>Fitxa de Google: categories, descripció, serveis i fotos noves</span></span>
+      <a class="text-link offer__more" href="/contacte/">Parlem-ne {{arrow}}</a>
+    </li>
+    <li class="offer" data-reveal>
+      <p class="offer__tag">Foto, vídeo i perfil</p>
+      <h3 class="offer__name">Un dia al teu negoci</h3>
+      <p class="offer__price"><small>Des de</small> {{preu:foto-video}}</p>
+      <x-obertura><p class="offer__note">Preu d’obertura. Després, {{preu-normal:foto-video}}.</p></x-obertura>
+      <p class="offer__desc">Una sessió amb fotografia i vídeo, i l’Instagram al dia. Convé als negocis que troben clients a les xarxes.</p>
+      <span class="svc-card__list"><span>Tot el que inclou «Per començar»</span><span>La sessió, amb tots dos</span><span>4 reels, que també serveixen per a TikTok i la web</span><span>Instagram: foto de perfil, bio i destacats</span></span>
       <a class="text-link offer__more" href="/contacte/">Parlem-ne {{arrow}}</a>
     </li>
     <li class="offer" data-reveal>
       <p class="offer__tag">Complet</p>
       <h3 class="offer__name">El perfil complet</h3>
-      <p class="offer__price"><small>Des de</small> 950&nbsp;€</p>
-      <p class="offer__note">Preu de llançament. Després, 1.190&nbsp;€.</p>
-      <p class="offer__desc">El mateix, i un perfil que explica el negoci a qui hi entra per primer cop. És el que hem fet a El Permanyer.</p>
-      <span class="svc-card__list"><span>Tot el que inclou el mínim</span><span>Tres publicacions fixades, amb text i disseny</span><span>Històries de reserves, amb enllaç</span><span>El perfil sencer, a punt per publicar</span></span>
+      <p class="offer__price"><small>Des de</small> {{preu:complet}}</p>
+      <x-obertura><p class="offer__note">Preu d’obertura. Després, {{preu-normal:complet}}.</p></x-obertura>
+      <p class="offer__desc">Un perfil que explica el negoci a qui hi entra per primer cop. Convé a qui ven estades o experiències des d’Instagram. És el que hem fet a El Permanyer.</p>
+      <span class="svc-card__list"><span>Tot el que inclou «Foto, vídeo i perfil»</span><span>Tres publicacions fixades, amb text i disseny</span><span>Històries de reserves, amb enllaç</span><span>El perfil sencer, a punt per publicar</span></span>
       <a class="text-link offer__more" href="/portfolio/el-permanyer/">Veure el cas d’El Permanyer {{arrow}}</a>
     </li>
-    <li class="offer offer--plain" data-reveal>
-      <p class="offer__tag">A part</p>
-      <h3 class="offer__name">Extres</h3>
-      <p class="offer__desc">S’afegeixen a qualsevol dels dos, amb pressupost a part.</p>
-      <span class="svc-card__list"><span>Xarxes cada mes, des de 340&nbsp;€</span><span>Vídeo de presentació, des de 1.450&nbsp;€</span><span>Fitxa de Google i ressenyes</span><span>Web: retocs, web nova o SEO local</span><span>Perfil de TikTok</span></span>
+    <li class="offer offer--plain offer--wide" data-reveal>
+      <div class="offer__head">
+        <p class="offer__tag">A part</p>
+        <h3 class="offer__name">Extres</h3>
+        <p class="offer__desc">S’afegeixen a qualsevol dels tres, amb pressupost a part.</p>
+      </div>
+      <span class="svc-card__list"><span>Xarxes cada mes, des de {{preu:xarxes}}</span><span>Vídeo de presentació, des de {{preu:video}}</span><span>Web: retocs, web nova o SEO local</span><span>Perfil de TikTok</span></span>
       <a class="text-link offer__more" href="/contacte/">Explica’ns què necessites {{arrow}}</a>
     </li>
   </ul>
   <div class="values values--3 offers__terms">
-    <div class="value"><h3>Preu de llançament</h3><p>Som un estudi nou. Per això els cinc primers clients tenen un 20&nbsp;% menys, fins al 31 de març del 2027, extres inclosos. A canvi et demanem unes paraules, una ressenya a Google i permís per ensenyar la feina.</p></div>
+    <x-obertura><div class="value"><h3>Tarifa d’obertura</h3><p>Els cinc primers projectes tenen un {{descompte}} menys, fins al {{obertura-fins}}, extres inclosos. A canvi, et demanem unes paraules, una ressenya a Google i permís per ensenyar la feina.</p></div></x-obertura>
     <div class="value"><h3>Desplaçament</h3><p>Inclòs fins a 30&nbsp;km de Terrassa o de Bagà. Més enllà, 0,40&nbsp;€ per quilòmetre.</p></div>
     <div class="value"><h3>Pagament</h3><p>La meitat en reservar la data i la resta en el lliurament. Preus sense IVA.</p></div>
   </div>

@@ -33,6 +33,20 @@ SITE = {
     ),
 }
 
+# Preus. Tot surt d’aquí: el bloc «Preus» de Serveis i les preguntes «Quant costa?».
+# A les pàgines: {{preu:clau}} és el preu d’ara (el d’obertura mentre duri; després, el normal),
+# {{preu-normal:clau}} és el normal i <x-obertura>…</x-obertura> només surt durant l’obertura.
+# Quan s’acabi l’obertura (o arribin els cinc primers projectes), posa "activa": False i torna a generar la web.
+OBERTURA = {"activa": True, "fins": datetime.date(2027, 3, 31), "fins_text": "31 de març del 2027",
+            "descompte": 20}
+PREUS = {
+    "per-comencar": {"normal": 490, "obertura": 390},
+    "foto-video": {"normal": 890, "obertura": 710},
+    "complet": {"normal": 1190, "obertura": 950},
+    "xarxes": {"normal": 340},
+    "video": {"normal": 1450},
+}
+
 NAV = [
     ("serveis", "Serveis", "/serveis/"),
     ("portfolio", "Portfolio", "/portfolio/"),
@@ -144,7 +158,8 @@ def esc(text):
 def plain(text):
     """Text sense etiquetes HTML, per a metadades i dades estructurades."""
     text = re.sub(r"<[^>]+>", " ", text)
-    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+    text = re.sub(r"\s+", " ", html.unescape(text)).strip()
+    return re.sub(r" ([.,;:])", r"\1", text)
 
 
 def asset_version(rel):
@@ -378,6 +393,33 @@ def article_rows(articles):
     return post_grid(articles)
 
 
+def obertura_activa():
+    return OBERTURA["activa"] and datetime.date.today() <= OBERTURA["fins"]
+
+
+def euros(n):
+    return f"{n:,}".replace(",", ".") + "\u00a0€"
+
+
+def preu(clau, quin=None):
+    if clau not in PREUS:
+        raise SystemExit(f"No trobo el preu «{clau}» (vegeu PREUS a build.py)")
+    p = PREUS[clau]
+    if quin is None:
+        quin = "obertura" if obertura_activa() and "obertura" in p else "normal"
+    return euros(p[quin])
+
+
+def fill_prices(body):
+    body = re.sub(r"\{\{preu:([a-z-]+)\}\}", lambda m: preu(m.group(1)), body)
+    body = re.sub(r"\{\{preu-normal:([a-z-]+)\}\}", lambda m: preu(m.group(1), "normal"), body)
+    body = body.replace("{{obertura-fins}}", OBERTURA["fins_text"])
+    body = body.replace("{{descompte}}", f"{OBERTURA['descompte']}\u00a0%")
+    if obertura_activa():
+        return re.sub(r"</?x-obertura>", "", body)
+    return re.sub(r"<x-obertura>.*?</x-obertura>", "", body, flags=re.S)
+
+
 def expand_parts(body, ctx):
     def part(m):
         attrs = parse_attrs(m.group(1))
@@ -405,7 +447,7 @@ def expand_parts(body, ctx):
         return path.read_text(encoding="utf-8")
     for _ in range(3):  # blocs dins de blocs
         body = re.sub(r"<x-part\s+([^>]*)></x-part>", part, body)
-    return body.replace("{{email}}", SITE["email"]).replace("{{arrow}}", ARROW)
+    return fill_prices(body.replace("{{email}}", SITE["email"]).replace("{{arrow}}", ARROW))
 
 
 # ---------------------------------------------------------------- layout
