@@ -26,7 +26,7 @@ SITE = {
     "email": "agenciaordiguer@gmail.com",
     # Comptes d’Instagram, sense @. El de l’Estudi surt al peu, a Contacte i a les dades per a Google;
     # el de la Comunitat, a la pàgina de la Comunitat i al peu. Mentre l’Estudi no en tingui, deixa-ho buit.
-    "instagram_estudi": "",
+    "instagram_estudi": "estudiordiguer",
     "instagram_comunitat": "lordiguer",
     "description": (
         "Estudi creatiu i agència de contingut en català. Fotografia, vídeo, "
