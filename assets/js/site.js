@@ -4,6 +4,10 @@
 (function () {
   'use strict';
   var root = document.documentElement;
+  /* En local, es veuen els requadres de les fotos pendents (a la web publicada, no) */
+  if (location.protocol === 'file:' || /^(localhost|127\.0\.0\.1|\[::1\]|.+\.local)$/.test(location.hostname)) {
+    root.classList.add('is-local');
+  }
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   function $(sel, ctx) { return (ctx || document).querySelector(sel); }

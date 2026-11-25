@@ -5,6 +5,9 @@ Generat automàticament per `_build/build.py`. No l’editis a mà.
 Desa cada foto a `assets/img/<nom>.jpg` (2000 px d’ample, qualitat 80) i cada vídeo a
 `assets/video/<nom>.mp4`. Després torna a executar `python3 _build/build.py`.
 
+Mentre una foto és pendent, el seu requadre només es veu en local (localhost);
+a la web publicada no surt.
+
 | Nom | Proporció | Què hi va | On surt | Estat |
 |---|---|---|---|---|
 | `campanya-nadal-hero` | 16/9 | Un lot de producte local preparat per regalar | /campanya-de-nadal/ | pendent |

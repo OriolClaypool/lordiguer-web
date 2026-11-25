@@ -258,8 +258,29 @@ def render_slot(attrs, page_path):
 
 
 def expand_slots(body, page_path):
-    return re.sub(r"<x-img\s+([^>]*)></x-img>",
+    body = re.sub(r"<x-img\s+([^>]*)></x-img>",
                   lambda m: render_slot(parse_attrs(m.group(1)), page_path), body)
+    return hide_pending(body, page_path)
+
+
+# Contenidors d’una foto: si la foto és pendent, s’amaga tot el contenidor (amb el peu de foto).
+PENDING_BOX = re.compile(r'<(?:figure|div|a)\b[^>]*?\bclass="(?:[^"]*\s)?'
+                         r'(?:hero-media|frame|person__media|feature__media|post-card__cover)(?=[\s"])')
+
+
+def hide_pending(body, page_path):
+    """Marca amb .is-pending el contenidor de cada foto pendent. A la web publicada no es veu;
+    en local (localhost), sí, per revisar on aniran les fotos (vegeu assets/js/site.js)."""
+    for ph in reversed(list(re.finditer(r'<div class="ph ', body))):
+        boxes = list(PENDING_BOX.finditer(body, 0, ph.start()))
+        if not boxes:
+            print(f"Avís: a {page_path} hi ha una foto pendent fora d’un contenidor conegut; es veurà el requadre.")
+            continue
+        box = boxes[-1]
+        tag = box.group(0)
+        i = tag.rindex('class="') + len('class="')
+        body = body[:box.start()] + tag[:i] + "is-pending " + tag[i:] + body[box.end():]
+    return body
 
 
 # ---------------------------------------------------------------- shared blocks
@@ -1244,6 +1265,8 @@ def build():
              "Generat automàticament per `_build/build.py`. No l’editis a mà.", "",
              "Desa cada foto a `assets/img/<nom>.jpg` (2000 px d’ample, qualitat 80) i cada vídeo a",
              "`assets/video/<nom>.mp4`. Després torna a executar `python3 _build/build.py`.", "",
+             "Mentre una foto és pendent, el seu requadre només es veu en local (localhost);",
+             "a la web publicada no surt.", "",
              "| Nom | Proporció | Què hi va | On surt | Estat |", "|---|---|---|---|---|"]
     for slot in sorted(SLOTS):
         info = SLOTS[slot]
@@ -1254,7 +1277,8 @@ def build():
 
     pending = sum(1 for s in SLOTS.values() if s.get("status", "pendent") == "pendent")
     print(f"Fet: {len(written)} pàgines, {len(REDIRECTS)} redireccions, "
-          f"{len(sitemap)} adreces al sitemap, {pending} fotos pendents (vegeu _build/FOTOS.md).")
+          f"{len(sitemap)} adreces al sitemap, {pending} fotos pendents, que a la web publicada no surten "
+          f"(vegeu _build/FOTOS.md).")
 
 
 if __name__ == "__main__":
