@@ -24,8 +24,10 @@ SITE = {
     "name": "L’Ordiguer Estudi",
     "base": "https://lordiguer.cat",
     "email": "agenciaordiguer@gmail.com",
-    "instagram": "https://www.instagram.com/lordiguer/",
-    "instagram_handle": "@lordiguer",
+    # Comptes d’Instagram, sense @. El de l’Estudi surt al peu, a Contacte i a les dades per a Google;
+    # el de la Comunitat, a la pàgina de la Comunitat i al peu. Mentre l’Estudi no en tingui, deixa-ho buit.
+    "instagram_estudi": "",
+    "instagram_comunitat": "lordiguer",
     "description": (
         "Estudi creatiu i agència de contingut en català. Fotografia, vídeo, "
         "xarxes i web per a turisme rural, productors, cooperatives, restaurants "
@@ -383,13 +385,21 @@ def article_cards(articles, limit, with_community):
             'alt="Un mercat de pagès a primera hora" label="Un mercat de pagès a primera hora"></x-img></div>'
             '<div class="post-card__body"><p class="post-meta"><span class="post-meta__cat">L’Ordiguer Comunitat</span></p>'
             '<h3 class="post-card__title">Mercats, festes, oficis i paisatges, des de dins</h3>'
-            f'<p class="post-card__excerpt">El nostre canal editorial sobre el territori. Segueix-nos a Instagram, {SITE["instagram_handle"]}.</p>'
+            f'<p class="post-card__excerpt">El nostre canal editorial sobre el territori. Segueix-nos a Instagram, @{SITE["instagram_comunitat"]}.</p>'
             '</div></a></article>')
     return f'<div class="post-grid post-grid--{len(cards)}">' + "".join(cards) + "</div>"
 
 
 def article_rows(articles):
     return post_grid(articles)
+
+
+def ig_url(handle):
+    return f"https://www.instagram.com/{handle}/"
+
+
+def ig_link(handle, label):
+    return f'<a href="{ig_url(handle)}" rel="noopener">{label} · @{handle}</a>'
 
 
 def obertura_activa():
@@ -438,6 +448,9 @@ def expand_parts(body, ctx):
             return article_rows(arts)
         if name == "email":
             return SITE["email"]
+        if name == "instagram-estudi":
+            handle = SITE["instagram_estudi"]
+            return f"<p>{ig_link(handle, 'Instagram')}</p>" if handle else ""
         if name == "comarca-options":
             return comarca_options()
         path = SRC / "parts" / f"{name}.html"
@@ -446,6 +459,8 @@ def expand_parts(body, ctx):
         return path.read_text(encoding="utf-8")
     for _ in range(3):  # blocs dins de blocs
         body = re.sub(r"<x-part\s+([^>]*)></x-part>", part, body)
+    body = body.replace("{{ig-comunitat-url}}", ig_url(SITE["instagram_comunitat"]))
+    body = body.replace("{{ig-comunitat}}", SITE["instagram_comunitat"])
     return fill_prices(body.replace("{{email}}", SITE["email"]).replace("{{arrow}}", ARROW))
 
 
@@ -490,6 +505,14 @@ def header_html(current):
 </div>"""
 
 
+def footer_instagram():
+    links = []
+    if SITE["instagram_estudi"]:
+        links.append(ig_link(SITE["instagram_estudi"], "Instagram"))
+    links.append(ig_link(SITE["instagram_comunitat"], "Comunitat"))
+    return "".join(f'<p class="footer__small">{l}</p>' for l in links)
+
+
 def footer_html():
     def col(title, items):
         lis = "".join(f'<li><a href="{href}">{esc(label)}</a></li>' for label, href, _ in items)
@@ -508,7 +531,7 @@ def footer_html():
         <span class="email__addr" data-email>{SITE['email']}</span>
         <button class="copy" type="button" data-copy>Copia</button>
       </div>
-      <p class="footer__small"><a href="{SITE['instagram']}" rel="noopener">Instagram · {SITE['instagram_handle']}</a></p>
+      {footer_instagram()}
     </div>
   </div>
   <nav class="footer__cols" aria-label="Peu de pàgina">
@@ -559,7 +582,7 @@ def structured_data(meta, url, body):
             "description": SITE["description"],
             "areaServed": {"@type": "AdministrativeArea", "name": "Catalunya"},
             "knowsLanguage": ["ca", "es"],
-            "sameAs": [SITE["instagram"]],
+            "sameAs": [ig_url(SITE["instagram_estudi"] or SITE["instagram_comunitat"])],
         },
         {
             "@type": "WebSite",
