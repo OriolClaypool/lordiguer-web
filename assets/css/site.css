@@ -1219,7 +1219,8 @@ h2.eyebrow {
   .footer__cols ul { gap: 0; }
   .footer__cols a { display: block; padding-block: 10px; }
   .pair__video, .pair--rev .pair__video, .pair__photo, .pair--rev .pair__photo { grid-column: 1 / -1; }
-  .pair__video .frame__media { aspect-ratio: 4 / 5; }
+  .pair__video, .pair--rev .pair__video { width: 75%; justify-self: center; }
+  .pair__video .frame__media { aspect-ratio: 9 / 16; }
   .hero-media figcaption { flex-direction: column; gap: 4px; }
 }
 
